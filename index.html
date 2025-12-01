@@ -1,105 +1,125 @@
-
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Kaylon Souza - Student</title>
-		<meta name="viewport" content="width=device-width">
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Modelo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href='assets/style.css' rel='stylesheet' type='text/css' />
+    <style>
+        :root {
+            --bg: #0d0d0d;
+            --fg: #e6e6e6;
+            --accent: #4da3ff;
+            --card: #1a1a1a;
+        }
 
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+        }
 
-		  <script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-42001979-1']);
-			_gaq.push(['_trackPageview']);
+        header {
+            padding: 20px 40px;
+            background: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+        }
 
-			(function() {
-			  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		  </script>
-		
-	</head>
-	<body>
-	  <div class="bg">
-		<div class="container">
-		  <div class="row">
-			<div id="main-box" class="span5">
-			  <span class="content">
-				<h1>Kaylon Souza</h1>
-				<h2>Student</h2>
-<div class="text">
+        nav a {
+            margin-left: 20px;
+            color: var(--fg);
+            text-decoration: none;
+        }
 
-	<!--
-	<img src='https://secure.gravatar.com/avatar/144d33eb4d11754ac56544bd5501f0f3'/>
-	-->
+        nav a:hover {
+            color: var(--accent);
+        }
 
+        .hero {
+            padding: 120px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #000 0%, #111 100%);
+        }
 
-<p>I&#8217;ve graduated in Computer Science from UESC. During my studies I worked in an IT Research Center and co-founded a company called Techmobil.</p>
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
 
-<p>Since then, I&#8217;ve worked as developer for Bopia, Todobebe.com and Globo.com and as consultant by ThoughtWorks for Rackspace, LATAM and other companies. I&#8217;ve also given workshops and lectures about Web Development, Testing, Continuous Delivery, React, Elm and more.</p>
+        .hero p {
+            font-size: 18px;
+            opacity: 0.7;
+        }
 
-<p>My current interests are board games, evolutionary architecture, functional programming and management.</p>
-</div>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            padding: 60px 40px;
+        }
 
-			  </span>
-			  <p>
-  
-	<i class='icon-location'></i><a href='https://maps.google.com.br/maps?q=Macajuba' title='Google Maps'>Macajuba, BA</a><br>
-  
-	<i class='icon-code'></i>JavaScript, TypeScript, Python, <br>
-  
-	<i class='icon-company'></i>Nubank<br>
-  
-	<i class='icon-university'></i>UESC - Computer Science<br>
-  
-	<i class='icon-interests'></i>Functional Programming, Board games, Open Source, Cinematography, Teamwork, RPG<br>
-  
-	<i class='icon-email'></i><a href='mailto:contact@robertosoares.me'>contact@robertosoares.me</a><br>
-  
+        .card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #222;
+        }
 
-</p>
-  
-	<a href='https://github.com/roberto/' class='fc-webicon github' title='github'>github</a>
-  
-	<a href='http://www.linkedin.com/in/rosoares' class='fc-webicon linkedin' title='linkedin'>linkedin</a>
-  
-	
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
 
-  
-	
-  
-	<a href='http://www.goodreads.com/user/show/10822464-roberto' class='fc-webicon goodreads' title='goodreads'>goodreads</a>
-  
-	
-  
-	
-  
-	
-  
-	
-  
-	
-  
-	
-  
-	
-  
-	
-  
-	
-  
-<hr/>
-<p>
-  
-</p>
+        footer {
+            padding: 40px;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
 
-			</div>
-		  </div>
-		</div>
-	  </div>
-	</body>
+<body>
+
+<header>
+    <div class="logo">LOGO</div>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Modelo Base</h1>
+    <p>Estrutura mínima para expandir conforme necessário.</p>
+</section>
+
+<section class="grid">
+    <div class="card">
+        <h2>Bloco 1</h2>
+        <p>Conteúdo.</p>
+    </div>
+
+    <div class="card">
+        <h2>Bloco 2</h2>
+        <p>Conteúdo.</p>
+    </div>
+
+    <div class="card">
+        <h2>Bloco 3</h2>
+        <p>Conteúdo.</p>
+    </div>
+</section>
+
+<footer>
+    © Ano
+</footer>
+
+</body>
 </html>
