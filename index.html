@@ -5,6 +5,8 @@
     <title>Modelo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <style>
         :root {
             --bg: #0d0d0d;
@@ -14,10 +16,21 @@
         }
 
         body {
+
+			--tw-bg-opacity: 1;
+			--tw-text-opacity: 1;
+			-webkit-font-smoothing: antialiased;
             margin: 0;
             font-family: sans-serif;
             background: var(--bg);
             color: var(--fg);
+  			overflow-x: hidden;
+        }
+
+        html{
+        	-webkit-tap-highlight-color: transparent;
+  			line-height: 1.5;
+  			scroll-behavior: smooth;
         }
 
         header {
@@ -29,6 +42,8 @@
             position: sticky;
             top: 0;
         }
+
+
 
         nav a {
             margin-left: 20px;
@@ -65,14 +80,24 @@
 
         .card {
             background: var(--card);
-            padding: 30px;
+            padding: 20px;
             border-radius: 8px;
             border: 1px solid #222;
         }
-
+		.glass_card {
+			background: rgba(255, 255, 255, 0.3);
+ 			backdrop-filter: blur(8px);
+ 			-webkit-backdrop-filter: blur(8px);
+			border: 0.5px solid var(--COLOR3);
+			border-radius: 10px;
+		}
         .card h2 {
             margin-top: 0;
             margin-bottom: 10px;
+        }
+
+        .card:hover{
+
         }
 
         footer {
@@ -87,7 +112,7 @@
 <body>
 
 <header>
-    <div class="logo">LOGO</div>
+    <div class="logo"></div>
     <nav>
         <a href="#">Início</a>
         <a href="#">Sobre</a>
@@ -96,30 +121,39 @@
 </header>
 
 <section class="hero">
-    <h1>Modelo Base</h1>
-    <p>Estrutura mínima para expandir conforme necessário.</p>
+    <h1 data-aos="zoom-out">KAYLON</h1>
+    <p data-aos="fade-in">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
 </section>
 
 <section class="grid">
-    <div class="card">
-        <h2>Bloco 1</h2>
-        <p>Conteúdo.</p>
+    <div class="card glass_card" data-aos="fade-up-left">
+        <h2>Projetos</h2>
+        <p>fdfgdfgdfgsdf.</p>
     </div>
 
-    <div class="card">
-        <h2>Bloco 2</h2>
-        <p>Conteúdo.</p>
+    <div class="card glass_card" data-aos="fade-down-right">
+        <h2>dfgsddfsgfsdg</h2>
+        <p>Chfhfhfhd</p>
     </div>
 
-    <div class="card">
-        <h2>Bloco 3</h2>
-        <p>Conteúdo.</p>
+    <div class="card" data-aos="fade-up-left">
+        <h2>Bldsfgdoco</h2>
+        <p>fgdfsggdsdf</p>
+    </div>
+    <div class="card" data-aos="fade-down-right">
+        <h2>Blodsfgdfsgco</h2>
+        <p>dfgsgsgsdg</p>
     </div>
 </section>
 
 <footer>
-    © Ano
+    © 2025
 </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
