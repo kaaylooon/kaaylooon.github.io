@@ -1,159 +1,184 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <title>Modelo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Kaylon - Student</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-    <style>
-        :root {
-            --bg: #0d0d0d;
-            --fg: #e6e6e6;
-            --accent: #4da3ff;
-            --card: #1a1a1a;
-        }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-        body {
+<style>
+:root {
+    --bg: #0d0d0d;
+    --fg: #e6e6e6;
+    --accent: #797AB2;
+    --card: #151515;
+    --border: #222;
+    --border-accent: #8E8E8E;
+}
 
-			--tw-bg-opacity: 1;
-			--tw-text-opacity: 1;
-			-webkit-font-smoothing: antialiased;
-            margin: 0;
-            font-family: sans-serif;
-            background: var(--bg);
-            color: var(--fg);
-  			overflow-x: hidden;
-        }
+body {
+    background: var(--bg);
+    color: var(--fg);
+}
 
-        html{
-        	-webkit-tap-highlight-color: transparent;
-  			line-height: 1.5;
-  			scroll-behavior: smooth;
-        }
+h1 { text-align: center; justify-content: center; font-size: clamp(2.5rem, 6vw, 4rem); margin: 0; }
 
-        header {
-            padding: 20px 40px;
-            background: #000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-        }
+h2 { text-align: center; font-size: clamp(1.5rem, 6vw, 2.5rem); margin: 0; padding-top: 50px; }
 
+h3 { margin: 0 0 10px; font-size: clamp(1rem, 6vw, 1rem); }
 
+.hero {
+    padding: 120px 0;
+    text-align: center;
+    background: linear-gradient(180deg, #000 0%, #111 100%);
+}
 
-        nav a {
-            margin-left: 20px;
-            color: var(--fg);
-            text-decoration: none;
-        }
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    transition: .25s;
+}
 
-        nav a:hover {
-            color: var(--accent);
-        }
+.card:hover {
+    transform: translateY(4px);
+    border-color: var(--border-accent);
+}
 
-        .hero {
-            padding: 120px 40px;
-            text-align: center;
-            background: linear-gradient(180deg, #000 0%, #111 100%);
-        }
+.glass {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+}
+a { color: var(--fg); text-decoration: none; }
+a:hover { color: var(--accent); }
+.devicon:hover{
+    transform: scale(1.05);;
+    transition: all 0.2s;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
+h4 .devicon:hover{
+    transform: scale(1.05);;
+    transition: all 0.2s;
+}
 
-        .hero p {
-            font-size: 18px;
-            opacity: 0.7;
-        }
+</style>
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-            padding: 60px 40px;
-        }
-
-        .card {
-            background: var(--card);
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #222;
-        }
-		.glass_card {
-			background: rgba(255, 255, 255, 0.3);
- 			backdrop-filter: blur(8px);
- 			-webkit-backdrop-filter: blur(8px);
-			border: 0.5px solid var(--COLOR3);
-			border-radius: 10px;
-		}
-        .card h2 {
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .card:hover{
-
-        }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            font-size: 14px;
-            opacity: 0.5;
-        }
-    </style>
 </head>
-
 <body>
 
-<header>
-    <div class="logo"></div>
-    <nav>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-    </nav>
-</header>
-
 <section class="hero">
-    <h1 data-aos="zoom-out">KAYLON</h1>
-    <p data-aos="fade-in">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-</section>
+    <h1 data-aos="zoom-in" class="display-3 fw-bold">KAYLON</h1>
+    <p data-aos="fade-in" class="opacity-75">Full-stack developer</p>
 
-<section class="grid">
-    <div class="card glass_card" data-aos="fade-up-left">
-        <h2>Projetos</h2>
-        <p>fdfgdfgdfgsdf.</p>
-    </div>
-
-    <div class="card glass_card" data-aos="fade-down-right">
-        <h2>dfgsddfsgfsdg</h2>
-        <p>Chfhfhfhd</p>
-    </div>
-
-    <div class="card" data-aos="fade-up-left">
-        <h2>Bldsfgdoco</h2>
-        <p>fgdfsggdsdf</p>
-    </div>
-    <div class="card" data-aos="fade-down-right">
-        <h2>Blodsfgdfsgco</h2>
-        <p>dfgsgsgsdg</p>
+    <div class="d-flex justify-content-center gap-4 fs-1 mt-4">
+        <i class="devicon devicon-nodejs-plain-wordmark"></i>
+        <i class="devicon devicon-python-plain"></i>
+        <i class="devicon devicon-typescript-plain"></i>
     </div>
 </section>
 
-<footer>
-    © 2025
-</footer>
+<div class="container py-5 px-2">
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <div class="row justify-content-center mb-2">
+        <div class="col-md-6">
+            <div class="card glass p-3" data-aos="fade-up">
+                <h3 class="mb-3">Sumário</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-transparent"><a href="#projetos">Projetos</a></li>
+                    <li class="list-group-item bg-transparent"><a href="#tecnologias">Tecnologias</a></li>
+                    <li class="list-group-item bg-transparent"><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="projetos" class="text-center my-5" data-aos="zoom-in">Projetos</h2>
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <a href="#">
+            <div class="card glass p-3" data-aos="fade-up">
+                <h4 class="d-flex">Katálogo 
+                    <span class="tech_used ms-auto">
+                    <i class="devicon devicon-python-plain"></i>
+                    <i class="devicon-flask-original"></i>
+
+                    <i class="devicon-postgresql-plain"></i>
+
+                    <i class="devicon-css3-plain"></i>
+                    <i class="devicon-html5-plain"></i>
+                    <i class="devicon-javascript-plain"></i>
+                </span>
+                </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique sapiente harum nulla possimus porro praesentium quae tempore numquam blanditiis, hic commodi enim accusantium magni dolorem! Ut soluta mollitia enim esse?</p>
+            </div>
+            </a>
+        </div>
+
+        <div class="col-md-6">
+            <a href="#">
+            <div class="card glass p-3" data-aos="fade-up">
+                <h4 class="d-flex">Kaappli <span class="tech_used ms-auto"><i class="devicon-css3-plain"></i>
+                    <i class="devicon-html5-plain"></i>
+                    <i class="devicon-javascript-plain"></i>
+                </span></h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, nobis consequuntur adipisci, nulla ipsa facere, dignissimos odit quae quis vero minima praesentium, quod doloribus fugiat. Minus blanditiis consequuntur unde dolore?</p>
+            </div>
+        </div>
+            </a>
+
+    </div>
+
+    <h2 id="tecnologias" class="text-center my-5" data-aos="zoom-in">Tecnologias</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>Postgres</h4></div></div>
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>Redis</h4></div></div>
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>SQL</h4></div></div>
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>Python</h4></div></div>
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>Node.js</h4></div></div>
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>Typescript</h4></div></div>
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>Docker</h4></div></div>
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>Django</h4></div></div>
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>Flask</h4></div></div>
+        <div class="col-md-4"><div class="card p-3 text-center" data-aos="fade-up"><h4>Node/Express</h4></div></div>
+
+    </div>
+
+    <h2 id="contato" class="text-center my-5" data-aos="zoom-in">Contato</h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="card glass p-3" data-aos="fade-up">
+                <h4>E-mail</h4>
+                <p>kaylon.contact@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card glass p-3" data-aos="fade-up">
+                <h4>Linkedin</h4>
+                <p><a href="https://www.linkedin.com/in/kaylonsouza/">Kaylon Souza</a></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="text-center py-4 opacity-50">© 2025</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 </body>
 </html>
