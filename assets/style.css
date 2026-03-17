@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: dark;
+    --bg: #0b0c0f;
+    --fg: #e6e8ee;
+    --muted: #a3a8b3;
+    --accent: #5fb3a9;
+    --surface: #111318;
+    --border: #1e222b;
+}
+
+body {
+    background: radial-gradient(1200px 600px at 20% -10%, rgba(95, 179, 169, 0.12), transparent 60%), var(--bg);
+    color: var(--fg);
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    letter-spacing: 0.2px;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    margin: 0;
+    letter-spacing: 0.06em;
+}
+
+h2 {
+    text-align: center;
+    font-size: clamp(1.4rem, 5vw, 2.2rem);
+    margin: 0;
+    padding-top: 48px;
+}
+
+h3 {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+}
+
+.hero {
+    padding: 96px 0 72px;
+    text-align: center;
+}
+
+.hero p {
+    color: var(--muted);
+}
+
+.summary {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    padding: 16px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+}
+
+.summary a {
+    color: var(--muted);
+}
+
+.summary a:hover {
+    color: var(--accent);
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(95, 179, 169, 0.45);
+}
+
+.glass {
+    background: rgba(17, 19, 24, 0.9);
+}
+
+a {
+    color: var(--fg);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+.devicon {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+.devicon:hover {
+    transform: scale(1.06);
+    transition: transform 0.2s ease;
+}
+
+.tech_used {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .summary {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .tech_used {
+        gap: 6px;
+    }
+}

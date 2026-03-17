@@ -6,68 +6,15 @@
 <title>Kaylon - Student</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-<style>
-:root {
-    --bg: #0d0d0d;
-    --fg: #e6e6e6;
-    --accent: #797AB2;
-    --card: #151515;
-    --border: #222;
-    --border-accent: #8E8E8E;
-}
-
-body {
-    background: var(--bg);
-    color: var(--fg);
-}
-
-h1 { text-align: center; justify-content: center; font-size: clamp(2.5rem, 6vw, 4rem); margin: 0; }
-
-h2 { text-align: center; font-size: clamp(1.5rem, 6vw, 2.5rem); margin: 0; padding-top: 50px; }
-
-h3 { margin: 0 0 10px; font-size: clamp(1rem, 6vw, 1rem); }
-
-.hero {
-    padding: 120px 0;
-    text-align: center;
-    background: linear-gradient(180deg, #000 0%, #111 100%);
-}
-
-.card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    transition: .25s;
-}
-
-.card:hover {
-    transform: translateY(4px);
-    border-color: var(--border-accent);
-}
-
-.glass {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
-}
-a { color: var(--fg); text-decoration: none; }
-a:hover { color: var(--accent); }
-.devicon:hover{
-    transform: scale(1.05);;
-    transition: all 0.2s;
-}
-
-h4 .devicon:hover{
-    transform: scale(1.05);;
-    transition: all 0.2s;
-}
-
-</style>
+<link rel="stylesheet" href="assets/style.css">
 
 </head>
 <body>
@@ -85,18 +32,11 @@ h4 .devicon:hover{
 
 <div class="container py-5 px-2">
 
-    <div class="row justify-content-center mb-2">
-        <div class="col-md-6">
-            <div class="card glass p-3" data-aos="fade-up">
-                <h3 class="mb-3">Sumário</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item bg-transparent"><a href="#projetos">Projetos</a></li>
-                    <li class="list-group-item bg-transparent"><a href="#tecnologias">Tecnologias</a></li>
-                    <li class="list-group-item bg-transparent"><a href="#contato">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <nav class="summary" data-aos="fade-up">
+        <a href="#projetos">Projetos</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#contato">Contato</a>
+    </nav>
 
     <h2 id="projetos" class="text-center my-5" data-aos="zoom-in">Projetos</h2>
     <div class="row g-4">
@@ -116,7 +56,6 @@ h4 .devicon:hover{
                     <i class="devicon-javascript-plain"></i>
                 </span>
                 </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique sapiente harum nulla possimus porro praesentium quae tempore numquam blanditiis, hic commodi enim accusantium magni dolorem! Ut soluta mollitia enim esse?</p>
             </div>
             </a>
         </div>
@@ -128,10 +67,9 @@ h4 .devicon:hover{
                     <i class="devicon-html5-plain"></i>
                     <i class="devicon-javascript-plain"></i>
                 </span></h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, nobis consequuntur adipisci, nulla ipsa facere, dignissimos odit quae quis vero minima praesentium, quod doloribus fugiat. Minus blanditiis consequuntur unde dolore?</p>
             </div>
-        </div>
             </a>
+        </div>
 
     </div>
 
