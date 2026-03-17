@@ -148,6 +148,11 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
     .summary {
         gap: 16px;
         flex-wrap: wrap;
