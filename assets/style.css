@@ -12,12 +12,18 @@
     --border: #1e222b;
 }
 
+html,
+body {
+    overflow-x: clip;
+}
+
 body {
     background: radial-gradient(1200px 600px at 20% -10%, rgba(95, 179, 169, 0.12), transparent 60%), var(--bg);
     color: var(--fg);
     font-family: "Space Grotesk", system-ui, sans-serif;
     letter-spacing: 0.2px;
-    overflow-x: hidden;
+    position: relative;
+    overflow-x: clip;
 }
 
 h1 {
