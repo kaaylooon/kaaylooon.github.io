@@ -129,6 +129,13 @@ a:hover {
     letter-spacing: 0.02em;
 }
 
+.project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 @media (max-width: 768px) {
     .summary {
         gap: 16px;
