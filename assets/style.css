@@ -106,6 +106,29 @@ a:hover {
     align-items: center;
 }
 
+.repo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.repo-link i {
+    font-size: 1rem;
+}
+
+.repo-link:hover {
+    color: var(--accent);
+}
+
+.repo-meta {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+}
+
 @media (max-width: 768px) {
     .summary {
         gap: 16px;
