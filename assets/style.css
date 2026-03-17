@@ -136,6 +136,10 @@ a:hover {
     gap: 8px;
 }
 
+.project-card p {
+    margin-top: 14px;
+}
+
 @media (max-width: 768px) {
     .summary {
         gap: 16px;
