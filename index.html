@@ -1,190 +1,427 @@
 <!DOCTYPE html>
-
-<html lang="pt-BR" data-bs-theme="dark">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Kaylon - Student</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaylon Souza</title>
+    <meta name="description" content="Personal page">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        body {
+            background-color: #fbfaf7;
+            color: #1e1e2a;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.55;
+            scroll-behavior: smooth;
+        }
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-<link rel="stylesheet" href="assets/style.css">
+        h1, h2, h3, .serif {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
 
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 900;
+            color: #1e1e2a;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e2e0d8;
+            display: inline-block;
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #4a4a5a;
+            margin-bottom: 1rem;
+            border-left: 3px solid #2563eb;
+            padding-left: 1rem;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 2rem 0 1rem 0;
+            border-bottom: 1px solid #e9e6df;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: flex-end;
+            padding: 1rem 0 0 0;
+        }
+
+        .lang-switch {
+            background: none;
+            border: 1px solid #2563eb;
+            color: #2563eb;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.2s;
+        }
+
+        .lang-switch:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        nav {
+            margin: 1rem 0 1rem 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: #2c2c3a;
+            font-size: 1rem;
+            letter-spacing: 0.2px;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .honors-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .honor-badge {
+            background-color: #f0ede7;
+            padding: 0.3rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #2c2c3a;
+            letter-spacing: 0.2px;
+        }
+
+        .honor-badge i {
+            margin-right: 6px;
+            font-size: 0.8rem;
+            color: #2563eb;
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #ece8e0;
+            border-radius: 16px;
+            padding: 1.3rem 1.5rem;
+            transition: all 0.2s;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+
+        .project-card:hover {
+            border-color: #d6cec0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+        }
+
+        .project-title {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 1.35rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .tech-stack {
+            font-size: 0.75rem;
+            font-family: 'Inter', monospace;
+            background: #f4f2ee;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            color: #4e4e62;
+        }
+
+        .project-description {
+            font-size: 0.92rem;
+            color: #3a3a48;
+            margin: 0.8rem 0;
+            line-height: 1.45;
+        }
+
+        .project-meta {
+            font-size: 0.75rem;
+            color: #7a7a8a;
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.8rem;
+            border-top: 1px dashed #e9e2d8;
+            padding-top: 0.7rem;
+        }
+
+        .project-meta i {
+            margin-right: 4px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0 3rem;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid #ece8e0;
+            border-radius: 20px;
+            padding: 1.2rem 1.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-card i {
+            font-size: 1.3rem;
+            color: #2563eb;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8c8c9a;
+            border-top: 1px solid #e9e2d8;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 0 1.3rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<section class="hero">
-    <h1 data-aos="fade-down" data-aos-duration="900" class="display-3 fw-bold">KAYLON</h1>
-    <p data-aos="fade-up" data-aos-delay="150" class="opacity-75">Full-stack developer</p>
-
-    <div class="d-flex justify-content-center gap-4 fs-1 mt-4" data-aos="fade-up" data-aos-delay="250">
-        <i class="devicon devicon-nodejs-plain-wordmark"></i>
-        <i class="devicon devicon-python-plain"></i>
-        <i class="devicon devicon-typescript-plain"></i>
+<main class="container">
+    <div class="top-bar">
+        <button class="lang-switch" id="langToggle">PT</button>
     </div>
-</section>
 
-<div class="container py-5 px-2">
-
-    <nav class="summary" data-aos="zoom-in" data-aos-delay="100">
-        <a href="#projetos">Projetos</a>
-        <a href="#tecnologias">Tecnologias</a>
-        <a href="#contato">Contato</a>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#conquistas" data-en="Achievements" data-pt="Medalhas">Medalhas</a></li>
+            <li><a href="#projetos" data-en="Projects" data-pt="Projetos">Projetos</a></li>
+            <li><a href="#contato" data-en="Contact" data-pt="Contato">Contato</a></li>
+        </ul>
     </nav>
 
-    <h2 id="projetos" class="text-center my-5" data-aos="fade-up">Projetos</h2>
-    <div class="row g-4">
+    <header>
+        <h1>Kaylon Souza</h1>
+    </header>
 
-        <div class="col-md-6">
-            <a href="#">
-            <div class="card glass p-3 project-card h-100" data-aos="fade-up" data-aos-delay="0">
-                <h4 class="d-flex">Katálogo 
-                    <span class="tech_used ms-auto">
-                    <i class="devicon devicon-python-plain"></i>
-                    <i class="devicon-flask-original"></i>
-
-                    <i class="devicon-postgresql-plain"></i>
-
-                    <i class="devicon-css3-plain"></i>
-                    <i class="devicon-html5-plain"></i>
-                    <i class="devicon-javascript-plain"></i>
-                </span>
-                </h4>
-                <p class="mb-0">
-                    <a class="repo-link" href="https://github.com/kaaylooon/Katalogo">
-                        <i class="bi bi-github"></i>
-                        <span>Github</span>
-                    </a>
-                </p>
-                <p class="repo-meta mb-0">Criado em 04/09/2025 · Atualizado em 08/03/2026</p>
-            </div>
-            </a>
+    <section id="conquistas">
+        <h2 data-en="Achievements" data-pt="Conquistas">Conquistas</h2>
+        <div class="honors-grid">
+            <span class="honor-badge" data-en="Gold – OLITEF (Financial Education)" data-pt="Ouro – OLITEF (Educação Financeira)"><i class="bi bi-trophy-fill"></i> Ouro – OLITEF (Educação Financeira)</span>
+            <span class="honor-badge" data-en="Gold – OBLI (English Language)" data-pt="Ouro – OBLI (Língua Inglesa)"><i class="bi bi-trophy-fill"></i> Ouro – OBLI (Língua Inglesa)</span>
+            <span class="honor-badge" data-en="Gold – O2 (Ocean Olympiad)" data-pt="Ouro – O2 (Olimpíada do Oceano)"><i class="bi bi-trophy-fill"></i> Ouro – O2 (Olimpíada do Oceano)</span>
+            <span class="honor-badge" data-en="Silver – OBA (Astronomy)" data-pt="Prata – OBA (Astronomia)"><i class="bi bi-award-fill"></i> Prata – OBA (Astronomia)</span>
+            <span class="honor-badge" data-en="Bronze – OBMEP" data-pt="Bronze – OBMEP"><i class="bi bi-award-fill"></i> Bronze – OBMEP</span>
+            <span class="honor-badge" data-en="Bronze – OBLI" data-pt="Bronze – OBLI"><i class="bi bi-award-fill"></i> Bronze – OBLI</span>
+            <span class="honor-badge" data-en="Bronze – OBG (Geography)" data-pt="Bronze – OBG (Geografia)"><i class="bi bi-award-fill"></i> Bronze – OBG (Geografia)</span>
+            <span class="honor-badge" data-en="Good performance – OBF (Physics)" data-pt="Bom desempenho – OBF (Física)"><i class="bi bi-star-fill"></i> Bom desempenho – OBF (Física)</span>
         </div>
+        <p class="mt-2" style="font-size:0.9rem; color:#4e4e62;" data-en="Participation in multiple regional and national phases." data-pt="Participação em múltiplas fases regionais e nacionais.">
+            Participação em múltiplas fases regionais e nacionais.
+        </p>
+    </section>
 
-        <div class="col-md-6">
-            <a href="#">
-            <div class="card glass p-3 project-card h-100" data-aos="fade-up" data-aos-delay="100">
-                <h4 class="d-flex">Kaappli <span class="tech_used ms-auto"><i class="devicon-css3-plain"></i>
-                    <i class="devicon-html5-plain"></i>
-                    <i class="devicon-javascript-plain"></i>
-                </span></h4>
-                <p class="mb-0">
-                    <a class="repo-link" href="https://github.com/kaaylooon/Kaappli">
-                        <i class="bi bi-github"></i>
-                        <span>Github</span>
-                    </a>
-                </p>
-                <p class="repo-meta mb-0">Criado em 30/12/2023 · Atualizado em 30/11/2025</p>
+    <section id="projetos">
+        <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <div class="project-title">
+                    <span data-en="Katálogo" data-pt="Katálogo">Katálogo</span>
+                    <span class="tech-stack">Python · Flask · PostgreSQL</span>
+                </div>
+                <div class="project-description" data-en="Platform for organizing items with authentication and filters. Modular backend and responsive interface." data-pt="Plataforma para organização de itens com autenticação e filtros. Backend modular e interface responsiva.">
+                    Plataforma para organização de itens com autenticação e filtros. Backend modular e interface responsiva.
+                </div>
+                <div class="project-meta">
+                    <span><i class="bi bi-calendar3"></i> 04/2025</span>
+                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/Katalogo" target="_blank">github/kaaylooon/Katalogo</a></span>
+                </div>
             </div>
-            </a>
-        </div>
-
-        <div class="col-md-6">
-            <a href="#">
-            <div class="card glass p-3 project-card h-100" data-aos="fade-up" data-aos-delay="200">
-                <h4 class="d-flex">Kapraxis <span class="tech_used ms-auto"><i class="devicon-cplusplus-plain"></i>
-                    <i class="devicon-qt-original"></i>
-                    <i class="devicon-sqlite-plain"></i>
-                </span></h4>
-                <p class="mb-0">
-                    <a class="repo-link" href="https://github.com/kaaylooon/kapraxis">
-                        <i class="bi bi-github"></i>
-                        <span>Github</span>
-                    </a>
-                </p>
-                <p class="repo-meta mb-0">Criado em 09/02/2026 · Atualizado em 13/02/2026</p>
+            <div class="project-card">
+                <div class="project-title">
+                    <span data-en="Kaappli" data-pt="Kaappli">Kaappli</span>
+                    <span class="tech-stack">HTML · CSS · JS</span>
+                </div>
+                <div class="project-description" data-en="Interactive web app (Electron) for practicing Hiragana and Katakana, with dynamic character generation and romanized answer validation." data-pt="Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.">
+                    Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.
+                </div>
+                <div class="project-meta">
+                    <span><i class="bi bi-calendar3"></i> 12/2023</span>
+                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/Kaappli" target="_blank">github/kaaylooon/Kaappli</a></span>
+                </div>
             </div>
-            </a>
-        </div>
-
-        <div class="col-md-6">
-            <a href="#">
-            <div class="card glass p-3 project-card h-100" data-aos="fade-up" data-aos-delay="300">
-                <h4 class="d-flex">Kext <span class="tech_used ms-auto"><i class="devicon-c-plain"></i></span></h4>
-                <p class="mb-0">
-                    <a class="repo-link" href="https://github.com/kaaylooon/kext">
-                        <i class="bi bi-github"></i>
-                        <span>Github</span>
-                    </a>
-                </p>
-                <p class="repo-meta mb-0">Criado em 08/03/2026 · Atualizado em 08/03/2026</p>
+            <div class="project-card">
+                <div class="project-title">
+                    <span data-en="Kapraxis" data-pt="Kapraxis">Kapraxis</span>
+                    <span class="tech-stack">C++ · Qt · SQLite</span>
+                </div>
+                <div class="project-description" data-en="A study app with flashcards, revisions, etc. All study resources are centralized in here." data-pt="A study app with flashcards, revisions, etc. All study resourses are centralized in here.">
+                    A study app with flashcards, revisions, etc. All study resourses are centralized in here.
+                </div>
+                <div class="project-meta">
+                    <span><i class="bi bi-calendar3"></i> 02/2026</span>
+                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/kapraxis" target="_blank">github/kaaylooon/kapraxis</a></span>
+                </div>
             </div>
-            </a>
-        </div>
-
-        <div class="col-md-6">
-            <a href="#">
-            <div class="card glass p-3 project-card h-100" data-aos="zoom-in" data-aos-delay="400">
-                <h4 class="d-flex">Telegram Bot PDF Uploader <span class="tech_used ms-auto"><i class="devicon-python-plain"></i></span></h4>
-                <p class="mb-0">
-                    <a class="repo-link" href="https://github.com/kaaylooon/telegram-bot-pdf-uploader">
-                        <i class="bi bi-github"></i>
-                        <span>Github</span>
-                    </a>
-                </p>
-                <p class="repo-meta mb-0">Criado em 11/01/2026 · Atualizado em 08/03/2026</p>
+            <div class="project-card">
+                <div class="project-title">
+                    <span data-en="Kext" data-pt="Kext">Kext</span>
+                    <span class="tech-stack">C</span>
+                </div>
+                <div class="project-description" data-en="Vi-based text editor" data-pt="Editor de texto vi based">
+                    Editor de texto vi based
+                </div>
+                <div class="project-meta">
+                    <span><i class="bi bi-calendar3"></i> 03/2026</span>
+                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/kext" target="_blank">github/kaaylooon/kext</a></span>
+                </div>
             </div>
-            </a>
-        </div>
-
-    </div>
-
-    <h2 id="tecnologias" class="text-center my-5" data-aos="fade-up">Tecnologias</h2>
-
-    <div class="row g-4">
-
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="fade-up" data-aos-delay="0"><h4>Postgres</h4></div></div>
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="fade-up" data-aos-delay="50"><h4>Redis</h4></div></div>
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="fade-up" data-aos-delay="100"><h4>SQL</h4></div></div>
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="fade-up" data-aos-delay="150"><h4>Python</h4></div></div>
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="fade-up" data-aos-delay="200"><h4>Node.js</h4></div></div>
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="fade-up" data-aos-delay="250"><h4>Typescript</h4></div></div>
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="fade-up" data-aos-delay="300"><h4>Docker</h4></div></div>
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="fade-up" data-aos-delay="350"><h4>Django</h4></div></div>
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="fade-up" data-aos-delay="400"><h4>Flask</h4></div></div>
-        <div class="col-md-4"><div class="card p-3 text-center h-100" data-aos="zoom-in" data-aos-delay="450"><h4>Node/Express</h4></div></div>
-
-    </div>
-
-    <h2 id="contato" class="text-center my-5" data-aos="fade-up">Contato</h2>
-
-    <div class="row g-4">
-
-        <div class="col-md-6">
-            <div class="card glass p-3 h-100" data-aos="fade-up" data-aos-delay="0">
-                <h4>E-mail</h4>
-                <p><a href="mailto:kaylon.contact@gmail.com">kaylon.contact@gmail.com</a></p>
+            <div class="project-card">
+                <div class="project-title">
+                    <span data-en="PDF Uploader Bot" data-pt="PDF Uploader Bot">PDF Uploader Bot</span>
+                    <span class="tech-stack">Python · Telegram API</span>
+                </div>
+                <div class="project-description" data-en="Bot that sends PDFs via Telegram" data-pt="Bot que envia PDFs via Telegram">
+                    Bot que envia PDFs via Telegram
+                </div>
+                <div class="project-meta">
+                    <span><i class="bi bi-calendar3"></i> 01/2026</span>
+                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/telegram-bot-pdf-uploader" target="_blank">github/kaaylooon/telegram-bot-pdf-uploader</a></span>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="col-md-6">
-            <div class="card glass p-3 h-100" data-aos="fade-up" data-aos-delay="100">
-                <h4>Linkedin</h4>
-                <p><a href="https://www.linkedin.com/in/kaylonsouza/">Kaylon Souza</a></p>
+    <section id="contato">
+        <h2 data-en="Contact" data-pt="Contato">Contato</h2>
+        <div class="contact-links">
+            <div class="contact-card">
+                <i class="bi bi-envelope-fill"></i>
+                <div><strong data-en="Email" data-pt="Email">Email</strong><br><a href="mailto:kaylon.contact@gmail.com">kaylon.contact@gmail.com</a></div>
+            </div>
+            <div class="contact-card">
+                <i class="bi bi-linkedin"></i>
+                <div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/kaylonsouza/" target="_blank">in/kaylonsouza</a></div>
+            </div>
+            <div class="contact-card">
+                <i class="bi bi-github"></i>
+                <div><strong>GitHub</strong><br><a href="https://github.com/kaaylooon" target="_blank">kaaylooon</a></div>
             </div>
         </div>
+    </section>
 
-    </div>
+    <footer>
+        <p>Kaylon Souza – © 2026</p>
+    </footer>
+</main>
 
-</div>
-
-<footer class="text-center py-4 opacity-50">© 2025</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-  AOS.init({
-    once: true,
-    disable: function () {
-      return window.innerWidth < 768;
-    }
-  });
+    (function() {
+        let currentLang = 'en'; // en, pt
+        const toggleBtn = document.getElementById('langToggle');
+        
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-en][data-pt]');
+            elements.forEach(el => {
+                if (lang === 'en') {
+                    if (el.hasAttribute('data-en')) {
+                        el.innerText = el.getAttribute('data-en');
+                    }
+                } else {
+                    if (el.hasAttribute('data-pt')) {
+                        el.innerText = el.getAttribute('data-pt');
+                    }
+                }
+            });
+            // For nav links specifically (they have data-en/data-pt but are <a> with inner text)
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                if (lang === 'en') {
+                    const enText = link.getAttribute('data-en');
+                    if (enText) link.innerText = enText;
+                } else {
+                    const ptText = link.getAttribute('data-pt');
+                    if (ptText) link.innerText = ptText;
+                }
+            });
+            toggleBtn.innerText = lang === 'en' ? 'PT' : 'EN';
+            currentLang = lang;
+            document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+        }
+        
+        toggleBtn.addEventListener('click', () => {
+            const newLang = currentLang === 'en' ? 'pt' : 'en';
+            setLanguage(newLang);
+        });
+        
+        setLanguage('en');
+    })();
 </script>
 
 </body>
