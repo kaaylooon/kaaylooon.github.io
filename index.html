@@ -6,7 +6,7 @@
     <title>Kaylon Souza</title>
     <meta name="description" content="Personal page">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.3/font/bootstrap-icons.min.css">
     <style>
         * {
             margin: 0;
@@ -70,15 +70,54 @@
             padding: 0 2rem;
         }
 
-        header {
-            padding: 2rem 0 1rem 0;
+        /* Navbar sticky */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(251, 250, 247, 0.95);
+            backdrop-filter: blur(8px);
             border-bottom: 1px solid #e9e6df;
+            z-index: 100;
+            padding: 0.75rem 0;
         }
 
-        .top-bar {
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
             display: flex;
-            justify-content: flex-end;
-            padding: 1rem 0 0 0;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-brand {
+            font-family: 'Merriweather', serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #1e1e2a;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: #2c2c3a;
+            font-size: 1rem;
+            letter-spacing: 0.2px;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+            text-decoration: none;
         }
 
         .lang-switch {
@@ -98,28 +137,14 @@
             color: white;
         }
 
-        nav {
-            margin: 1rem 0 1rem 0;
+        /* Ajuste para os títulos das seções não ficarem escondidos atrás da navbar fixa */
+        section {
+            scroll-margin-top: 80px;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            color: #2c2c3a;
-            font-size: 1rem;
-            letter-spacing: 0.2px;
-        }
-
-        .nav-links a:hover {
-            color: #2563eb;
-            text-decoration: none;
+        header {
+            padding: 2rem 0 1rem 0;
+            border-bottom: 1px solid #e9e6df;
         }
 
         .honors-grid {
@@ -248,27 +273,38 @@
             h2 {
                 font-size: 1.6rem;
             }
+            .nav-container {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+            .nav-links {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
 
-<main class="container">
-    <div class="top-bar">
-        <button class="lang-switch" id="langToggle">PT</button>
-    </div>
-
-    <nav>
+<!-- Navbar sticky -->
+<div class="sticky-nav">
+    <div class="nav-container">
+        <span class="nav-brand">Kaylon Souza</span>
         <ul class="nav-links">
+            <li><a href="#home" data-en="Home" data-pt="Início">Home</a></li>
             <li><a href="#conquistas" data-en="Achievements" data-pt="Medalhas">Medalhas</a></li>
             <li><a href="#projetos" data-en="Projects" data-pt="Projetos">Projetos</a></li>
             <li><a href="#contato" data-en="Contact" data-pt="Contato">Contato</a></li>
+            <li><button class="lang-switch" id="langToggle">PT</button></li>
         </ul>
-    </nav>
+    </div>
+</div>
 
-    <header>
+<main class="container">
+    <header id="home">
         <h1>Kaylon Souza</h1>
     </header>
+    
 
     <section id="conquistas">
         <h2 data-en="Achievements" data-pt="Conquistas">Conquistas</h2>
@@ -277,7 +313,7 @@
             <span class="honor-badge" data-en="Gold – OBLI (English Language)" data-pt="Ouro – OBLI (Língua Inglesa)"><i class="bi bi-trophy-fill"></i> Ouro – OBLI (Língua Inglesa)</span>
             <span class="honor-badge" data-en="Gold – O2 (Ocean Olympiad)" data-pt="Ouro – O2 (Olimpíada do Oceano)"><i class="bi bi-trophy-fill"></i> Ouro – O2 (Olimpíada do Oceano)</span>
             <span class="honor-badge" data-en="Silver – OBA (Astronomy)" data-pt="Prata – OBA (Astronomia)"><i class="bi bi-award-fill"></i> Prata – OBA (Astronomia)</span>
-            <span class="honor-badge" data-en="Bronze – OBMEP" data-pt="Bronze – OBMEP"><i class="bi bi-award-fill"></i> Bronze – OBMEP</span>
+            <span class="honor-badge" data-en="Bronze – OBMEP (Math)" data-pt="Bronze – OBMEP (Matemática)"><i class="bi bi-award-fill"></i> Bronze – OBMEP (Matemática)</span>
             <span class="honor-badge" data-en="Bronze – OBLI" data-pt="Bronze – OBLI"><i class="bi bi-award-fill"></i> Bronze – OBLI</span>
             <span class="honor-badge" data-en="Bronze – OBG (Geography)" data-pt="Bronze – OBG (Geografia)"><i class="bi bi-award-fill"></i> Bronze – OBG (Geografia)</span>
             <span class="honor-badge" data-en="Good performance – OBF (Physics)" data-pt="Bom desempenho – OBF (Física)"><i class="bi bi-star-fill"></i> Bom desempenho – OBF (Física)</span>
@@ -286,6 +322,19 @@
             Participação em múltiplas fases regionais e nacionais.
         </p>
     </section>
+
+    <section id="conquistas">
+        <h2 data-en="Skills" data-pt="Habilidades">Habilidades</h2>
+        <div class="honors-grid">
+          
+            <span class="honor-badge" data-en="Fast workflow: i've been using Linux for 2 years" data-pt="Rápido fluxo de trabalho: eu uso Linux há 2 anos"><i class="bi bi-award-fill"></i> Rápido fluxo de trabalho: eu uso Linux há 2 anos</span>
+            <span class="honor-badge" data-en="Fast workflow: i've been using Linux for 2 years" data-pt="Rápido fluxo de trabalho: eu uso Linux há 2 anos"><i class="bi bi-award-fill"></i> Rápido fluxo de trabalho: eu uso Linux há 2 anos</span>
+        </div>
+        </div>
+        <p class="mt-2" style="font-size:0.9rem; color:#4e4e62;" data-en="Participation in multiple regional and national phases." data-pt="Participação em múltiplas fases regionais e nacionais.">
+        </p>
+      </section>
+
 
     <section id="projetos">
         <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
@@ -383,7 +432,7 @@
 
 <script>
     (function() {
-        let currentLang = 'en'; // en, pt
+        let currentLang = 'en';
         const toggleBtn = document.getElementById('langToggle');
         
         function setLanguage(lang) {
@@ -399,8 +448,7 @@
                     }
                 }
             });
-            // For nav links specifically (they have data-en/data-pt but are <a> with inner text)
-            const navLinks = document.querySelectorAll('.nav-links a');
+            const navLinks = document.querySelectorAll('.nav-links a[data-en][data-pt]');
             navLinks.forEach(link => {
                 if (lang === 'en') {
                     const enText = link.getAttribute('data-en');
