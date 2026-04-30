@@ -81,17 +81,15 @@
             padding: 0.75rem 0;
         }
 
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
         .nav-brand {
             font-family: 'Merriweather', serif;
             font-weight: 700;
@@ -100,14 +98,14 @@
             letter-spacing: -0.3px;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 1.8rem;
-            flex-wrap: wrap;
-            list-style: none;
-            align-items: center;
-        }
 
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
         .nav-links a {
             font-weight: 500;
             color: #2c2c3a;
@@ -119,6 +117,17 @@
             color: #2563eb;
             text-decoration: none;
         }
+
+          @media (max-width: 800px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .nav-links {
+        justify-content: center;
+        gap: 1rem;
+    }
+}
 
         .lang-switch {
             background: none;
@@ -279,8 +288,15 @@
                 text-align: center;
             }
             .nav-links {
-                justify-content: center;
+              gap: 0.8rem;
             }
+            .project-card {
+              padding =1rem;
+            }
+            .project-list {
+              gap: 1rem;
+            }
+            
         }
     </style>
 </head>
