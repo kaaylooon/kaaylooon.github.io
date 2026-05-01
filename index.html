@@ -6,8 +6,19 @@
     <title>Kaylon Souza</title>
     <meta name="description" content="Personal page">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.3/font/bootstrap-icons.min.css">
     <style>
+        :root {
+            /* Paleta Ajustada para Dark Mode Sério */
+            --bg-page: #0d1117;
+            --bg-card: #161b22;
+            --text-main: #e6edf3;
+            --text-dim: #8b949e;
+            --border-color: #30363d;
+            --accent-blue: #1490FC; /* Sua cor primária usada com moderação */
+            --accent-royal: #1447FC;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,438 +26,390 @@
         }
 
         body {
-            background-color: #fbfaf7;
-            color: #1e1e2a;
+            background-color: var(--bg-page);
+            color: var(--text-main);
             font-family: 'Inter', sans-serif;
-            line-height: 1.55;
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
         h1, h2, h3, .serif {
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            letter-spacing: -0.3px;
+            font-family: 'Arial', serif;
+            font-weight: 800;
         }
 
         h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 900;
-            color: #1e1e2a;
+            font-size: 3rem;
+            letter-spacing: -1px;
+            margin-bottom: 1rem;
+            color: #ffffff;
         }
 
         h2 {
-            font-size: 1.9rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
             padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e0d8;
-            display: inline-block;
+            border-bottom: 1px solid var(--border-color);
+            display: block;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .subhead {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #4a4a5a;
-            margin-bottom: 1rem;
-            border-left: 3px solid #2563eb;
-            padding-left: 1rem;
-        }
-
-        a {
-            color: #2563eb;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: #1e40af;
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Navbar sticky */
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            background-color: rgba(251, 250, 247, 0.95);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid #e9e6df;
-            z-index: 100;
-            padding: 0.75rem 0;
-        }
-
-.nav-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-}
-        .nav-brand {
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: #1e1e2a;
-            letter-spacing: -0.3px;
-        }
-
-
-.nav-links {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    text-decoration: none;
-    list-style: none;
-}
-        .nav-links a {
-            font-weight: 500;
-            color: #2c2c3a;
-            font-size: 1rem;
-            letter-spacing: 0.2px;
-        }
-
-        .nav-links a:hover {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-          @media (max-width: 800px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    .nav-links {
-        justify-content: center;
-        gap: 1rem;
-    }
-}
-
-        .lang-switch {
-            background: none;
-            border: 1px solid #2563eb;
-            color: #2563eb;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            transition: all 0.2s;
-        }
-
-        .lang-switch:hover {
-            background: #2563eb;
-            color: white;
-        }
-
-        /* Ajuste para os títulos das seções não ficarem escondidos atrás da navbar fixa */
+        /* Espaçamento Amplo */
         section {
+            padding: 3rem 0;
             scroll-margin-top: 80px;
         }
 
-        header {
-            padding: 2rem 0 1rem 0;
-            border-bottom: 1px solid #e9e6df;
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: opacity 0.2s;
         }
 
-        .honors-grid {
+        a:hover {
+            opacity: 0.8;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navbar Sombria */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(13, 17, 23, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            padding: 1.2rem 0;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin: 1.5rem 0 1rem 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Botão Idioma Floating */
+        .lang-switch-fixed {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+        }
+
+        /* Grid de Conquistas/Habilidades */
+        .honors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
         }
 
         .honor-badge {
-            background-color: #f0ede7;
-            padding: 0.3rem 0.9rem;
-            border-radius: 30px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
             font-size: 0.85rem;
-            font-weight: 500;
-            color: #2c2c3a;
-            letter-spacing: 0.2px;
+            display: flex;
+            align-items: center;
+            color: var(--text-main);
         }
 
         .honor-badge i {
-            margin-right: 6px;
-            font-size: 0.8rem;
-            color: #2563eb;
+            margin-right: 12px;
+            color: var(--accent-blue);
+            font-size: 1rem;
         }
 
+        /* Projetos - Estilo Acadêmico */
         .project-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 1.8rem;
-            margin: 2rem 0 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 450px), 1fr));
+            gap: 1.5rem;
         }
 
         .project-card {
-            background: #ffffff;
-            border: 1px solid #ece8e0;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 1.3rem 1.5rem;
-            transition: all 0.2s;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s;
         }
 
         .project-card:hover {
-            border-color: #d6cec0;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            border-color: var(--text-dim);
         }
 
-        .project-title {
-            font-family: 'Merriweather', serif;
-            font-weight: 700;
-            font-size: 1.35rem;
-            margin-bottom: 0.5rem;
+        .project-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.2rem;
+            color: #fff;
         }
 
         .tech-stack {
+            font-family: monospace;
             font-size: 0.75rem;
-            font-family: 'Inter', monospace;
-            background: #f4f2ee;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            color: #4e4e62;
+            color: var(--accent-blue);
+            background: rgba(20, 144, 252, 0.1);
+            padding: 0.2rem 0.5rem;
+            border-radius: 8px;
         }
 
         .project-description {
-            font-size: 0.92rem;
-            color: #3a3a48;
-            margin: 0.8rem 0;
-            line-height: 1.45;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
         }
 
-        .project-meta {
-            font-size: 0.75rem;
-            color: #7a7a8a;
+        .project-footer {
+            font-size: 0.8rem;
+            color: var(--text-dim);
             display: flex;
-            gap: 1rem;
-            margin-top: 0.8rem;
-            border-top: 1px dashed #e9e2d8;
-            padding-top: 0.7rem;
+            justify-content: space-between;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
         }
 
-        .project-meta i {
-            margin-right: 4px;
-        }
-
-        .contact-links {
+        /* Papers/Posts */
+        .posts-list {
             display: flex;
+            flex-direction: column;
             gap: 2rem;
-            flex-wrap: wrap;
-            margin: 2rem 0 3rem;
+        }
+
+        .post-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2rem;
+        }
+
+        .post-date {
+            font-family: monospace;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            padding-top: 4px;
+        }
+
+        .post-content h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .post-content p {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+        }
+
+        /* Contato */
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
         }
 
         .contact-card {
-            background: #ffffff;
-            border: 1px solid #ece8e0;
-            border-radius: 20px;
-            padding: 1.2rem 1.8rem;
-            display: inline-flex;
+            background: var(--bg-card);
+            padding: 1.2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            display: flex;
             align-items: center;
             gap: 1rem;
         }
 
         .contact-card i {
-            font-size: 1.3rem;
-            color: #2563eb;
+            font-size: 1.2rem;
+            color: var(--text-dim);
         }
 
         footer {
-            margin-top: 3rem;
-            padding: 2rem 0;
+            padding: 4rem 0;
+            border-top: 1px solid var(--border-color);
             text-align: center;
+            color: var(--text-dim);
             font-size: 0.8rem;
-            color: #8c8c9a;
-            border-top: 1px solid #e9e2d8;
         }
 
-        @media (max-width: 700px) {
-            .container {
-                padding: 0 1.3rem;
-            }
-            h1 {
-                font-size: 2.5rem;
-            }
-            h2 {
-                font-size: 1.6rem;
-            }
-            .nav-container {
-                flex-direction: column;
-                align-items: stretch;
-                text-align: center;
-            }
-            .nav-links {
-              gap: 0.8rem;
-            }
-            .project-card {
-              padding =1rem;
-            }
-            .project-list {
-              gap: 1rem;
-            }
-            
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .post-item { grid-template-columns: 1fr; gap: 0.5rem; }
+            .nav-links { display: none; }
+            section { padding: 4rem 0; }
         }
     </style>
 </head>
 <body>
 
-<!-- Navbar sticky -->
-<div class="sticky-nav">
+<button class="lang-switch-fixed" id="langToggle">🇧🇷</button>
+
+<nav class="sticky-nav">
     <div class="nav-container">
         <span class="nav-brand">Kaylon Souza</span>
         <ul class="nav-links">
-            <li><a href="#home" data-en="Home" data-pt="Início">Home</a></li>
-            <li><a href="#conquistas" data-en="Achievements" data-pt="Medalhas">Medalhas</a></li>
-            <li><a href="#projetos" data-en="Projects" data-pt="Projetos">Projetos</a></li>
-            <li><a href="#contato" data-en="Contact" data-pt="Contato">Contato</a></li>
-            <li><button class="lang-switch" id="langToggle">PT</button></li>
+            <li><a href="#conquistas" data-en="Achievements" data-pt="Conquistas">Achievements</a></li>
+            <li><a href="#habilidades" data-en="Skills" data-pt="Habilidades">Skills</a></li>
+            <li><a href="#projetos" data-en="Projects" data-pt="Projetos">Projects</a></li>
+            <li><a href="#posts" data-en="Posts" data-pt="Publicações">Posts</a></li>
+            <li><a href="#contato" data-en="Contact" data-pt="Contato">Contact</a></li>
         </ul>
     </div>
-</div>
+</nav>
 
 <main class="container">
-    <header id="home">
-        <h1>Kaylon Souza</h1>
-    </header>
-    
+    <section id="home">
+        <h1>Kaylon Souza</h1> <p style="color: var(--text-dim); font-size: 1.1rem;" data-en="Hi, how are you doing? Welcome, here i introduce all the things i like and would like to share." data-pt="Opa, tudo bem? Seja bem-vindo(a). Aqui introduzo conteúdos que eu gostaria de compartilhar. ">Opa, tudo bem? Seja bem-vindo(a). Aqui introduzo conteúdos que eu gostaria de compartilhar. </p>
+    </section>
 
     <section id="conquistas">
-        <h2 data-en="Achievements" data-pt="Conquistas">Conquistas</h2>
+        <h2 data-en="Achievements" data-pt="Conquistas">Achievements</h2>
         <div class="honors-grid">
-            <span class="honor-badge" data-en="Gold – OLITEF (Financial Education)" data-pt="Ouro – OLITEF (Educação Financeira)"><i class="bi bi-trophy-fill"></i> Ouro – OLITEF (Educação Financeira)</span>
-            <span class="honor-badge" data-en="Gold – OBLI (English Language)" data-pt="Ouro – OBLI (Língua Inglesa)"><i class="bi bi-trophy-fill"></i> Ouro – OBLI (Língua Inglesa)</span>
-            <span class="honor-badge" data-en="Gold – O2 (Ocean Olympiad)" data-pt="Ouro – O2 (Olimpíada do Oceano)"><i class="bi bi-trophy-fill"></i> Ouro – O2 (Olimpíada do Oceano)</span>
-            <span class="honor-badge" data-en="Silver – OBA (Astronomy)" data-pt="Prata – OBA (Astronomia)"><i class="bi bi-award-fill"></i> Prata – OBA (Astronomia)</span>
-            <span class="honor-badge" data-en="Bronze – OBMEP (Math)" data-pt="Bronze – OBMEP (Matemática)"><i class="bi bi-award-fill"></i> Bronze – OBMEP (Matemática)</span>
-            <span class="honor-badge" data-en="Bronze – OBLI" data-pt="Bronze – OBLI"><i class="bi bi-award-fill"></i> Bronze – OBLI</span>
-            <span class="honor-badge" data-en="Bronze – OBG (Geography)" data-pt="Bronze – OBG (Geografia)"><i class="bi bi-award-fill"></i> Bronze – OBG (Geografia)</span>
-            <span class="honor-badge" data-en="Good performance – OBF (Physics)" data-pt="Bom desempenho – OBF (Física)"><i class="bi bi-star-fill"></i> Bom desempenho – OBF (Física)</span>
+            <div class="honor-badge" data-en="Gold – OLITEF (Financial Education)" data-pt="Ouro – OLITEF (Educação Financeira)"><i class="bi bi-trophy"></i> Ouro – OLITEF (Educação Financeira)</div>
+            <div class="honor-badge" data-en="Gold – OBLI (English Language)" data-pt="Ouro – OBLI (Língua Inglesa)"><i class="bi bi-trophy"></i> Ouro – OBLI (Língua Inglesa)</div>
+            <div class="honor-badge" data-en="Gold – O2 (Ocean Olympiad)" data-pt="Ouro – O2 (Olimpíada do Oceano)"><i class="bi bi-trophy"></i> Ouro – O2 (Olimpíada do Oceano)</div>
+            <div class="honor-badge" data-en="Silver – OBA (Astronomy)" data-pt="Prata – OBA (Astronomia)"><i class="bi bi-award"></i> Prata – OBA (Astronomia)</div>
+            <div class="honor-badge" data-en="Bronze – OBMEP (Math)" data-pt="Bronze – OBMEP (Matemática)"><i class="bi bi-award"></i> Bronze – OBMEP (Matemática)</div>
+            <div class="honor-badge" data-en="Bronze – OBLI" data-pt="Bronze – OBLI"><i class="bi bi-award"></i> Bronze – OBLI</div>
+            <div class="honor-badge" data-en="Bronze – OBG (Geography)" data-pt="Bronze – OBG (Geografia)"><i class="bi bi-award"></i> Bronze – OBG (Geografia)</div>
+            <div class="honor-badge" data-en="Good performance – OBF (Physics)" data-pt="Bom desempenho – OBF (Física)"><i class="bi bi-activity"></i> Bom desempenho – OBF (Física)</div>
         </div>
-        <p class="mt-2" style="font-size:0.9rem; color:#4e4e62;" data-en="Participation in multiple regional and national phases." data-pt="Participação em múltiplas fases regionais e nacionais.">
+        <p style="font-size:0.85rem; color:var(--text-dim);" data-en="Participation in multiple regional and national phases." data-pt="Participação em múltiplas fases regionais e nacionais.">
             Participação em múltiplas fases regionais e nacionais.
         </p>
     </section>
 
-    <section id="conquistas">
+    <section id="habilidades">
         <h2 data-en="Skills" data-pt="Habilidades">Habilidades</h2>
         <div class="honors-grid">
-          
-
-            <span class="honor-badge" data-en="Fast workflow: Linux (2 years)" data-pt="Fluxo de trabalho rápido: uso Linux há 2 anos"><i class="bi bi-award-fill"></i> Fluxo de trabalho rápido: uso Linux há 2 anos</span>
-            
-            <span class="honor-badge" data-en="Self-study in Math & Physics (textbooks)" data-pt="Auto-didata em Matemática e Física (livros)"><i class="bi bi-award-fill"></i> Auto-didata em exatas (livros)</span>
+            <div class="honor-badge" data-en="Linux Environment (2 years)" data-pt="Ambiente Linux (2 anos)"><i class="bi bi-terminal"></i> Linux Environment (2 years)</div>
+            <div class="honor-badge" data-en="Self-taught learner" data-pt="Autodidata"><i class="bi bi-book"></i> Self-taught learner</div>
+            <div class="honor-badge" data-en="Portuguese (Native)" data-pt="Português (Nativo)"><i class="bi bi-book"></i> Português (Nativo)</div>
+            <div class="honor-badge" data-en="English (Intermediate)" data-pt="Inglês (Intermediário)"><i class="bi bi-book"></i> Inglês (Intermediário)</div>
         </div>
-
-<span class="honor-badge"><i class="bi bi-chat-dots-fill"></i> Portuguese (native)</span>
-<span class="honor-badge"><i class="bi bi-chat-dots-fill"></i> English (Intermediary)</span>
-      </section>
-
+    </section>
 
     <section id="projetos">
         <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
         <div class="project-list">
             <div class="project-card">
-                <div class="project-title">
-                    <span data-en="Katálogo" data-pt="Katálogo">Katálogo</span>
-                    <span class="tech-stack">Python · Flask · PostgreSQL</span>
+                <div class="project-header">
+                    <h3 data-en="Aurium Initium" data-pt="Aurium Initium">Aurium Initium</h3>
+                    <span class="tech-stack">TeX · Math</span>
                 </div>
-                <div class="project-description" data-en="Platform for organizing items with authentication and filters. Modular backend and responsive interface." data-pt="Plataforma para organização de itens com autenticação e filtros. Backend modular e interface responsiva.">
-                    Plataforma para organização de itens com autenticação e filtros. Backend modular e interface responsiva.
-                </div>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> 04/2025</span>
-                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/Katalogo" target="_blank">github/kaaylooon/Katalogo</a></span>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-title">
-                    <span data-en="Kaappli" data-pt="Kaappli">Kaappli</span>
-                    <span class="tech-stack">HTML · CSS · JS</span>
-                </div>
-                <div class="project-description" data-en="Interactive web app (Electron) for practicing Hiragana and Katakana, with dynamic character generation and romanized answer validation." data-pt="Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.">
-                    Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.
-                </div>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> 12/2023</span>
-                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/Kaappli" target="_blank">github/kaaylooon/Kaappli</a></span>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-title">
-                    <span data-en="Kapraxis" data-pt="Kapraxis">Kapraxis</span>
-                    <span class="tech-stack">C++ · Qt · SQLite</span>
-                </div>
-                <div class="project-description" data-en="A study app with flashcards, revisions, etc. All study resources are centralized in here." data-pt="A study app with flashcards, revisions, etc. All study resourses are centralized in here.">
-                    A study app with flashcards, revisions, etc. All study resourses are centralized in here.
-                </div>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> 02/2026</span>
-                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/kapraxis" target="_blank">github/kaaylooon/kapraxis</a></span>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-title">
-                    <span data-en="Kext" data-pt="Kext">Kext</span>
-                    <span class="tech-stack">C</span>
-                </div>
-                <div class="project-description" data-en="Vi-based text editor" data-pt="Editor de texto vi based">
-                    Editor de texto vi based
-                </div>
-                <div class="project-meta">
+                <p class="project-description" data-en="Book of elementary mathematics" data-pt="Livro de matemática elementar com o foco de tampar lacunas na base.">Livro de matemática elementar com o foco de tampar lacunas na base.</p>
+                <div class="project-footer">
                     <span><i class="bi bi-calendar3"></i> 03/2026</span>
-                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/kext" target="_blank">github/kaaylooon/kext</a></span>
                 </div>
             </div>
+
             <div class="project-card">
-                <div class="project-title">
-                    <span data-en="PDF Uploader Bot" data-pt="PDF Uploader Bot">PDF Uploader Bot</span>
-                    <span class="tech-stack">Python · Telegram API</span>
+                <div class="project-header">
+                    <h3 data-en="Katálogo" data-pt="Katálogo">Katálogo</h3>
+                    <span class="tech-stack">Python · Flask</span>
                 </div>
-                <div class="project-description" data-en="Bot that sends PDFs via Telegram" data-pt="Bot que envia PDFs via Telegram">
-                    Bot que envia PDFs via Telegram
+                <p class="project-description" data-en="Web application of business/services listing" data-pt="Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.">Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.</p>
+                <div class="project-footer">
+                    <a href="https://github.com/kaaylooon/Katalogo" target="_blank"><i class="bi bi-github"></i> Source</a>
                 </div>
-                <div class="project-meta">
-                    <span><i class="bi bi-calendar3"></i> 01/2026</span>
-                    <span><i class="bi bi-github"></i> <a href="https://github.com/kaaylooon/telegram-bot-pdf-uploader" target="_blank">github/kaaylooon/telegram-bot-pdf-uploader</a></span>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 data-en="Kaappli" data-pt="Kaappli">Kaappli</h3>
+                    <span class="tech-stack">JS · Electron</span>
+                </div>
+                <p class="project-description" data-en="Interactive web app (Electron) for practicing Hiragana and Katakana, with dynamic character generation and romanized answer validation." data-pt="Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.">Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.</p>
+                <div class="project-footer">
+                    <a href="https://github.com/kaaylooon/Kaappli" target="_blank"><i class="bi bi-github"></i> Source</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="posts">
+        <h2 data-en="Posts" data-pt="Publicações"> Publicações</h2>
+        <div class="posts-list">
+            </div>
+            <div class="post-item">
+                <div class="post-date">MAR 2026</div>
+                <div class="post-content">
+                    <h3 data-en="The Aurium Project Methodology" data-pt="Metodologia do Projeto Aurium">Metodologia do Projeto Aurium</h3>
+                    <p data-en="An analysis of pedagogical gaps in elementary math." data-pt="Uma análise sobre lacunas pedagógicas na matemática elementar.">Uma análise sobre lacunas pedagógicas na matemática elementar.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="contato">
-        <h2 data-en="Contact" data-pt="Contato">Contato</h2>
+        <h2 data-en="Contact" data-pt="Contato">Contact</h2>
         <div class="contact-links">
             <div class="contact-card">
-                <i class="bi bi-envelope-fill"></i>
-                <div><strong data-en="Email" data-pt="Email">Email</strong><br><a href="mailto:kaylon.contact@gmail.com">kaylon.contact@gmail.com</a></div>
+                <i class="bi bi-envelope"></i>
+                <div><a href="mailto:kaylon.contact@gmail.com">kaylon.contact@gmail.com</a></div>
             </div>
             <div class="contact-card">
                 <i class="bi bi-linkedin"></i>
-                <div><strong>LinkedIn</strong><br><a href="https://www.linkedin.com/in/kaylonsouza/" target="_blank">in/kaylonsouza</a></div>
-            </div>
-            <div class="contact-card">
-                <i class="bi bi-github"></i>
-                <div><strong>GitHub</strong><br><a href="https://github.com/kaaylooon" target="_blank">kaaylooon</a></div>
+                <div><a href="https://www.linkedin.com/in/kaylonsouza/" target="_blank">LinkedIn</a></div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Kaylon Souza – © 2026</p>
+        <p>Kaylon Souza &bull; 2026</p>
     </footer>
 </main>
 
@@ -454,40 +417,22 @@
     (function() {
         let currentLang = 'en';
         const toggleBtn = document.getElementById('langToggle');
-        
+
         function setLanguage(lang) {
             const elements = document.querySelectorAll('[data-en][data-pt]');
             elements.forEach(el => {
-                if (lang === 'en') {
-                    if (el.hasAttribute('data-en')) {
-                        el.innerText = el.getAttribute('data-en');
-                    }
-                } else {
-                    if (el.hasAttribute('data-pt')) {
-                        el.innerText = el.getAttribute('data-pt');
-                    }
-                }
+                const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
+                if (text) el.innerText = text;
             });
-            const navLinks = document.querySelectorAll('.nav-links a[data-en][data-pt]');
-            navLinks.forEach(link => {
-                if (lang === 'en') {
-                    const enText = link.getAttribute('data-en');
-                    if (enText) link.innerText = enText;
-                } else {
-                    const ptText = link.getAttribute('data-pt');
-                    if (ptText) link.innerText = ptText;
-                }
-            });
-            toggleBtn.innerText = lang === 'en' ? 'PT' : 'EN';
+            toggleBtn.innerHTML = lang === 'en' ? '🇧🇷' : '🇺🇸';
             currentLang = lang;
-            document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+            document.documentElement.lang = lang;
         }
-        
+
         toggleBtn.addEventListener('click', () => {
-            const newLang = currentLang === 'en' ? 'pt' : 'en';
-            setLanguage(newLang);
+            setLanguage(currentLang === 'en' ? 'pt' : 'en');
         });
-        
+
         setLanguage('en');
     })();
 </script>
