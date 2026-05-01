@@ -303,6 +303,91 @@
             font-size: 0.8rem;
         }
 
+
+        /* Estilos para a Seção de Música */
+.music-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.music-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.visualizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 30px;
+    margin-bottom: 1rem;
+}
+
+.bar {
+    width: 100vh;
+    background: var(--accent-blue);
+    border-radius: 2px;
+    animation: bounce 0.8s ease-in-out infinite alternate;
+}
+
+/* Delay variado para as barras parecerem orgânicas */
+.bar:nth-child(2) { animation-delay: 0.2s; height: 90%; }
+.bar:nth-child(3) { animation-delay: 0.3s; height: 80%; }
+.bar:nth-child(4) { animation-delay: 0.4s; height: 70%; }
+.bar:nth-child(5) { animation-delay: 0.5s; height: 60%; }
+
+@keyframes bounce {
+    from { height: 20%; }
+    to { height: 100%; }
+}
+
+.recommendation-box {
+    text-align: center;
+    border-left: 1px solid var(--border-color);
+    padding-left: 2rem;
+}
+
+#song-name {
+    display: block;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 0.5rem;
+}
+
+.btn-music {
+    background: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-music:hover {
+    background: var(--accent-blue);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .recommendation-box {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding-left: 0;
+        padding-top: 2rem;
+        width: 100%;
+    }
+}
+
         @media (max-width: 768px) {
             h1 { font-size: 2.2rem; }
             .post-item { grid-template-columns: 1fr; gap: 0.5rem; }
@@ -332,6 +417,26 @@
     <section id="home">
         <h1>Kaylon Souza</h1> <p style="color: var(--text-dim); font-size: 1.1rem;" data-en="Welcome. Here is everything I like and would like to share." data-pt="Seja bem-vindo(a). Aqui encontra-se o que eu gosto e gostaria de compartilhar. ">Seja bem-vindo(a). Aqui encontra-se o que eu gosto e gostaria de compartilhar. </p>
     </section>
+
+
+    <section id="musica">
+    <div class="music-container">
+        <div class="music-info">
+            <div class="visualizer">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+
+        <div class="recommendation-box">
+            <span id="song-name">...</span>
+            <button class="btn-music" onclick="getRecommendation()" data-en="Next" data-pt="Próxima">Próxima</button>
+        </div>
+    </div>
+</section>
 
     <section id="conquistas">
         <h2 data-en="Achievements" data-pt="Conquistas">Achievements</h2>
@@ -492,6 +597,29 @@
 
         setLanguage('en');
     })();
+
+    const songs = [
+    "João Gilberto - Louco (live)",
+    "João Gilberto - Manhã de Carnaval",
+    "Antonio Carlos Jobim - Sabiá",
+    "Antonio Carlos Jobim - Brazil",
+    "Daft Punk - Something About Us",
+];
+
+function getRecommendation() {
+    const songDisplay = document.getElementById('song-name');
+    const randomSong = songs[Math.floor(Math.random() * songs.length)];
+
+    // Pequeno efeito de fade ao mudar
+    songDisplay.style.opacity = 0;
+    setTimeout(() => {
+        songDisplay.innerText = randomSong;
+        songDisplay.style.opacity = 1;
+    }, 0);
+}
+
+// Iniciar com uma música
+window.addEventListener('DOMContentLoaded', getRecommendation);
 </script>
 
 </body>
