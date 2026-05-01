@@ -17,6 +17,10 @@
             --border-color: #30363d;
             --accent-blue: #1490FC; /* Sua cor primária usada com moderação */
             --accent-royal: #1447FC;
+
+            /* Cores de Status */
+            --status-progress: #e1b12c;
+            --status-done: #27ae60;
         }
 
         * {
@@ -191,13 +195,27 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .project-card h3 {
             font-size: 1.2rem;
             color: #fff;
         }
+
+        .project-status {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .status-progress { color: var(--status-progress); }
+        .status-done { color: var(--status-done); }
 
         .tech-stack {
             font-family: monospace;
@@ -345,10 +363,15 @@
     <section id="projetos">
         <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
         <div class="project-list">
+
+
             <div class="project-card">
                 <div class="project-header">
                     <h3 data-en="Aurium Initium" data-pt="Aurium Initium">Aurium Initium</h3>
                     <span class="tech-stack">TeX · Math</span>
+                </div>
+                <div class="project-status status-progress">
+                    <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
                 </div>
                 <p class="project-description" data-en="Book of elementary mathematics" data-pt="Livro de matemática elementar com o foco de tampar lacunas na base.">Livro de matemática elementar com o foco de tampar lacunas na base.</p>
                 <div class="project-footer">
@@ -358,8 +381,40 @@
 
             <div class="project-card">
                 <div class="project-header">
+                    <h3 data-en="Kaappli" data-pt="Kaappli">Kext</h3>
+                    <span class="tech-stack">C</span>
+                </div>
+                <div class="project-status status-progress">
+                    <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
+                </div>
+                <p class="project-description" data-en="Vi-based text editor" data-pt="Editor de texto vi-based">Editor de texto vi-based</p>
+                <div class="project-footer">
+                    <a href="https://github.com/kaaylooon/kext" target="_blank"><i class="bi bi-github"></i> Source</a>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 data-en="Kapraxis" data-pt="Kapraxis">Kapraxis</h3>
+                    <span class="tech-stack">C++ · QT</span>
+                </div>
+                <div class="project-status status-done">
+                    <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
+                </div>
+                <p class="project-description" data-en="A study app with flashcards, revisions, etc. All study resources are centralized in here." data-pt="Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.">Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.</p>
+                <div class="project-footer">
+                    <a href="https://github.com/kaaylooon/Kaappli" target="_blank"><i class="bi bi-github"></i> Source</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
                     <h3 data-en="Katálogo" data-pt="Katálogo">Katálogo</h3>
                     <span class="tech-stack">Python · Flask</span>
+                </div>
+                <div class="project-status status-done">
+                    <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
                 </div>
                 <p class="project-description" data-en="Web application of business/services listing" data-pt="Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.">Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.</p>
                 <div class="project-footer">
@@ -372,18 +427,22 @@
                     <h3 data-en="Kaappli" data-pt="Kaappli">Kaappli</h3>
                     <span class="tech-stack">JS · Electron</span>
                 </div>
+                <div class="project-status status-done">
+                    <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
+                </div>
                 <p class="project-description" data-en="Interactive web app (Electron) for practicing Hiragana and Katakana, with dynamic character generation and romanized answer validation." data-pt="Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.">Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.</p>
                 <div class="project-footer">
                     <a href="https://github.com/kaaylooon/Kaappli" target="_blank"><i class="bi bi-github"></i> Source</a>
                 </div>
             </div>
+
+
         </div>
     </section>
 
     <section id="posts">
         <h2 data-en="Posts" data-pt="Publicações"> Publicações</h2>
         <div class="posts-list">
-            </div>
             <div class="post-item">
                 <div class="post-date">MAR 2026</div>
                 <div class="post-content">
