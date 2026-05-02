@@ -2,6 +2,7 @@ email: kaylon.contact@gmail.com
 description: Personal Page
 baseurl: ""
 url: "https://kaaylooon.github.io"
+remote_theme: []
 
 markdown: kramdown
 highlighter: rouge
