@@ -1,0 +1,14 @@
+title: Kaylon Souza
+email: kaylon.contact@gmail.com
+description: Personal Page
+baseurl: ""
+url: "https://kaaylooon.github.io"
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

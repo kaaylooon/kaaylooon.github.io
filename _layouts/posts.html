@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} | Kaylon Souza</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Adicione um CSS minimalista para a página do post */
+        body { background: #0d1117; color: #e6edf3; font-family: 'Inter', sans-serif; line-height: 1.6; padding: 2rem; }
+        .post-container { max-width: 800px; margin: 0 auto; }
+        .serif { font-family: 'Merriweather', serif; }
+        h1 { color: #fff; margin-bottom: 0.5rem; }
+        .date { color: #8b949e; margin-bottom: 2rem; font-family: monospace; }
+        a { color: #1490FC; text-decoration: none; }
+        .content { font-size: 1.1rem; }
+        hr { border: 0; border-top: 1px solid #30363d; margin: 2rem 0; }
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <a href="/">← Back</a>
+        <hr>
+        <h1 class="serif">{{ page.title }}</h1>
+        <div class="date">{{ page.date | date: "%B %d, %Y" }}</div>
+        <div class="content">
+            {{ content }}
+        </div>
+        <hr>
+        <footer>Kaylon Souza &bull; 2026</footer>
+    </div>
+</body>
+</html>
