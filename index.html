@@ -422,26 +422,6 @@ layout: null
         <h1>Kaylon Souza</h1> <p style="color: var(--text-dim); font-size: 1.1rem;" data-en="Welcome. Here is everything I like and would like to share." data-pt="Seja bem-vindo(a). Aqui encontra-se o que eu gosto e gostaria de compartilhar. ">Seja bem-vindo(a). Aqui encontra-se o que eu gosto e gostaria de compartilhar. </p>
     </section>
 
-
-    <section id="musica">
-    <div class="music-container">
-        <div class="music-info">
-            <div class="visualizer">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </div>
-
-        <div class="recommendation-box">
-            <span id="song-name">...</span>
-            <button class="btn-music" onclick="getRecommendation()" data-en="Next" data-pt="Próxima">Próxima</button>
-        </div>
-    </div>
-</section>
-
     <section id="conquistas">
         <h2 data-en="Achievements" data-pt="Conquistas">Achievements</h2>
         <div class="honors-grid">
@@ -481,6 +461,12 @@ layout: null
                     <h3 data-en="Aurium Initium" data-pt="Aurium Initium">Aurium Initium</h3>
                     <span class="tech-stack">TeX · Math</span>
                 </div>
+
+
+<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+        <img src="./assets/auriuminitium.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
+    </div>
+
                 <div class="project-status status-progress">
                     <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
                 </div>
@@ -492,9 +478,14 @@ layout: null
 
             <div class="project-card">
                 <div class="project-header">
-                    <h3 data-en="Kaappli" data-pt="Kaappli">Kext</h3>
+                    <h3 data-en="Kext" data-pt="Kext">Kext</h3>
                     <span class="tech-stack">C</span>
                 </div>
+
+<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+        <img src="./assets/kext.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
+    </div>
+
                 <div class="project-status status-progress">
                     <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
                 </div>
@@ -510,6 +501,12 @@ layout: null
                     <h3 data-en="Kapraxis" data-pt="Kapraxis">Kapraxis</h3>
                     <span class="tech-stack">C++ · QT</span>
                 </div>
+
+                
+<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+        <img src="./assets/kapraxis.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
+    </div>
+
                 <div class="project-status status-done">
                     <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
                 </div>
@@ -524,6 +521,15 @@ layout: null
                     <h3 data-en="Katálogo" data-pt="Katálogo">Katálogo</h3>
                     <span class="tech-stack">Python · Flask</span>
                 </div>
+<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+        <img src="./assets/katalogo-2.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
+    </div>
+
+<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+        <img src="./assets/katalogo-1.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
+    </div>
+
+
                 <div class="project-status status-done">
                     <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
                 </div>
@@ -552,7 +558,7 @@ layout: null
     </section>
 
     <section id="posts">
-    <h2 data-en="Journal" data-pt="Diário">Journal</h2>
+    <h2 data-en="Posts" data-pt="Postagens">Posts</h2>
     <div class="posts-list">
         {% for post in site.posts %}
         <div class="post-item">
