@@ -2,7 +2,7 @@
 layout: null
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -179,9 +179,9 @@ layout: null
 }
         /* Projetos - Estilo Acadêmico */
         .project-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(min(100%, 450px), 1fr));
-            gap: 1.5rem;
+          column-count: 2;
+          column-gap: 1.5rem;
+          width: 100%;
         }
 
         .project-card {
@@ -189,8 +189,10 @@ layout: null
             border: 1px solid var(--border-color);
             border-radius: 16px;
             padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            width: 100%;
+            break-inside: avoid;
             transition: border-color 0.2s;
         }
 
@@ -316,6 +318,7 @@ layout: null
             .post-item { grid-template-columns: 1fr; gap: 0.5rem; }
             .nav-links { display: none; }
             section { padding: 4rem 0; }
+            .project-list { column-count: 1; }
         }
     </style>
 </head>
@@ -523,7 +526,7 @@ layout: null
             setLanguage(currentLang === 'en' ? 'pt' : 'en');
         });
 
-        setLanguage('en');
+        setLanguage('pt');
     })();
 </script>
 
