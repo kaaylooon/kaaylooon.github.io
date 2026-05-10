@@ -8,24 +8,22 @@ layout: null
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaylon Souza</title>
     <meta name="description" content="Personal page">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* Paleta Ajustada para Dark Mode Sério */
-            --bg-page: #0d1117;
-            --bg-card: #161b22;
-            --text-main: #e6edf3;
-            --text-dim: #8b949e;
-            --border-color: #30363d;
-            --accent-blue: #1490FC; /* Sua cor primária usada com moderação */
-            --accent-royal: #1447FC;
+ --bg-page: #1a1b26;
+    --bg-card: #24283b;
+    --text-main: #c0caf5;
+    --text-dim: #7982a9;
+    --border-color: #414868;
+    --accent-blue: #7aa2f7; 
+    --accent-royal: #bb9af7;
 
-            /* Cores de Status */
-            --status-progress: #e1b12c;
-            --status-done: #27ae60;
-        }
+    /* Status */
+    --status-progress: #e0af68;
+    --status-done: #9ece6a;       }
 
         * {
             margin: 0;
@@ -169,11 +167,16 @@ layout: null
         }
 
         .honor-badge i {
-            margin-right: 12px;
-            color: var(--accent-blue);
-            font-size: 1rem;
-        }
-
+    display: inline-flex !important; /* Força a renderização */
+    align-items: center;
+    justify-content: center;
+    min-width: 20px; /* Garante que ele não "encolha" para 0px */
+    margin-right: 12px;
+    color: var(--accent-blue) !important;
+    font-size: 1.2rem; /* Aumentei um pouco para testar a visibilidade */
+    line-height: 1;
+    vertical-align: middle;
+}
         /* Projetos - Estilo Acadêmico */
         .project-list {
             display: grid;
@@ -308,90 +311,6 @@ layout: null
         }
 
 
-        /* Estilos para a Seção de Música */
-.music-container {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-}
-
-.music-info {
-    flex: 1;
-    min-width: 250px;
-}
-
-.visualizer {
-    display: flex;
-    align-items: flex-end;
-    gap: 3px;
-    height: 30px;
-    margin-bottom: 1rem;
-}
-
-.bar {
-    width: 100vh;
-    background: var(--accent-blue);
-    border-radius: 2px;
-    animation: bounce 0.8s ease-in-out infinite alternate;
-}
-
-/* Delay variado para as barras parecerem orgânicas */
-.bar:nth-child(2) { animation-delay: 0.2s; height: 90%; }
-.bar:nth-child(3) { animation-delay: 0.3s; height: 80%; }
-.bar:nth-child(4) { animation-delay: 0.4s; height: 70%; }
-.bar:nth-child(5) { animation-delay: 0.5s; height: 60%; }
-
-@keyframes bounce {
-    from { height: 20%; }
-    to { height: 100%; }
-}
-
-.recommendation-box {
-    text-align: center;
-    border-left: 1px solid var(--border-color);
-    padding-left: 2rem;
-}
-
-#song-name {
-    display: block;
-    font-weight: 600;
-    color: #fff;
-    margin-top: 0.5rem;
-}
-
-.btn-music {
-    background: transparent;
-    border: 1px solid var(--accent-blue);
-    color: var(--accent-blue);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    margin-top: 1rem;
-    transition: all 0.3s;
-}
-
-.btn-music:hover {
-    background: var(--accent-blue);
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .recommendation-box {
-        border-left: none;
-        border-top: 1px solid var(--border-color);
-        padding-left: 0;
-        padding-top: 2rem;
-        width: 100%;
-    }
-}
-
         @media (max-width: 768px) {
             h1 { font-size: 2.2rem; }
             .post-item { grid-template-columns: 1fr; gap: 0.5rem; }
@@ -425,14 +344,14 @@ layout: null
     <section id="conquistas">
         <h2 data-en="Achievements" data-pt="Conquistas">Achievements</h2>
         <div class="honors-grid">
-            <div class="honor-badge" data-en="Gold – OLITEF (Financial Education)" data-pt="Ouro – OLITEF (Educação Financeira)"><i class="bi bi-trophy"></i> Ouro – OLITEF (Educação Financeira)</div>
-            <div class="honor-badge" data-en="Gold – OBLI (English Language)" data-pt="Ouro – OBLI (Língua Inglesa)"><i class="bi bi-trophy"></i> Ouro – OBLI (Língua Inglesa)</div>
-            <div class="honor-badge" data-en="Gold – O2 (Ocean Olympiad)" data-pt="Ouro – O2 (Olimpíada do Oceano)"><i class="bi bi-trophy"></i> Ouro – O2 (Olimpíada do Oceano)</div>
-            <div class="honor-badge" data-en="Silver – OBA (Astronomy)" data-pt="Prata – OBA (Astronomia)"><i class="bi bi-award"></i> Prata – OBA (Astronomia)</div>
-            <div class="honor-badge" data-en="Bronze – OBMEP (Math)" data-pt="Bronze – OBMEP (Matemática)"><i class="bi bi-award"></i> Bronze – OBMEP (Matemática)</div>
-            <div class="honor-badge" data-en="Bronze – OBLI" data-pt="Bronze – OBLI"><i class="bi bi-award"></i> Bronze – OBLI</div>
-            <div class="honor-badge" data-en="Bronze – OBG (Geography)" data-pt="Bronze – OBG (Geografia)"><i class="bi bi-award"></i> Bronze – OBG (Geografia)</div>
-            <div class="honor-badge" data-en="Good performance – OBF (Physics)" data-pt="Bom desempenho – OBF (Física)"><i class="bi bi-activity"></i> Bom desempenho – OBF (Física)</div>
+          <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – OLITEF (Financial Education)" data-pt="Ouro – OLITEF (Educação Financeira)">Gold – OLITEF (Financial Education)</span></div>
+            <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – OBLI (English Language)" data-pt="Ouro – OBLI (Língua Inglesa)">Gold – OBLI (English Language)</span></div>
+            <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – O2 (Ocean Olympiad)" data-pt="Ouro – O2 (Olimpíada do Oceano)">Gold – O2 (Ocean Olympiad)</span></div>
+            <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Silver – OBA (Astronomy)" data-pt="Prata – OBA (Astronomia)">Silver – OBA (Astronomy)</span></div>
+            <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBMEP (Math)" data-pt="Bronze – OBMEP (Matemática)">Bronze – OBMEP (Math)</span></div>
+            <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBLI" data-pt="Bronze – OBLI">Bronze – OBLI</span></div>
+            <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBG (Geography)" data-pt="Bronze – OBG (Geografia)">Bronze – OBG (Geography)</span></div>
+            <div class="honor-badge"><i class="bi bi-activity"></i><span data-en="Good performance – OBF (Physics)" data-pt="Bom desempenho – OBF (Física)">Good performance – OBF (Physics)</span></div>
         </div>
         <p style="font-size:0.85rem; color:var(--text-dim);" data-en="Participation in multiple regional and national phases." data-pt="Participação em múltiplas fases regionais e nacionais.">
             Participação em múltiplas fases regionais e nacionais.
@@ -441,13 +360,12 @@ layout: null
 
     <section id="habilidades">
         <h2 data-en="Skills" data-pt="Habilidades">Habilidades</h2>
-        <div class="honors-grid">
-            <div class="honor-badge" data-en="Linux environment" data-pt="Ambiente Linux"><i class="bi bi-terminal"></i> Linux environment</div>
-            <div class="honor-badge" data-en=" LaTeX experience" data-pt="Experiência com LaTeX"><i class="bi bi-book"> Experiência com LaTeX</i></div>
-            <div class="honor-badge" data-en="Self-taught learner" data-pt="Autodidata"><i class="bi bi-book"></i> Self-taught learner</div>
-            <div class="honor-badge" data-en="Portuguese (Native)" data-pt="Português (Nativo)"><i class="bi bi-book"></i> Português (Nativo)</div>
-            <div class="honor-badge" data-en="English (Intermediate)" data-pt="Inglês (Intermediário)"><i class="bi bi-book"></i> Inglês (Intermediário)</div>
-            <div class="honor-badge" data-en="Simplified Chinese (N5)" data-pt="Mandarim (N5)"><i class="bi bi-book"></i> Mandarim (N5)</div>
+        <div class="honors-grid"> <div class="honor-badge"><i class="bi bi-terminal"></i><span data-en="Linux environment" data-pt="Ambiente Linux">Linux environment</span></div>
+            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="LaTeX experience" data-pt="Experiência com LaTeX">LaTeX experience</span></div>
+            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Self-taught learner" data-pt="Autodidata">Self-taught learner</span></div>
+            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Portuguese (Native)" data-pt="Português (Nativo)">Portuguese (Native)</span></div>
+            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="English (Intermediate)" data-pt="Inglês (Intermediário)">English (Intermediate)</span></div>
+            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Simplified Chinese (N5)" data-pt="Mandarim (N5)">Simplified Chinese (N5)</span></div>
         </div>
     </section>
 
@@ -482,9 +400,9 @@ layout: null
                     <span class="tech-stack">C</span>
                 </div>
 
-<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-        <img src="./assets/kext.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
-    </div>
+                <!--<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+        <img src="./assets/kext2.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
+                </div>-->
 
                 <div class="project-status status-progress">
                     <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
@@ -521,10 +439,6 @@ layout: null
                     <h3 data-en="Katálogo" data-pt="Katálogo">Katálogo</h3>
                     <span class="tech-stack">Python · Flask</span>
                 </div>
-<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-        <img src="./assets/katalogo-2.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
-    </div>
-
 <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
         <img src="./assets/katalogo-1.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
     </div>
