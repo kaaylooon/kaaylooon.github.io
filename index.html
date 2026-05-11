@@ -3,553 +3,494 @@ layout: null
 ---
 <!DOCTYPE html>
 <html lang="pt">
-<head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N8XJL7JC');</script>
-<!-- End Google Tag Manager -->
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-N8XJL7JC');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaylon Souza</title>
     <meta name="description" content="Personal page | Kaylon Souza">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
-
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    </noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    </noscript>
     <style>
-        :root {
- --bg-page: #1a1b26;
-    --bg-card: #24283b;
-    --text-main: #c0caf5;
-    --text-dim: #7982a9;
-    --border-color: #414868;
-    --accent-blue: #7aa2f7; 
-    --accent-royal: #bb9af7;
-
-    /* Status */
-    --status-progress: #e0af68;
-    --status-done: #9ece6a;       }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--bg-page);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        h1, h2, h3, .serif {
-            font-family: 'Arial', serif;
-            font-weight: 800;
-        }
-
-        h1 {
-            font-size: 3rem;
-            letter-spacing: -1px;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border-color);
-            display: block;
-            color: var(--accent-blue);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Espaçamento Amplo */
-        section {
-            padding: 3rem 0;
-            scroll-margin-top: 80px;
-        }
-
-        a {
-            color: var(--accent-blue);
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-
-        a:hover {
-            opacity: 0.8;
-            text-decoration: none;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Navbar Sombria */
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            background-color: rgba(13, 17, 23, 0.85);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 100;
-            padding: 1.2rem 0;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-brand {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #fff;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            font-weight: 400;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-blue);
-        }
-
-        /* Botão Idioma Floating */
-        .lang-switch-fixed {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 999;
-            width: 50px;
-            height: 50px;
-            border-radius: 8px;
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            color: white;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            transition: all 0.2s;
-        }
-
-        /* Grid de Conquistas/Habilidades */
-        .honors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .honor-badge {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 0.8rem 1rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            color: var(--text-main);
-        }
-
-        .honor-badge i {
-    display: inline-flex !important; /* Força a renderização */
-    align-items: center;
-    justify-content: center;
-    min-width: 20px; /* Garante que ele não "encolha" para 0px */
-    margin-right: 12px;
-    color: var(--accent-blue) !important;
-    font-size: 1.2rem; /* Aumentei um pouco para testar a visibilidade */
-    line-height: 1;
-    vertical-align: middle;
-}
-        /* Projetos - Estilo Acadêmico */
-        .project-list {
-          column-count: 2;
-          column-gap: 1.5rem;
-          width: 100%;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            width: 100%;
-            break-inside: avoid;
-            transition: border-color 0.2s;
-        }
-
-        .project-card:hover {
-            border-color: var(--text-dim);
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-card h3 {
-            font-size: 1.2rem;
-            color: #fff;
-        }
-
-        .project-status {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .status-progress { color: var(--status-progress); }
-        .status-done { color: var(--status-done); }
-
-        .tech-stack {
-            font-family: monospace;
-            font-size: 0.75rem;
-            color: var(--accent-blue);
-            background: rgba(20, 144, 252, 0.1);
-            padding: 0.2rem 0.5rem;
-            border-radius: 8px;
-        }
-
-        .project-description {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            flex-grow: 1;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-footer {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid var(--border-color);
-            padding-top: 1rem;
-        }
-
-        /* Papers/Posts */
-        .posts-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .post-item {
-            display: grid;
-            grid-template-columns: 100px 1fr;
-            gap: 2rem;
-        }
-
-        .post-date {
-            font-family: monospace;
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            padding-top: 4px;
-        }
-
-        .post-content h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.5rem;
-            color: #fff;
-        }
-
-        .post-content p {
-            font-size: 0.95rem;
-            color: var(--text-dim);
-        }
-
-        /* Contato */
-        .contact-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
-        }
-
-        .contact-card {
-            background: var(--bg-card);
-            padding: 1.2rem;
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-card i {
-            font-size: 1.2rem;
-            color: var(--text-dim);
-        }
-
-        footer {
-            padding: 4rem 0;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            color: var(--text-dim);
-            font-size: 0.8rem;
-        }
-
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .post-item { grid-template-columns: 1fr; gap: 0.5rem; }
-            .nav-links { display: none; }
-            section { padding: 4rem 0; }
-            .project-list { column-count: 1; }
-        }
+      :root {
+      --bg-page: #1a1b26;
+      --bg-card: #24283b;
+      --text-main: #c0caf5;
+      --text-dim: #7982a9;
+      --border-color: #414868;
+      --accent-blue: #7aa2f7; 
+      --accent-royal: #bb9af7;
+      /* Status */
+      --status-progress: #e0af68;
+      --status-done: #9ece6a;       }
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+      body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      }
+      h1, h2, h3, .serif {
+      font-family: 'Arial', serif;
+      font-weight: 800;
+      }
+      h1 {
+      font-size: 3rem;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      }
+      h2 {
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      display: block;
+      color: var(--accent-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      }
+      /* Espaçamento Amplo */
+      section {
+      padding: 3rem 0;
+      scroll-margin-top: 80px;
+      }
+      a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      transition: opacity 0.2s;
+      }
+      a:hover {
+      opacity: 0.8;
+      text-decoration: none;
+      }
+      .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      }
+      /* Navbar Sombria */
+      .sticky-nav {
+      position: sticky;
+      top: 0;
+      background-color: rgba(13, 17, 23, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 100;
+      padding: 1.2rem 0;
+      }
+      .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+      .nav-brand {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #fff;
+      }
+      .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      }
+      .nav-links a {
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      font-weight: 400;
+      }
+      .nav-links a:hover {
+      color: var(--accent-blue);
+      }
+      /* Botão Idioma Floating */
+      .lang-switch-fixed {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all 0.2s;
+      }
+      /* Grid de Conquistas/Habilidades */
+      .honors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+      }
+      .honor-badge {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      color: var(--text-main);
+      }
+      .honor-badge i {
+      display: inline-flex !important; /* Força a renderização */
+      align-items: center;
+      justify-content: center;
+      min-width: 20px; /* Garante que ele não "encolha" para 0px */
+      margin-right: 12px;
+      color: var(--accent-blue) !important;
+      font-size: 1.2rem; /* Aumentei um pouco para testar a visibilidade */
+      line-height: 1;
+      vertical-align: middle;
+      }
+      /* Projetos - Estilo Acadêmico */
+      .project-list {
+      column-count: 2;
+      column-gap: 1.5rem;
+      width: 100%;
+      }
+      .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      width: 100%;
+      break-inside: avoid;
+      transition: border-color 0.2s;
+      }
+      .project-card:hover {
+      border-color: var(--text-dim);
+      }
+      .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+      }
+      .project-card h3 {
+      font-size: 1.2rem;
+      color: #fff;
+      }
+      .project-status {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      }
+      .status-progress { color: var(--status-progress); }
+      .status-done { color: var(--status-done); }
+      .tech-stack {
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: var(--accent-blue);
+      background: rgba(20, 144, 252, 0.1);
+      padding: 0.2rem 0.5rem;
+      border-radius: 8px;
+      }
+      .project-description {
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      flex-grow: 1;
+      margin-bottom: 1.5rem;
+      }
+      .project-footer {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1rem;
+      }
+      /* Papers/Posts */
+      .posts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      }
+      .post-item {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 2rem;
+      }
+      .post-date {
+      font-family: monospace;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      padding-top: 4px;
+      }
+      .post-content h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+      }
+      .post-content p {
+      font-size: 0.95rem;
+      color: var(--text-dim);
+      }
+      /* Contato */
+      .contact-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      }
+      .contact-card {
+      background: var(--bg-card);
+      padding: 1.2rem;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      }
+      .contact-card i {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      }
+      footer {
+      padding: 4rem 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      }
+      @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      .post-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .nav-links { display: none; }
+      section { padding: 4rem 0; }
+      .project-list { column-count: 1; }
+      }
     </style>
-</head>
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8XJL7JC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<button class="lang-switch-fixed" id="langToggle">🇧🇷</button>
-
-<nav class="sticky-nav">
-    <div class="nav-container">
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8XJL7JC"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <button class="lang-switch-fixed" id="langToggle">🇧🇷</button>
+    <nav class="sticky-nav">
+      <div class="nav-container">
         <span class="nav-brand">Kaylon Souza</span>
         <ul class="nav-links">
-            <li><a href="#conquistas" data-en="Achievements" data-pt="Conquistas">Achievements</a></li>
-            <li><a href="#habilidades" data-en="Skills" data-pt="Habilidades">Skills</a></li>
-            <li><a href="#projetos" data-en="Projects" data-pt="Projetos">Projects</a></li>
-            <li><a href="#posts" data-en="Posts" data-pt="Publicações">Posts</a></li>
-            <li><a href="#contato" data-en="Contact" data-pt="Contato">Contact</a></li>
+          <li><a href="#conquistas" data-en="Achievements" data-pt="Conquistas">Achievements</a></li>
+          <li><a href="#habilidades" data-en="Skills" data-pt="Habilidades">Skills</a></li>
+          <li><a href="#projetos" data-en="Projects" data-pt="Projetos">Projects</a></li>
+          <li><a href="#posts" data-en="Posts" data-pt="Publicações">Posts</a></li>
+          <li><a href="#contato" data-en="Contact" data-pt="Contato">Contact</a></li>
         </ul>
-    </div>
-</nav>
-
-<main class="container">
-<section id="home">
-    <h1>Kaylon Souza</h1>
-    <p style="color: var(--text-dim); font-size: 1rem; max-width: 700px;">
-        <span data-pt="Bem-vindo(a). Aqui encontra-se o que eu gostaria de compartilhar." 
-              data-en="Welcome. Here is what I would like to share.">
-            Bem-vindo(a). Aqui encontra-se o que eu gostaria de compartilhar.
-        </span>
-        <br>
-        <a href="/about.html" style="font-size: 0.85rem; margin-top: 0.5rem; margin-right: 1rem; display: inline-block;">
-            <i class="bi bi-arrow-right-circle"></i> 
-            <span data-pt="Saiba mais" data-en="About me">Saiba mais</span>
-        </a>
-    </p>
-</section>
-    <section id="conquistas">
+      </div>
+    </nav>
+    <main class="container">
+      <section id="home">
+        <h1>Kaylon Souza</h1>
+        <p style="color: var(--text-dim); font-size: 1rem; max-width: 700px;">
+          <span data-pt="Bem-vindo(a). Aqui encontra-se o que eu gostaria de compartilhar." 
+            data-en="Welcome. Here is what I would like to share.">
+          Bem-vindo(a). Aqui encontra-se o que eu gostaria de compartilhar.
+          </span>
+          <br>
+          <a href="/about.html" style="font-size: 0.85rem; margin-top: 0.5rem; margin-right: 1rem; display: inline-block;">
+          <i class="bi bi-arrow-right-circle"></i> 
+          <span data-pt="Saiba mais" data-en="About me">Saiba mais</span>
+          </a>
+        </p>
+      </section>
+      <section id="conquistas">
         <h2 data-en="Achievements" data-pt="Conquistas">Achievements</h2>
         <div class="honors-grid">
           <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – OLITEF (Financial Education)" data-pt="Ouro – OLITEF (Educação Financeira)">Gold – OLITEF (Financial Education)</span></div>
-            <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – OBLI (English Language)" data-pt="Ouro – OBLI (Língua Inglesa)">Gold – OBLI (English Language)</span></div>
-            <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – O2 (Ocean Olympiad)" data-pt="Ouro – O2 (Olimpíada do Oceano)">Gold – O2 (Ocean Olympiad)</span></div>
-            <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Silver – OBA (Astronomy)" data-pt="Prata – OBA (Astronomia)">Silver – OBA (Astronomy)</span></div>
-            <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBMEP (Math)" data-pt="Bronze – OBMEP (Matemática)">Bronze – OBMEP (Math)</span></div>
-            <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBLI" data-pt="Bronze – OBLI">Bronze – OBLI</span></div>
-            <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBG (Geography)" data-pt="Bronze – OBG (Geografia)">Bronze – OBG (Geography)</span></div>
-            <div class="honor-badge"><i class="bi bi-activity"></i><span data-en="Good performance – OBF (Physics)" data-pt="Bom desempenho – OBF (Física)">Good performance – OBF (Physics)</span></div>
+          <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – OBLI (English Language)" data-pt="Ouro – OBLI (Língua Inglesa)">Gold – OBLI (English Language)</span></div>
+          <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – O2 (Ocean Olympiad)" data-pt="Ouro – O2 (Olimpíada do Oceano)">Gold – O2 (Ocean Olympiad)</span></div>
+          <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Silver – OBA (Astronomy)" data-pt="Prata – OBA (Astronomia)">Silver – OBA (Astronomy)</span></div>
+          <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBMEP (Math)" data-pt="Bronze – OBMEP (Matemática)">Bronze – OBMEP (Math)</span></div>
+          <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBLI" data-pt="Bronze – OBLI">Bronze – OBLI</span></div>
+          <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBG (Geography)" data-pt="Bronze – OBG (Geografia)">Bronze – OBG (Geography)</span></div>
+          <div class="honor-badge"><i class="bi bi-activity"></i><span data-en="Good performance – OBF (Physics)" data-pt="Bom desempenho – OBF (Física)">Good performance – OBF (Physics)</span></div>
         </div>
         <p style="font-size:0.85rem; color:var(--text-dim);" data-en="Participation in multiple regional and national phases." data-pt="Participação em múltiplas fases regionais e nacionais.">
-            Participação em múltiplas fases regionais e nacionais.
+          Participação em múltiplas fases regionais e nacionais.
         </p>
-    </section>
-
-    <section id="habilidades">
+      </section>
+      <section id="habilidades">
         <h2 data-en="Skills" data-pt="Habilidades">Habilidades</h2>
-        <div class="honors-grid"> <div class="honor-badge"><i class="bi bi-terminal"></i><span data-en="Linux environment" data-pt="Ambiente Linux">Linux environment</span></div>
-            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="LaTeX experience" data-pt="Experiência com LaTeX">LaTeX experience</span></div>
-            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Self-taught learner" data-pt="Autodidata">Self-taught learner</span></div>
-            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Portuguese (Native)" data-pt="Português (Nativo)">Portuguese (Native)</span></div>
-            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="English (Intermediate)" data-pt="Inglês (Intermediário)">English (Intermediate)</span></div>
-            <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Simplified Chinese (N5)" data-pt="Mandarim (N5)">Simplified Chinese (N5)</span></div>
+        <div class="honors-grid">
+          <div class="honor-badge"><i class="bi bi-terminal"></i><span data-en="Linux environment" data-pt="Ambiente Linux">Linux environment</span></div>
+          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="LaTeX experience" data-pt="Experiência com LaTeX">LaTeX experience</span></div>
+          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Self-taught learner" data-pt="Autodidata">Self-taught learner</span></div>
+          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Portuguese (Native)" data-pt="Português (Nativo)">Portuguese (Native)</span></div>
+          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="English (Intermediate)" data-pt="Inglês (Intermediário)">English (Intermediate)</span></div>
+          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Simplified Chinese (N5)" data-pt="Mandarim (N5)">Simplified Chinese (N5)</span></div>
         </div>
-    </section>
-
-    <section id="projetos">
+      </section>
+      <section id="projetos">
         <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
         <div class="project-list">
-
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 data-en="Aurium Initium" data-pt="Aurium Initium">Aurium Initium</h3>
-                    <span class="tech-stack">TeX · Math</span>
-                </div>
-
-
-<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-        <img src="./assets/auriuminitium.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
-    </div>
-
-                <div class="project-status status-progress">
-                    <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
-                </div>
-                <p class="project-description" data-en="Book of elementary mathematics" data-pt='É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.'>É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.</p>
-                <div class="project-footer">
-                    <span><i class="bi bi-calendar3"></i> 03/2026</span>
-                </div>
+          <div class="project-card">
+            <div class="project-header">
+              <h3 data-en="Aurium Initium" data-pt="Aurium Initium">Aurium Initium</h3>
+              <span class="tech-stack">TeX · Math</span>
             </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 data-en="Kext" data-pt="Kext">Kext</h3>
-                    <span class="tech-stack">C</span>
-                </div>
-
-                <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-        <img src="./assets/kext2.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
+            <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+              <img src="./assets/auriuminitium.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
             </div>
-
-                <div class="project-status status-progress">
-                    <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
-                </div>
-                <p class="project-description" data-en="Vi-based text editor" data-pt="Editor de texto vi-based">Editor de texto vi-based</p>
-                <div class="project-footer">
-                    <a href="https://github.com/kaaylooon/kext" target="_blank"><i class="bi bi-github"></i> Source</a>
-                </div>
+            <div class="project-status status-progress">
+              <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
             </div>
-
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 data-en="Kapraxis" data-pt="Kapraxis">Kapraxis</h3>
-                    <span class="tech-stack">C++ · QT</span>
-                </div>
-
-                
-<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-        <img src="./assets/kapraxis.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
-    </div>
-
-                <div class="project-status status-done">
-                    <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
-                </div>
-                <p class="project-description" data-en="A study app with flashcards, revisions, etc. All study resources are centralized in here." data-pt="Uma aplicação de estudos com flashcards, revisões, etc. Todos os recursos para fomentar os estudos centralizados."> Uma aplicação de estudos com flashcards, revisões, etc. Todos os recursos para fomentar os estudos centralizados.</p>
-                <div class="project-footer">
-                    <a href="https://github.com/kaaylooon/kapraxis" target="_blank"><i class="bi bi-github"></i> Source</a>
-                </div>
+            <p class="project-description" data-en="Book of elementary mathematics" data-pt='É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.'>É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.</p>
+            <div class="project-footer">
+              <span><i class="bi bi-calendar3"></i> 03/2026</span>
             </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 data-en="Katálogo" data-pt="Katálogo">Katálogo</h3>
-                    <span class="tech-stack">Python · Flask</span>
-                </div>
-<div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-        <img src="./assets/katalogo-1.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
-    </div>
-
-
-                <div class="project-status status-done">
-                    <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
-                </div>
-                <p class="project-description" data-en="Web application of business/services listing" data-pt="Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.">Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.</p>
-                <div class="project-footer">
-                    <a href="https://github.com/kaaylooon/Katalogo" target="_blank"><i class="bi bi-github"></i> Source</a>
-                </div>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <h3 data-en="Kext" data-pt="Kext">Kext</h3>
+              <span class="tech-stack">C</span>
             </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3 data-en="Kaappli" data-pt="Kaappli">Kaappli</h3>
-                    <span class="tech-stack">JS · Electron</span>
-                </div>
-                <div class="project-status status-done">
-                    <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
-                </div>
-                <p class="project-description" data-en="Interactive web app (Electron) for practicing Hiragana and Katakana, with dynamic character generation and romanized answer validation." data-pt="Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.">Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.</p>
-                <div class="project-footer">
-                    <a href="https://github.com/kaaylooon/Kaappli" target="_blank"><i class="bi bi-github"></i> Source</a>
-                </div>
+            <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+              <img src="./assets/kext2.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
             </div>
-
-
+            <div class="project-status status-progress">
+              <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
+            </div>
+            <p class="project-description" data-en="Vi-based text editor" data-pt="Editor de texto vi-based">Editor de texto vi-based</p>
+            <div class="project-footer">
+              <a href="https://github.com/kaaylooon/kext" target="_blank"><i class="bi bi-github"></i> Source</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <h3 data-en="Kapraxis" data-pt="Kapraxis">Kapraxis</h3>
+              <span class="tech-stack">C++ · QT</span>
+            </div>
+            <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+              <img src="./assets/kapraxis.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
+            </div>
+            <div class="project-status status-done">
+              <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
+            </div>
+            <p class="project-description" data-en="A study app with flashcards, revisions, etc. All study resources are centralized in here." data-pt="Uma aplicação de estudos com flashcards, revisões, etc. Todos os recursos para fomentar os estudos centralizados."> Uma aplicação de estudos com flashcards, revisões, etc. Todos os recursos para fomentar os estudos centralizados.</p>
+            <div class="project-footer">
+              <a href="https://github.com/kaaylooon/kapraxis" target="_blank"><i class="bi bi-github"></i> Source</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <h3 data-en="Katálogo" data-pt="Katálogo">Katálogo</h3>
+              <span class="tech-stack">Python · Flask</span>
+            </div>
+            <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+              <img src="./assets/katalogo-1.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
+            </div>
+            <div class="project-status status-done">
+              <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
+            </div>
+            <p class="project-description" data-en="Web application of business/services listing" data-pt="Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.">Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.</p>
+            <div class="project-footer">
+              <a href="https://github.com/kaaylooon/Katalogo" target="_blank"><i class="bi bi-github"></i> Source</a>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <h3 data-en="Kaappli" data-pt="Kaappli">Kaappli</h3>
+              <span class="tech-stack">JS · Electron</span>
+            </div>
+            <div class="project-status status-done">
+              <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
+            </div>
+            <p class="project-description" data-en="Interactive web app (Electron) for practicing Hiragana and Katakana, with dynamic character generation and romanized answer validation." data-pt="Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.">Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.</p>
+            <div class="project-footer">
+              <a href="https://github.com/kaaylooon/Kaappli" target="_blank"><i class="bi bi-github"></i> Source</a>
+            </div>
+          </div>
         </div>
-    </section>
-
-    <section id="posts">
-    <h2 data-en="Posts" data-pt="Postagens">Posts</h2>
-    <div class="posts-list">
-        {% for post in site.posts %}
-        <div class="post-item">
+      </section>
+      <section id="posts">
+        <h2 data-en="Posts" data-pt="Postagens">Posts</h2>
+        <div class="posts-list">
+          {% for post in site.posts %}
+          <div class="post-item">
             <div class="post-date">{{ post.date | date: "%b %Y" | upcase }}</div>
             <div class="post-content">
-                <h3>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </h3>
-                <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+              <h3>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </h3>
+              <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
             </div>
+          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-</section>
-
-    <section id="contato">
+      </section>
+      <section id="contato">
         <h2 data-en="Contact" data-pt="Contato">Contact</h2>
         <div class="contact-links">
-            <div class="contact-card">
-                <i class="bi bi-envelope"></i>
-                <div><a href="mailto:kaylon.contact@gmail.com">kaylon.contact@gmail.com</a></div>
-            </div>
+          <div class="contact-card">
+            <i class="bi bi-envelope"></i>
+            <div><a href="mailto:kaylon.contact@gmail.com">kaylon.contact@gmail.com</a></div>
+          </div>
         </div>
-    </section>
-
-    <footer>
-      <p>Kaylon Souza &bull; 2026<br>
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=kaaylooon.github.io&title=(...)&color=transparent&left_color=transparent" alt="visitantes">
-    </footer>
-</main>
-
-<script>
-    (function() {
-        let currentLang = 'pt';
-        const toggleBtn = document.getElementById('langToggle');
-
-        function setLanguage(lang) {
-            const elements = document.querySelectorAll('[data-en][data-pt]');
-            elements.forEach(el => {
-                const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
-                if (text) el.innerText = text;
-            });
-            toggleBtn.innerHTML = lang === 'en' ? '🇧🇷' : '🇺🇸';
-            currentLang = lang;
-            document.documentElement.lang = lang;
-        }
-
-        toggleBtn.addEventListener('click', () => {
-            setLanguage(currentLang === 'en' ? 'pt' : 'en');
-        });
-
-        setLanguage('pt');
-    })();
-</script>
-
-</body>
+      </section>
+      <footer>
+        <p>Kaylon Souza &bull; 2026<br>
+          <img src="https://visitor-badge.laobi.icu/badge?page_id=kaaylooon.github.io&title=(...)&color=transparent&left_color=transparent" alt="visitantes">
+      </footer>
+    </main>
+    <script>
+      (function() {
+          let currentLang = 'pt';
+          const toggleBtn = document.getElementById('langToggle');
+      
+          function setLanguage(lang) {
+              const elements = document.querySelectorAll('[data-en][data-pt]');
+              elements.forEach(el => {
+                  const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
+                  if (text) el.innerText = text;
+              });
+              toggleBtn.innerHTML = lang === 'en' ? '🇧🇷' : '🇺🇸';
+              currentLang = lang;
+              document.documentElement.lang = lang;
+          }
+      
+          toggleBtn.addEventListener('click', () => {
+              setLanguage(currentLang === 'en' ? 'pt' : 'en');
+          });
+      
+          setLanguage('pt');
+      })();
+    </script>
+  </body>
 </html>
