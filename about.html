@@ -1,0 +1,381 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N8XJL7JC');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre | Kaylon Souza</title>
+    <meta name="description" content="Sobre Kaylon Souza – matemática, física, programação e objetivos.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-page: #1a1b26;
+            --bg-card: #24283b;
+            --text-main: #c0caf5;
+            --text-dim: #7982a9;
+            --border-color: #414868;
+            --accent-blue: #7aa2f7;
+            --accent-royal: #bb9af7;
+            --status-progress: #e0af68;
+            --status-done: #9ece6a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Arial', serif;
+            font-weight: 800;
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: -1px;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Navbar Sombria */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(26, 27, 38, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 100;
+            padding: 1.2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .nav-brand a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Botão Idioma Floating */
+        .lang-switch-fixed {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+        }
+
+        /* Post Content (reutilizado para o about) */
+        .post-header {
+            margin-bottom: 2rem;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dim);
+            font-family: monospace;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .post-meta i {
+            margin-right: 0.25rem;
+        }
+
+        .post-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .post-content p {
+            margin-bottom: 1.25rem;
+        }
+
+        .post-content h2 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .post-content h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .post-content h4 {
+            font-size: 1.1rem;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--accent-blue);
+        }
+
+        .post-content a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .post-content a:hover {
+            text-decoration: underline;
+        }
+
+        .post-content blockquote {
+            border-left: 3px solid var(--accent-blue);
+            padding-left: 1.25rem;
+            margin: 1.25rem 0;
+            color: var(--text-dim);
+            font-style: italic;
+        }
+
+        .post-content code {
+            background: var(--bg-card);
+            padding: 0.2rem 0.4rem;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: var(--accent-royal);
+        }
+
+        .post-content pre {
+            background: var(--bg-card);
+            padding: 1rem;
+            border-radius: 12px;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .post-content pre code {
+            background: none;
+            padding: 0;
+            color: var(--text-main);
+        }
+
+        .post-content ul, .post-content ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .post-content li {
+            margin: 0.5rem 0;
+        }
+
+        .post-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .post-content hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: 2rem 0;
+        }
+
+        /* Back Link */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 0 3rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.25rem; }
+            h3 { font-size: 1.1rem; }
+            .post-content { font-size: 1rem; }
+            .nav-links { display: none; }
+            .container { padding: 0 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8XJL7JC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<button class="lang-switch-fixed" id="langToggle">🇧🇷</button>
+
+<nav class="sticky-nav">
+    <div class="nav-container">
+        <span class="nav-brand"><a href="/">Kaylon Souza</a></span>
+        <ul class="nav-links">
+            <li><a href="/#conquistas" data-en="Achievements" data-pt="Conquistas">Conquistas</a></li>
+            <li><a href="/#habilidades" data-en="Skills" data-pt="Habilidades">Habilidades</a></li>
+            <li><a href="/#projetos" data-en="Projects" data-pt="Projetos">Projetos</a></li>
+            <li><a href="/#posts" data-en="Posts" data-pt="Publicações">Publicações</a></li>
+            <li><a href="/#contato" data-en="Contact" data-pt="Contato">Contato</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <a href="/" class="back-link">
+        <i class="bi bi-arrow-left"></i> <span data-en="Back to home" data-pt="Voltar ao início">Voltar ao início</span>
+    </a>
+
+    <article class="post-header">
+        <h1 data-pt="Sobre" data-en="About">Sobre</h1>
+        <!-- sem post-meta (data, autor etc) por não ser um post -->
+    </article>
+
+    <div class="post-content"
+         data-pt="
+            <p>Estudei matemática por obras nacionais e dei algumas 'olhadas' em clássicos internacionais (Titu, por exemplo). Completei a base com máximo aprofundamento, e também passei pelo conteúdo do superior: cálculo, álgebra linear, teoria dos números etc. Em física, completei a base e tive contato com o superior: relatividade, moderna etc.</p>
+            <p>Em programação, passei um tempo considerável com Python e C++, usando RayLib para simulações físicas (colisões, n-body problem…). É um hobby interessante.</p>
+            <p>Quero ser poliglota. É um dos meus objetivos — em breve, colocarei em prática.</p>
+            <p>Não são menções vagas de 'qualificações'. Estas são algumas coisas que me definem.</p>
+            <blockquote>
+                'It is a ridiculous thing for a man not to fly from his own badness, which is indeed possible, but to fly from other men's badness, which is impossible.'<br>
+                — Marco Aurélio, Meditações
+            </blockquote>
+         "
+         data-en="
+            <p>I studied mathematics through national works and took a look at international classics (Titu, for example). I covered all high school content with maximum depth, and also went through calculus, linear algebra, number theory, etc. In physics, I completed the basics and had contact with higher-level topics: relativity, modern physics, etc.</p>
+            <p>In programming, I spent considerable time with Python and C++, using RayLib for physical simulations (collisions, n-body problem…). It's an interesting hobby.</p>
+            <p>I want to be a polyglot. It's one of my goals — I'll put it into practice soon.</p>
+            <p>These are not vague mentions of 'qualifications.' These are some of the things that define me.</p>
+            <blockquote>
+                'It is a ridiculous thing for a man not to fly from his own badness, which is indeed possible, but to fly from other men's badness, which is impossible.'<br>
+                — Marcus Aurelius, Meditations
+            </blockquote>
+         ">
+        <!-- O conteúdo inicial (português) será inserido pelo JavaScript -->
+    </div>
+</main>
+
+<footer>
+    <p>Kaylon Souza &bull; 2026<br>
+</footer>
+
+<script>
+    (function() {
+        let currentLang = 'pt';
+        const toggleBtn = document.getElementById('langToggle');
+
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[data-en][data-pt]');
+            elements.forEach(el => {
+                const html = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
+                if (html) el.innerHTML = html;
+            });
+            toggleBtn.innerHTML = lang === 'en' ? '🇧🇷' : '🇺🇸';
+            currentLang = lang;
+            document.documentElement.lang = lang;
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            setLanguage(currentLang === 'en' ? 'pt' : 'en');
+        });
+
+        setLanguage('pt');
+    })();
+</script>
+
+</body>
+</html>
