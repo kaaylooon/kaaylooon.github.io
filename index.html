@@ -1,6 +1,4 @@
 ---
-layout: null
----
 <!DOCTYPE html>
 <html lang="pt">
   <head>
@@ -154,12 +152,18 @@ layout: null
       .honor-badge {
       background-color: var(--bg-card);
       border: 1px solid var(--border-color);
-      padding: 0.8rem 1rem;
+      padding: 1.5rem 1.25rem;
       border-radius: 8px;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      min-width: 28px;
       display: flex;
       align-items: center;
+      gap: 0.75rem;
       color: var(--text-main);
+      transition: all 0.2s;
+      }
+      .honor-badge:hover {
+        transform: translateY(-2px);
       }
       .honor-badge i {
       display: inline-flex !important; /* Força a renderização */
@@ -177,6 +181,8 @@ layout: null
       column-count: 2;
       column-gap: 1.5rem;
       width: 100%;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
       }
       .project-card {
       background: var(--bg-card);
@@ -262,7 +268,6 @@ layout: null
       font-size: 0.95rem;
       color: var(--text-dim);
       }
-      /* Contato */
       .contact-links {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -288,6 +293,80 @@ layout: null
       color: var(--text-dim);
       font-size: 0.8rem;
       }
+
+
+/* Layout Bento Grid Base */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.bento-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 1.75rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--text-dim);
+}
+
+/* Modificadores de tamanho do Bento */
+.bento-lg { grid-column: span 2; grid-row: span 2; }
+.bento-md-w { grid-column: span 2; }
+.bento-md-h { grid-row: span 2; }
+.bento-sm { grid-column: span 1; }
+
+/* Estilização interna dos Cards */
+.bento-card i {
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+  line-height: 1;
+}
+
+.bento-card .card-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.bento-card .card-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 900px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-lg { grid-column: span 2; grid-row: span 1; }
+}
+
+@media (max-width: 600px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-lg, .bento-md-w, .bento-md-h, .bento-sm {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+
       @media (max-width: 768px) {
       h1 { font-size: 2.2rem; }
       .post-item { grid-template-columns: 1fr; gap: 0.5rem; }
@@ -329,32 +408,164 @@ layout: null
           <span data-pt="Saiba mais" data-en="About me">Saiba mais</span>
           </a>
         </p>
-      </section>
+      </section
+
+<!-- SEÇÃO CONQUISTAS (BENTO LAYOUT EQUILIBRADO) -->
       <section id="conquistas">
         <h2 data-en="Achievements" data-pt="Conquistas">Achievements</h2>
-        <div class="honors-grid">
-          <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – OLITEF (Financial Education)" data-pt="Ouro – OLITEF (Educação Financeira)">Gold – OLITEF (Financial Education)</span></div>
-          <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – OBLI (English Language)" data-pt="Ouro – OBLI (Língua Inglesa)">Gold – OBLI (English Language)</span></div>
-          <div class="honor-badge"><i class="bi bi-trophy"></i><span data-en="Gold – O2 (Ocean Olympiad)" data-pt="Ouro – O2 (Olimpíada do Oceano)">Gold – O2 (Ocean Olympiad)</span></div>
-          <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Silver – OBA (Astronomy)" data-pt="Prata – OBA (Astronomia)">Silver – OBA (Astronomy)</span></div>
-          <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBMEP (Math)" data-pt="Bronze – OBMEP (Matemática)">Bronze – OBMEP (Math)</span></div>
-          <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBLI" data-pt="Bronze – OBLI">Bronze – OBLI</span></div>
-          <div class="honor-badge"><i class="bi bi-award"></i><span data-en="Bronze – OBG (Geography)" data-pt="Bronze – OBG (Geografia)">Bronze – OBG (Geography)</span></div>
-          <div class="honor-badge"><i class="bi bi-activity"></i><span data-en="Good performance – OBF (Physics)" data-pt="Bom desempenho – OBF (Física)">Good performance – OBF (Physics)</span></div>
+        
+        <div class="bento-grid">
+          
+          <!-- OLITEF Ouro -->
+          <div class="bento-card bento-sm">
+            <i class="bi bi-trophy" style="color: #e0af68;"></i>
+            <div>
+              <div class="card-label">OLITEF</div>
+              <div class="card-value" data-en="Gold" data-pt="Ouro">Ouro</div>
+              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Financial Education" data-pt="Educação Financeira">Educação Financeira</p>
+            </div>
+          </div>
+
+          <!-- OBLI Ouro -->
+          <div class="bento-card bento-md-w">
+            <i class="bi bi-trophy" style="color: #e0af68;"></i>
+            <div>
+              <div class="card-label">OBLI</div>
+              <div class="card-value" data-en="Gold" data-pt="Ouro">Ouro</div>
+              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="English Language" data-pt="Língua Inglesa">Língua Inglesa</p>
+            </div>
+          </div>
+
+          <!-- O2 Ouro -->
+          <div class="bento-card bento-sm">
+            <i class="bi bi-trophy" style="color: #e0af68;"></i>
+            <div>
+              <div class="card-label">O2</div>
+              <div class="card-value" data-en="Gold" data-pt="Ouro">Ouro</div>
+              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Ocean Olympiad" data-pt="Olimpíada do Oceano">Olimpíada do Oceano</p>
+            </div>
+          </div>
+
+
+          <!-- OBA Prata (Card largo posicionado para quebra estética do grid) -->
+          <div class="bento-card bento-lg">
+              <i class="bi bi-award" style="color: #a9b1d6; font-size: 2rem;"></i>
+              <div>
+                <div class="card-label">OBA</div>
+                <div class="card-value" data-en="Silver" data-pt="Prata">Medalha de Prata</div>
+                <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;" data-en="Astronomy and Astronautics" data-pt="Astronomia e Astronáutica">Astronomia e Astronáutica</p>
+              </div>
+          </div>
+
+          <!-- OBMEP Bronze -->
+          <div class="bento-card bento-sm">
+            <i class="bi bi-award" style="color: #cd7f32;"></i>
+            <div>
+              <div class="card-label">OBMEP</div>
+              <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
+              <p style="font-size: 0.85rem; color: var(--text-dim);" data-en="Mathematics" data-pt="Matemática">Matemática</p>
+            </div>
+          </div>
+
+          <!-- OBLI Bronze -->
+            <div class="bento-card bento-sm">
+              <i class="bi bi-award" style="color: #cd7f32;"></i>
+              <div>
+                <div class="card-label">OBLI</div>
+                <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
+                <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="English Language" data-pt="Língua Inglesa">Língua Inglesa</p>
+              </div>
+            </div>
+
+            <!-- OBG Bronze -->
+            <div class="bento-card bento-sm">
+            <i class="bi bi-award" style="color: #cd7f32;"></i>
+            <div>
+              <div class="card-label">OBG</div>
+              <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
+              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Geography" data-pt="Geografia">Geografia</p>
+            </div>
+          </div>
+
+          <!-- OBF Menção -->
+          <div class="bento-card bento-sm">
+            <i class="bi bi-activity" style="color: var(--accent-blue);"></i>
+            <div>
+              <div class="card-label">OBF</div>
+              <div class="card-value" style="font-size: 0.95rem;" data-en="Good Perf." data-pt="Bom Desemp.">Bom Desemp.</div>
+              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Physics" data-pt="Física">Física</p>
+            </div>
+          </div>
+
         </div>
-        <p style="font-size:0.85rem; color:var(--text-dim);" data-en="Participation in multiple regional and national phases." data-pt="Participação em múltiplas fases regionais e nacionais.">
+        
+        <p style="font-size:0.85rem; color:var(--text-dim); margin-top: 1rem;" data-en="Participation in multiple regional and national phases." data-pt="Participação em múltiplas fases regionais e nacionais.">
           Participação em múltiplas fases regionais e nacionais.
         </p>
       </section>
+      <!-- SEÇÃO HABILIDADES (BENTO LAYOUT) -->
       <section id="habilidades">
         <h2 data-en="Skills" data-pt="Habilidades">Habilidades</h2>
-        <div class="honors-grid">
-          <div class="honor-badge"><i class="bi bi-terminal"></i><span data-en="Linux environment" data-pt="Ambiente Linux">Linux environment</span></div>
-          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="LaTeX experience" data-pt="Experiência com LaTeX">LaTeX experience</span></div>
-          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Self-taught learner" data-pt="Autodidata">Self-taught learner</span></div>
-          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Portuguese (Native)" data-pt="Português (Nativo)">Portuguese (Native)</span></div>
-          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="English (Intermediate)" data-pt="Inglês (Intermediário)">English (Intermediate)</span></div>
-          <div class="honor-badge"><i class="bi bi-book"></i><span data-en="Simplified Chinese (N5)" data-pt="Mandarim (N5)">Simplified Chinese (N5)</span></div>
+        <div class="bento-grid">
+          
+          <!-- Habilidades Técnicas/Pessoais -->
+          <div class="bento-card bento-sm">
+            <i class="bi bi-terminal"></i>
+            <div>
+              
+              <div class="card-label">OS</div>
+              <div class="card-value">Linux</div>
+            </div>
+          </div>
+
+          <div class="bento-card bento-sm">
+
+            <i class="bi bi-terminal"></i>
+            <div>
+              <div class="card-label">Doc</div>
+              <div class="card-value">LaTeX</div>
+            </div>
+          </div>
+
+          <div class="bento-card bento-md-w" style="background: linear-gradient(135deg, rgba(187, 154, 247, 0.05) 0%, rgba(36, 40, 59, 1) 100%);">
+            <i class="bi bi-book"></i>
+            <div>
+            <div class="card-label" data-en="Profile" data-pt="Perfil">Perfil</div>
+            <div class="card-value" data-en="Self-taught learner" data-pt="Autodidata">Autodidata</div>
+            </div>
+          </div>
+
+          <!-- Bloco Temático de Idiomas (Separados, mas com mesma identidade) -->
+          <div class="bento-card bento-sm" style="border-bottom: 2px solid var(--accent-blue);">
+            <i class="bi bi-translate"></i>
+            <div>
+              <div class="card-label" data-en="Language" data-pt="Idioma">Idioma</div>
+              <div class="card-value" data-en="Portuguese" data-pt="Português">Português</div>
+              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Native speaker" data-pt="Nativo">Nativo</p>
+            </div>
+          </div>
+
+          <div class="bento-card bento-sm" style="border-bottom: 2px solid var(--accent-blue);">
+            <i class="bi bi-translate"></i>
+            <div>
+              <div class="card-label" data-en="Language" data-pt="Idioma">Idioma</div>
+              <div class="card-value" data-en="English" data-pt="Inglês">Inglês</div>
+              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Intermediate" data-pt="Intermediário">Intermediário</p>
+            </div>
+          </div>
+
+          <div class="bento-card bento-md-w" style="border-bottom: 2px solid var(--accent-blue); background: linear-gradient(180deg, rgba(36, 40, 59, 1) 0%, rgba(122, 162, 247, 0.03) 100%);">
+            <i class="bi bi-translate"></i>
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; height: 100%;">
+              <div>
+                <div class="card-label" data-en="Language" data-pt="Idioma">Idioma</div>
+                <div class="card-value" data-en="Mandarin" data-pt="Mandarim">Mandarim</div>
+                <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Simplified Chinese (N5)" data-pt="Chinês Simplificado (N5)">Chinês Simplificado (N5)</p>
+              </div>
+              <span style="font-size: 1.5rem; color: var(--text-dim); font-weight: bold; opacity: 0.4;">中文</span>
+            </div>
+          </div>
+
         </div>
       </section>
       <section id="projetos">
@@ -371,7 +582,8 @@ layout: null
             <div class="project-status status-progress">
               <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
             </div>
-            <p class="project-description" data-en="Book of elementary mathematics" data-pt='É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.'>É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.</p>
+            <p class="project-description" data-en="Book of elementary mathematics" data-pt='É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.'>
+            É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.</p>
             <div class="project-footer">
               <span><i class="bi bi-calendar3"></i> 03/2026</span>
             </div>
