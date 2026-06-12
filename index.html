@@ -13,10 +13,15 @@ permalink: /
       })(window,document,'script','dataLayer','GTM-N8XJL7JC');
     </script>
     <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Kaylon Souza</title>
     <meta name="description" content="Personal page | Kaylon Souza">
+    <meta property="og:title" content="Kaylon Souza">
+    <meta property="og:description" content="Personal Page |  Kaylon Souza">
+     <meta property="og:type" content="website">   
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -62,7 +67,7 @@ permalink: /
       color: #ffffff;
       }
       h2 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-bottom: 2.5rem;
       padding-bottom: 0.5rem;
       border-bottom: 1px solid var(--border-color);
@@ -301,13 +306,13 @@ permalink: /
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin: 1.5rem 0;
+  margin: 1.0rem 0;
 }
 
 .bento-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -363,7 +368,7 @@ permalink: /
     grid-row: span 2;
   }
   .bento-md-w { grid-column: span 2; }
-  .bento-md-h { grid-row: span 1; }
+  .bento-md-h { grid-row: span 2; }
 }
 
 /* Mobile: 2 colunas com cards compactos */
@@ -433,6 +438,8 @@ permalink: /
         <ul class="nav-links">
           <li><a href="#conquistas" data-en="Distinctions"
               data-pt="Distinções">Distinctions</a></li>
+          <li><a href="#idiomas" data-en="Languages"
+              data-pt="Idiomas">Idiomas</a></li>
           <li><a href="#habilidades" data-en="Skills" data-pt="Habilidades">Skills</a></li>
           <li><a href="#projetos" data-en="Projects" data-pt="Projetos">Projects</a></li>
           <li><a href="#posts" data-en="Posts" data-pt="Publicações">Posts</a></li>
@@ -547,7 +554,7 @@ permalink: /
           <div class="bento-card bento-sm">
             <i class="bi bi-trophy" style="color: #cd7f32;"></i>
             <div>
-              <div class="card-label">OLITEF (2026)</div>
+              <div class="card-label">OLITEF (2025)</div>
               <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
               <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Financial Education" data-pt="Educação Financeira">Educação Financeira</p>
             </div>
@@ -569,75 +576,15 @@ permalink: /
           Participação em múltiplas fases regionais e nacionais.
         </p>
       </section>
-      <!-- SEÇÃO HABILIDADES (BENTO LAYOUT) -->
-      <section id="habilidades">
-        <h2 data-en="Skills" data-pt="Habilidades">Habilidades</h2>
+
+
+      <section id="idiomas">
+        <h2 data-en="Languages" data-pt="Idiomas">Idiomas</h2>
         <div class="bento-grid">
-          
-          <!-- Habilidades Técnicas/Pessoais -->
-          <div class="bento-card bento-sm">
-            <i class="bi bi-terminal"></i>
-            <div>
-              
-              <div class="card-label">OS</div>
-              <div class="card-value">Linux</div>
-            </div>
-          </div>
 
-          <div class="bento-card bento-sm">
-
-            <i class="bi bi-terminal"></i>
-            <div>
-              <div class="card-label">Doc</div>
-              <div class="card-value">LaTeX</div>
-            </div>
-          </div>
-
-          <div class="bento-card bento-md-w">
-            <i class="bi bi-book"></i>
-            <div>
-            <div class="card-label" data-en="Profile" data-pt="Perfil">Perfil</div>
-            <div class="card-value" data-en="Self-taught learner" data-pt="Autodidata">Autodidata</div>
-            </div>
-          </div>
-
-<div class="bento-card bento-sm">
-  <i class="bi bi-code-slash"></i>
-  <div>
-    <div class="card-label">Primary</div>
-    <div class="card-value">C++ · Python</div>
-  </div>
-</div>
-
-<div class="bento-card bento-sm">
-  <i class="bi bi-code-slash"></i>
-  <div>
-    <div class="card-label">Mobile</div>
-    <div class="card-value">React Native</div>
-  </div>
-</div>
-
-<div class="bento-card bento-sm">
-  <i class="bi bi-code-slash"></i>
-  <div>
-    <div class="card-label">Web</div>
-    <div class="card-value">Flask · Django</div>
-  </div>
-</div>
-
-<div class="bento-card bento-sm">
-  <i class="bi bi-code-slash"></i>
-  <div>
-    <div class="card-label">Graphics</div>
-    <div class="card-value">Raylib</div>
-  </div>
-</div>
-
-          <!-- Bloco Temático de Idiomas (Separados, mas com mesma identidade) -->
           <div class="bento-card bento-sm" style="border-bottom: 2px solid var(--accent-blue);">
             <i class="bi bi-translate"></i>
             <div>
-              <div class="card-label" data-en="Language" data-pt="Idioma">Idioma</div>
               <div class="card-value" data-en="Portuguese" data-pt="Português">Português</div>
               <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Native speaker" data-pt="Nativo">Nativo</p>
             </div>
@@ -646,7 +593,6 @@ permalink: /
           <div class="bento-card bento-sm" style="border-bottom: 2px solid var(--accent-blue);">
             <i class="bi bi-translate"></i>
             <div>
-              <div class="card-label" data-en="Language" data-pt="Idioma">Idioma</div>
               <div class="card-value" data-en="English" data-pt="Inglês">Inglês</div>
               <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Intermediate" data-pt="Intermediário">Intermediário</p>
             </div>
@@ -657,7 +603,6 @@ permalink: /
             <i class="bi bi-translate"></i>
             <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; height: 100%;">
               <div>
-                <div class="card-label" data-en="Language" data-pt="Idioma">Idioma</div>
                 <div class="card-value" data-en="Mandarin" data-pt="Mandarim">Mandarim</div>
                 <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Simplified Chinese (N5)" data-pt="Chinês Simplificado (N5)">Chinês Simplificado (N5)</p>
               </div>
@@ -667,6 +612,70 @@ permalink: /
 
         </div>
       </section>
+
+      <section id="habilidades">
+  <h2 data-en="Skills" data-pt="Habilidades">Habilidades</h2>
+  <div class="bento-grid">
+    
+    <!-- Habilidades Técnicas/Pessoais -->
+    <div class="bento-card bento-sm">
+      <i class="bi bi-terminal"></i>
+      <div>
+        <div class="card-label" data-en="OS" data-pt="SO">OS</div>
+        <div class="card-value" data-en="Linux" data-pt="Linux">Linux</div>
+      </div>
+    </div>
+
+    <div class="bento-card bento-sm">
+      <i class="bi bi-terminal"></i>
+      <div>
+        <div class="card-label" data-en="Doc" data-pt="Doc">Doc</div>
+        <div class="card-value" data-en="LaTeX" data-pt="LaTeX">LaTeX</div>
+      </div>
+    </div>
+
+    <div class="bento-card bento-md-w">
+      <i class="bi bi-book"></i>
+      <div>
+        <div class="card-label" data-en="Profile" data-pt="Perfil">Perfil</div>
+        <div class="card-value" data-en="Self-taught learner" data-pt="Autodidata">Autodidata</div>
+      </div>
+    </div>
+
+    <div class="bento-card bento-sm">
+      <i class="bi bi-code-slash"></i>
+      <div>
+        <div class="card-label" data-en="Primary" data-pt="Principal">Primary</div>
+        <div class="card-value" data-en="C++ · Python" data-pt="C++ · Python">C++ · Python</div>
+      </div>
+    </div>
+
+    <div class="bento-card bento-sm">
+      <i class="bi bi-code-slash"></i>
+      <div>
+        <div class="card-label" data-en="Mobile" data-pt="Mobile">Mobile</div>
+        <div class="card-value" data-en="React Native" data-pt="React Native">React Native</div>
+      </div>
+    </div>
+
+    <div class="bento-card bento-sm">
+      <i class="bi bi-code-slash"></i>
+      <div>
+        <div class="card-label" data-en="Web" data-pt="Web">Web</div>
+        <div class="card-value" data-en="Flask · Django" data-pt="Flask · Django">Flask · Django</div>
+      </div>
+    </div>
+
+    <div class="bento-card bento-sm">
+      <i class="bi bi-code-slash"></i>
+      <div>
+        <div class="card-label" data-en="Graphics" data-pt="Gráficos">Graphics</div>
+        <div class="card-value" data-en="Raylib" data-pt="Raylib">Raylib</div>
+      </div>
+    </div>
+
+  </div>
+</section>     
       <section id="projetos">
         <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
         <div class="project-list">
