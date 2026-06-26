@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kaaylooon.github.io/sitemap.xml

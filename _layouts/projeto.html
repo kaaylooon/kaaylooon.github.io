@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | Kaylon Souza</title>
+  <link rel="stylesheet" href="/assets/css/style.css"> 
+</head>
+<body style="background: #1a1b26; color: #c0caf5; padding: 2rem;">
+  <main style="max-width: 800px; margin: 0 auto;">
+    <a href="/#projetos" style="color: #7aa2f7;">&larr; Voltar</a>
+    <h1 style="color: #fff; margin-top: 1rem;">{{ page.title }}</h1>
+    <p style="color: var(--text-dim);">Stack: {{ page.stack }} | Status: {{ page.status }}</p>
+    <hr style="border-color: #414868; margin: 1.5rem 0;">
+
+    <div class="project-deep-dive">
+      {{ content }}
+    </div>
+  </main>
+</body>
+</html>
