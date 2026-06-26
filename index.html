@@ -210,7 +210,7 @@ permalink: /
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      padding: 2rem;
+      padding: 1.5rem;
       margin-bottom: 1.5rem;
       display: inline-block;
       width: 100%;
@@ -697,9 +697,6 @@ permalink: /
             <div class="project-card">
               <div class="project-header">
                 <h3>{{ projeto.title }}</h3>
-                {% if projeto.stack %}
-                  <span class="tech-stack">{{ projeto.stack }}</span>
-                {% endif %}
               </div>
               
               {% if projeto.image %}
@@ -719,9 +716,11 @@ permalink: /
               
               <div class="project-footer">
                 {% if projeto.repo %}
-                  <a href="{{ projeto.repo }}" target="_blank"><i class="bi bi-github"></i> Source</a>
+                  <a href="{{ projeto.repo }}" target="_blank"><i class="bi
+                      bi-github" style="padding-right: 0.3rem"></i> Source</a>
                 {% endif %}
-                <a href="{{ projeto.url }}"><i class="bi bi-arrow-right-circle"></i> Detalhes</a>
+                <a href="{{ projeto.url }}"><i class="bi
+                    bi-arrow-right-circle" style="padding-right: 0.3rem"></i> Saiba Mais</a>
               </div>
             </div>
           {% endfor %}
