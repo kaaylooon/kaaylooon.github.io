@@ -23,7 +23,7 @@ permalink: /
     <meta property="og:description" content="Personal Page |  Kaylon Souza">
     <meta property="og:type" content="website">   
    
-     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     </noscript>
@@ -693,84 +693,38 @@ permalink: /
       <section id="projetos">
         <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
         <div class="project-list">
-          <div class="project-card">
-            <div class="project-header">
-              <h3 data-en="Aurium Initium" data-pt="Aurium Initium">Aurium Initium</h3>
-              <span class="tech-stack">TeX · Math</span>
+          {% for projeto in site.projetos %}
+            <div class="project-card">
+              <div class="project-header">
+                <h3>{{ projeto.title }}</h3>
+                {% if projeto.stack %}
+                  <span class="tech-stack">{{ projeto.stack }}</span>
+                {% endif %}
+              </div>
+              
+              {% if projeto.image %}
+                <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
+                  <img src="{{ projeto.image }}" alt="{{ projeto.title }}" style="width: 100%; height: auto; display: block;">
+                </div>
+              {% endif %}
+              
+              <div class="project-status 
+                {% if projeto.status == 'Concluído' or projeto.status == 'Completed' %}status-done{% else %}status-progress{% endif %}">
+                <i class="bi 
+                  {% if projeto.status == 'Concluído' or projeto.status == 'Completed' %}bi-check-circle-fill{% else %}bi-gear-wide-connected{% endif %}"></i> 
+                <span>{{ projeto.status | default: "Em progresso" }}</span>
+              </div>
+              
+              <p class="project-description">{{ projeto.description | default: projeto.excerpt }}</p>
+              
+              <div class="project-footer">
+                {% if projeto.repo %}
+                  <a href="{{ projeto.repo }}" target="_blank"><i class="bi bi-github"></i> Source</a>
+                {% endif %}
+                <a href="{{ projeto.url }}"><i class="bi bi-arrow-right-circle"></i> Detalhes</a>
+              </div>
             </div>
-            <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-              <img src="./assets/2026-06-12  -  02h08m.png" alt="Aurium Initium" style="width: 100%; height: auto; display: block;">
-            </div>
-            <div class="project-status status-progress">
-              <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
-            </div>
-            <p class="project-description" data-en="Book of elementary mathematics" data-pt='É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.'>
-            É um livro de matemática elementar que estou escrevendo no meu tempo livre (às vezes). O livro tem o propósito de formar uma base sólida de matemática, "pulando" entre tópicos, isto é, explicando de formas que formam a intuição e deixam o conteúdo mais didático. Por exemplo, nós introduzimos o capítulo de equações explicando sobre a intepretação geométrica: em equações do primeiro grau, é explicado o que podemos concluir de acordo com as posições relativas às retas (coincidentes, parelelas e concorrentes). Desse modo, pretendo continuar escrevendo, mas demanda muito tempo. Veremos o desfecho (to be continued)... A saber, descobri que não gosto de ensinar o que vejo como "óbvio" hoje em dia, gostaria de pular para o que vejo de interessante, como conceitos mais raros de álgebra linear, geometria analítica e etc.</p>
-            <div class="project-footer">
-              <span><i class="bi bi-calendar3"></i> 03/2026</span>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-header">
-              <h3 data-en="Kext" data-pt="Kext">Kext</h3>
-              <span class="tech-stack">C</span>
-            </div>
-            <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-              <img src="./assets/kext2.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
-            </div>
-            <div class="project-status status-progress">
-              <i class="bi bi-gear-wide-connected"></i> <span data-en="In Progress" data-pt="Em progresso">In Progress</span>
-            </div>
-            <p class="project-description" data-en="Vi-based text editor" data-pt="Editor de texto vi-based">Editor de texto vi-based</p>
-            <div class="project-footer">
-              <a href="https://github.com/kaaylooon/kext" target="_blank"><i class="bi bi-github"></i> Source</a>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-header">
-              <h3 data-en="Kapraxis" data-pt="Kapraxis">Kapraxis</h3>
-              <span class="tech-stack">C++ · QT</span>
-            </div>
-            <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-              <img src="./assets/kapraxis.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
-            </div>
-            <div class="project-status status-done">
-              <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
-            </div>
-            <p class="project-description" data-en="A study app with flashcards, revisions, etc. All study resources are centralized in here." data-pt="Uma aplicação de estudos com flashcards, revisões, etc. Todos os recursos para fomentar os estudos centralizados."> Uma aplicação de estudos com flashcards, revisões, etc. Todos os recursos para fomentar os estudos centralizados.</p>
-            <div class="project-footer">
-              <a href="https://github.com/kaaylooon/kapraxis" target="_blank"><i class="bi bi-github"></i> Source</a>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-header">
-              <h3 data-en="Katálogo" data-pt="Katálogo">Katálogo</h3>
-              <span class="tech-stack">Python · Flask</span>
-            </div>
-            <div class="project-image" style="margin: 1rem 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color);">
-              <img src="./assets/katalogo-1.png" alt="Kapraxis Screenshot" style="width: 100%; height: auto; display: block;">
-            </div>
-            <div class="project-status status-done">
-              <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
-            </div>
-            <p class="project-description" data-en="Web application of business/services listing" data-pt="Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.">Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc.</p>
-            <div class="project-footer">
-              <a href="https://github.com/kaaylooon/Katalogo" target="_blank"><i class="bi bi-github"></i> Source</a>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-header">
-              <h3 data-en="Kaappli" data-pt="Kaappli">Kaappli</h3>
-              <span class="tech-stack">JS · Electron</span>
-            </div>
-            <div class="project-status status-done">
-              <i class="bi bi-check-circle-fill"></i> <span data-en="Completed" data-pt="Concluído">Completed</span>
-            </div>
-            <p class="project-description" data-en="Interactive web app (Electron) for practicing Hiragana and Katakana, with dynamic character generation and romanized answer validation." data-pt="Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.">Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.</p>
-            <div class="project-footer">
-              <a href="https://github.com/kaaylooon/Kaappli" target="_blank"><i class="bi bi-github"></i> Source</a>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </section>
       <section id="posts">
