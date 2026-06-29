@@ -59,34 +59,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </nav>
 
-<main class="container">
-    <a href="/#projetos" class="back-link">
-        <i class="bi bi-arrow-left"></i> <span data-en="Go back" data-pt="Voltar para Projetos">Voltar para Projetos</span>
-    </a>
+<main class="container" style="--content-max: 1000px;">
+    <section class="project-hero">
+        <a href="/#projetos" class="back-link">
+            <i class="bi bi-arrow-left"></i> <span data-en="Go back" data-pt="Voltar para Projetos">Voltar para Projetos</span>
+        </a>
 
-    <article class="post-header">
         <h1>{{ page.title }}</h1>
-        <div class="post-meta">
+
+        {% if page.description %}
+          <p class="project-intro">{{ page.description }}</p>
+        {% endif %}
+
+        <div class="bento-grid project-meta-grid">
             {% if page.stack %}
-            <span class="project-tech"><i class="bi bi-cpu"></i> {{ page.stack }}</span>
+              <div class="bento-card bento-sm">
+                <i class="bi bi-cpu"></i>
+                <div>
+                  <div class="card-label" data-en="Stack" data-pt="Stack">Stack</div>
+                  <div class="card-value">{{ page.stack }}</div>
+                </div>
+              </div>
             {% endif %}
-            
+
             {% if page.status %}
-            <span class="project-status"><i class="bi bi-gear-wide-connected"></i> {{ page.status }}</span>
+              <div class="bento-card bento-sm">
+                <i class="bi bi-gear-wide-connected"></i>
+                <div>
+                  <div class="card-label" data-en="Status" data-pt="Status">Status</div>
+                  <div class="card-value">{{ page.status }}</div>
+                </div>
+              </div>
             {% endif %}
 
             {% if page.repo %}
-            <span><i class="bi bi-github"></i> <a href="{{ page.repo }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-dim); text-decoration: none;">Repositório</a></span>
+              <a class="bento-card bento-sm project-meta-link" href="{{ page.repo }}" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+                <div>
+                  <div class="card-label" data-en="Source" data-pt="Repositório">Repositório</div>
+                  <div class="card-value">GitHub</div>
+                </div>
+              </a>
             {% endif %}
         </div>
-    </article>
+    </section>
 
     {% assign project_images = page.images %}
     {% if project_images == nil and page.image %}
       {% assign project_images = page.image | split: "|" %}
     {% endif %}
     {% if project_images and project_images.size > 0 %}
-      <section class="project-carousel" aria-label="Galeria do projeto">
+      <section class="project-carousel-section" aria-label="Galeria do projeto">
+        <h2 data-en="Gallery" data-pt="Galeria">Galeria</h2>
         <div class="project-carousel-shell" data-carousel>
           <div class="project-carousel-track">
             {% for image in project_images %}
@@ -120,9 +144,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </section>
     {% endif %}
 
-    <div class="post-content">
-        {{ content }}
-    </div>
+    <section class="project-content-section">
+        <h2 data-en="Overview" data-pt="Visão geral">Visão geral</h2>
+        <div class="post-content">
+            {{ content }}
+        </div>
+    </section>
 
 </main>
 
