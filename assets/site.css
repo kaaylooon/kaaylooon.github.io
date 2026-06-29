@@ -662,6 +662,15 @@ footer {
         margin: 0.75rem 0;
     }
 
+    .project-media-frame {
+        aspect-ratio: auto;
+    }
+
+    .project-media-frame img {
+        height: auto;
+        object-fit: contain;
+    }
+
     .bento-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.875rem;
