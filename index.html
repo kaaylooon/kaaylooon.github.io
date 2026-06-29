@@ -18,427 +18,35 @@ permalink: /
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Kaylon Souza</title>
-    <meta name="description" content="Personal page | Kaylon Souza">
+    <meta name="description" content="Kaylon Souza: matemática, física, programação, projetos e idiomas.">
+    <link rel="canonical" href="https://kaaylooon.github.io/">
+    <meta name="theme-color" content="#1a1b26">
+    <meta property="og:site_name" content="Kaylon Souza">
     <meta property="og:title" content="Kaylon Souza">
-    <meta property="og:description" content="Personal Page |  Kaylon Souza">
-    <meta property="og:type" content="website">   
+    <meta property="og:description" content="Matemática, física, programação, projetos e idiomas.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaaylooon.github.io/">
+    <meta property="og:image" content="https://kaaylooon.github.io/assets/particles.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kaylon Souza">
+    <meta name="twitter:description" content="Matemática, física, programação, projetos e idiomas.">
+    <meta name="twitter:image" content="https://kaaylooon.github.io/assets/particles.png">
    
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     </noscript>
 
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true
-    },
-    svg: { fontCache: 'global' }
-  };
-</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     </noscript>
-    <style>
-      :root {
-      --bg-page: #1a1b26;
-      --bg-card: #24283b;
-      --text-main: #c0caf5;
-      --text-dim: #7982a9;
-      --border-color: #414868;
-      --accent-blue: #7aa2f7; 
-      --accent-royal: #bb9af7;
-      /* Status */
-      --status-progress: #e0af68;
-      --status-done: #9ece6a;       }
-      * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      }
-      body {
-      background-color: var(--bg-page);
-      color: var(--text-main);
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-      }
-      h1, h2, h3, .serif {
-      font-family: 'Arial', serif;
-      font-weight: 800;
-      }
-      h1 {
-      font-size: 3rem;
-      letter-spacing: -1px;
-      margin-bottom: 1rem;
-      color: #ffffff;
-      }
-      h2 {
-      font-size: 1.3rem;
-      margin-bottom: 2.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border-color);
-      display: block;
-      color: var(--accent-blue);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      }
-      /* Espaçamento Amplo */
-      section {
-      padding: 3rem 0;
-      scroll-margin-top: 80px;
-      }
-      a {
-      color: var(--accent-blue);
-      text-decoration: none;
-      transition: opacity 0.2s;
-      }
-      a:hover {
-      opacity: 0.8;
-      text-decoration: none;
-      }
-      .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      }
-      /* Navbar Sombria */
-      .sticky-nav {
-      position: sticky;
-      top: 0;
-      background-color: rgba(13, 17, 23, 0.85);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-color);
-      z-index: 100;
-      padding: 1.2rem 0;
-      }
-      .nav-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      }
-      .nav-brand {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #fff;
-      }
-      .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      }
-      .nav-links a {
-      color: var(--text-dim);
-      font-size: 0.9rem;
-      font-weight: 400;
-      }
-      .nav-links a:hover {
-      color: var(--accent-blue);
-      }
-      /* Botão Idioma Floating */
-      .lang-switch-fixed {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 999;
-      width: 50px;
-      height: 50px;
-      border-radius: 8px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      color: white;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      transition: all 0.2s;
-      }
-      /* Grid de Conquistas/Habilidades */
-      .honors-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-      margin: 1.5rem 0;
-      }
-      .honor-badge {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      padding: 1.5rem 1.25rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      min-width: 28px;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      color: var(--text-main);
-      transition: all 0.2s;
-      }
-      .honor-badge:hover {
-        transform: translateY(-2px);
-      }
-      .honor-badge i {
-      display: inline-flex !important; /* Força a renderização */
-      align-items: center;
-      justify-content: center;
-      min-width: 20px; /* Garante que ele não "encolha" para 0px */
-      margin-right: 12px;
-      color: var(--accent-blue) !important;
-      font-size: 1.2rem; /* Aumentei um pouco para testar a visibilidade */
-      line-height: 1;
-      vertical-align: middle;
-      }
-      /* Projetos - Estilo Acadêmico */
-      .project-list {
-      column-count: 2;
-      column-gap: 2rem;
-      width: 100%;
-      gap: 2rem;
-      margin: 1.5rem 0;
-      }
-      .project-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      display: inline-block;
-      width: 100%;
-      break-inside: avoid;
-      transition: border-color 0.2s;
-      }
-      .project-card:hover {
-      border-color: var(--text-dim);
-      }
-      .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 0.5rem;
-      }
-      .project-card h3 {
-      font-size: 1.2rem;
-      color: #fff;
-      }
-      .project-status {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 1rem;
-      font-weight: 600;
-      }
-      .status-progress { color: var(--status-progress); }
-      .status-done { color: var(--status-done); }
-      .tech-stack {
-      font-family: monospace;
-      font-size: 0.75rem;
-      color: var(--accent-blue);
-      background: rgba(20, 144, 252, 0.1);
-      padding: 0.2rem 0.5rem;
-      border-radius: 8px;
-      }
-      .project-description {
-      font-size: 0.9rem;
-      color: var(--text-dim);
-      flex-grow: 1;
-      margin-bottom: 1.5rem;
-      }
-      .project-footer {
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      display: flex;
-      justify-content: space-between;
-      border-top: 1px solid var(--border-color);
-      padding-top: 1rem;
-      }
-      /* Papers/Posts */
-      .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      }
-      .post-item {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 2rem;
-      }
-      .post-date {
-      font-family: monospace;
-      color: var(--text-dim);
-      font-size: 0.9rem;
-      padding-top: 4px;
-      }
-      .post-content h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.5rem;
-      color: #fff;
-      }
-      .post-content p {
-      font-size: 0.95rem;
-      color: var(--text-dim);
-      }
-      .contact-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-      }
-      .contact-card {
-      background: var(--bg-card);
-      padding: 1.2rem;
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      }
-      .contact-card i {
-      font-size: 1.2rem;
-      color: var(--text-dim);
-      }
-      footer {
-      padding: 4rem 0;
-      border-top: 1px solid var(--border-color);
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 0.8rem;
-      }
-/* Layout Bento Grid Base */
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin: 1.0rem 0;
-}
-
-.bento-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  padding: 1.25rem;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  transition: all 0.2s ease-in-out;
-}
-
-.bento-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--text-dim);
-}
-
-/* Modificadores de tamanho do Bento */
-.bento-lg { grid-column: span 4; grid-row: span 2; }
-.bento-md-w { grid-column: span 2; }
-.bento-md-h { grid-row: span 2; }
-.bento-sm { grid-column: span 1; }
-
-/* Estilização interna dos Cards */
-.bento-card i {
-  font-size: 1.5rem;
-  color: var(--accent-blue);
-  line-height: 1;
-}
-
-.bento-card .card-value {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.bento-card .card-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-dim);
-}
-
-/* Tablet: 2 colunas mantendo spans */
-@media (max-width: 700px) {
-  .bento-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.875rem;
-  }
-  
-  .bento-card {
-    padding: 1.25rem;
-  }
-  
-  /* Mantém spans proporcionais */
-  .bento-lg { 
-    grid-column: span 2; 
-    grid-row: span 2;
-  }
-  .bento-md-w { grid-column: span 2; }
-  .bento-md-h { grid-row: span 2; }
-}
-
-/* Mobile: 2 colunas com cards compactos */
-@media (max-width: 200px) {
-  .bento-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-  
-  .bento-card {
-    padding: 0.875rem;
-    gap: 0.5rem;
-  }
-  
-  .bento-card i {
-    font-size: 1.1rem;
-  }
-  
-  .bento-card .card-value {
-    font-size: 0.85rem;
-  }
-  
-  .bento-card .card-label {
-    font-size: 0.6rem;
-  }
-  
-  /* Esconde textos descritivos em todos os cards no mobile */
-  .bento-card p {
-    display: none;
-  }
-  
-  /* No mobile, todos os cards ocupam 1 coluna para grid 2x2 equilibrado */
-  /* Exceto cards que explicitamente precisam de destaque (opcional) */
-  .bento-lg, 
-  .bento-md-w, 
-  .bento-md-h, 
-  .bento-sm {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-  
-  /* Opcional: destaca o card OBA (prata) ocupando 2 colunas no mobile */
-  /* Para isso, adicione uma classe 'bento-featured' no card OBA no HTML */
-}
-
-/* Demais responsividades (navbar, projetos, posts) */
-@media (max-width: 768px) {
-  h1 { font-size: 2.2rem; }
-  .post-item { grid-template-columns: 1fr; gap: 0.5rem; }
-  .nav-links { display: none; }
-  section { padding: 2rem 0; }
-  .project-list { column-count: 1; }
-  .project-card { padding: 1rem; }
-  .project-image { margin: 0.75rem 0; }
-}
-    </style>
+    <link rel="stylesheet" href="/assets/site.css">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -461,13 +69,13 @@ permalink: /
         </ul>
       </div>
     </nav>
-    <main class="container">
+    <main class="container" style="--content-max: 1000px;">
       <section id="home">
         <h1>Kaylon Souza</h1>
         <p style="color: var(--text-dim); font-size: 1rem; max-width: 700px;">
-          <span data-pt="Bem-vindo(a). Aqui encontra-se o que eu gostaria de compartilhar." 
-            data-en="Welcome. Here is what I would like to share.">
-          Bem-vindo(a). Aqui encontra-se o que eu gostaria de compartilhar.
+          <span data-pt="Matemática, física, programação e idiomas. Um registro direto do que construo."
+            data-en="Mathematics, physics, programming and languages. A direct record of what I build.">
+            Matemática, física, programação e idiomas. Um registro direto do que construo.
           </span>
           <br>
           <a href="/about.html" style="font-size: 0.85rem; margin-top: 0.5rem; margin-right: 1rem; display: inline-block;">
@@ -475,7 +83,7 @@ permalink: /
           <span data-pt="Saiba mais" data-en="About me">Saiba mais</span>
           </a>
         </p>
-      </section
+      </section>
 
 <!-- SEÇÃO CONQUISTAS (BENTO LAYOUT EQUILIBRADO) -->
       <section id="conquistas">
@@ -486,7 +94,7 @@ permalink: /
           <!-- OLITEF Ouro -->
           
           <div class="bento-card bento-sm">
-            <i class="bi bi-trophy" style="color: #e0af68;"></i>
+            <i class="bi bi-trophy"></i>
             <div>
               <div class="card-label">OLITEF (2024)</div>
               <div class="card-value" data-en="Gold" data-pt="Ouro">Ouro</div>
@@ -497,7 +105,7 @@ permalink: /
 
           <!-- O2 Ouro -->
           <div class="bento-card bento-sm">
-            <i class="bi bi-trophy" style="color: #e0af68;"></i>
+            <i class="bi bi-trophy"></i>
             <div>
               <div class="card-label">O2 (2024)</div>
               <div class="card-value" data-en="Gold" data-pt="Ouro">Ouro</div>
@@ -507,7 +115,7 @@ permalink: /
 
           <!-- OBLI Ouro -->
           <div class="bento-card bento-md-w">
-            <i class="bi bi-trophy" style="color: #e0af68;"></i>
+            <i class="bi bi-trophy"></i>
             <div>
               <div class="card-label">OBLI (2024)</div>
               <div class="card-value" data-en="Gold" data-pt="Ouro">Ouro</div>
@@ -518,7 +126,7 @@ permalink: /
           <!-- OBA Prata (Card largo posicionado para quebra estética do grid) -->
           
           <div class="bento-card bento-md-w">
-              <i class="bi bi-award" style="color: #a9b1d6;"></i>
+              <i class="bi bi-award"></i>
               <div>
                 <div class="card-label">OBA (2025)</div>
                 <div class="card-value" data-en="Silver" data-pt="Prata">Medalha de Prata</div>
@@ -527,7 +135,7 @@ permalink: /
           </div>
 
           <div class="bento-card bento-md-w">
-              <i class="bi bi-award" style="color: #a9b1d6;"></i>
+              <i class="bi bi-award"></i>
               <div>
                 <div class="card-label">OBA (2026)</div>
                 <div class="card-value" data-en="Silver" data-pt="Prata">Medalha de Prata</div>
@@ -537,7 +145,7 @@ permalink: /
 
           <!-- OBMEP Bronze -->
           <div class="bento-card bento-sm">
-            <i class="bi bi-award" style="color: #cd7f32;"></i>
+            <i class="bi bi-award"></i>
             <div>
               <div class="card-label">OBMEP (2025)</div>
               <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
@@ -547,7 +155,7 @@ permalink: /
 
           <!-- OBLI Bronze -->
             <div class="bento-card bento-sm">
-              <i class="bi bi-award" style="color: #cd7f32;"></i>
+              <i class="bi bi-award"></i>
               <div>
                 <div class="card-label">OBLI (2025)</div>
                 <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
@@ -557,7 +165,7 @@ permalink: /
 
             <!-- OBG Bronze -->
             <div class="bento-card bento-sm">
-            <i class="bi bi-award" style="color: #cd7f32;"></i>
+            <i class="bi bi-award"></i>
             <div>
               <div class="card-label">OBG (2024)</div>
               <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
@@ -566,7 +174,7 @@ permalink: /
           </div>
 
           <div class="bento-card bento-sm">
-            <i class="bi bi-trophy" style="color: #cd7f32;"></i>
+            <i class="bi bi-trophy"></i>
             <div>
               <div class="card-label">OLITEF (2025)</div>
               <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
@@ -576,7 +184,7 @@ permalink: /
 
           <!-- OBF Menção -->
           <div class="bento-card bento-lg">
-            <i class="bi bi-activity" style="color: var(--accent-blue);"></i>
+            <i class="bi bi-activity"></i>
             <div>
               <div class="card-label">OBF (2025)</div>
               <div class="card-value" style="font-size: 0.95rem;" data-en="Good Perf." data-pt="Bom Desemp.">Bom Desemp.</div>
@@ -596,35 +204,70 @@ permalink: /
         <h2 data-en="Languages" data-pt="Idiomas">Idiomas</h2>
         <div class="bento-grid">
 
-          <div class="bento-card bento-sm" style="border-bottom: 2px solid var(--accent-blue);">
-            <i class="bi bi-translate"></i>
+          <div class="bento-card bento-md-w lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge">Nativo</span>
+            </div>
             <div>
               <div class="card-value" data-en="Portuguese" data-pt="Português">Português</div>
-              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Native speaker" data-pt="Nativo">Nativo</p>
+              <p class="lang-quote">“por causa das sobras, engoli com alguma dor meu orgulho que sempre fora feroz, e aceitei humilde o que o destino me dava de esmola.” <span style="font-style: normal;">~ Clarice Lispector</span></p>
             </div>
           </div>
 
-          <div class="bento-card bento-sm" style="border-bottom: 2px solid var(--accent-blue);">
-            <i class="bi bi-translate"></i>
+          <div class="bento-card bento-md-w lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge">B2/C1</span>
+            </div>
             <div>
               <div class="card-value" data-en="English" data-pt="Inglês">Inglês</div>
-              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Intermediate" data-pt="Intermediário">Intermediário</p>
+              <p class="lang-quote">“There are no mistakes, only lessons. Lessons will be repeated until they are learned.” <span style="font-style: normal;">~ Sanskrit Wisdom</span></p>
             </div>
           </div>
 
-          <div class="bento-card bento-md-w" style="border-bottom: 2px solid
-                      var(--accent-blue);">
-            <i class="bi bi-translate"></i>
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; height: 100%;">
-              <div>
-                <div class="card-value" data-en="Mandarin" data-pt="Mandarim">Mandarim</div>
-                <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Simplified Chinese (N5)" data-pt="Chinês Simplificado (N5)">Chinês Simplificado (N5)</p>
-              </div>
-              <span style="font-size: 1.5rem; color: var(--text-dim); font-weight: bold; opacity: 0.4;">中文</span>
+
+          <div class="bento-card bento-md-w lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge">A1</span>
+            </div>
+            <div>
+              <div class="card-value" data-en="French" data-pt="Francês">Francês</div>
+              <p class="lang-quote">“Je pense, donc je suis.” <span
+                style="font-style: normal;">~ René Descartes</span></p>
+            </div>
+          </div>
+
+          <!--<div class="bento-card bento-sm lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge">A1</span>
+            </div>
+            <div class="lang-card-top">
+              <div class="card-value" data-en="Mandarin" data-pt="Mandarim">Mandarim</div>
+              <span class="lang-script">中文</span>
+            </div>
+            <div>
+              <p class="lang-quote">“路漫漫其修远兮，吾将上下而求索。” <span style="font-style: normal;">~ 屈原</span></p>
+            </div>
+          </div>
+          -->
+          <div class="bento-card bento-md-w lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge">A1</span>
+            </div>
+            <div>
+              <div class="card-value" data-en="Spanish" data-pt="Espanhol">Espanhol</div>
+              <p class="lang-quote">“Caminante, no hay camino, se hace camino al andar.” <span style="font-style: normal;">- Antonio Machado</span></p>
             </div>
           </div>
 
         </div>
+        <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 1rem;">
+          <span data-pt="Fonte:" data-en="Source:">Fonte:</span> <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/official-translations-of-the-cefr-global-scale" target="_blank" rel="noopener noreferrer">Conselho da Europa, CEFR Global Scale</a>
+        </p>
       </section>
 
       <section id="habilidades">
@@ -716,7 +359,7 @@ permalink: /
               
               <div class="project-footer">
                 {% if projeto.repo %}
-                  <a href="{{ projeto.repo }}" target="_blank"><i class="bi
+                  <a href="{{ projeto.repo }}" target="_blank" rel="noopener noreferrer"><i class="bi
                       bi-github" style="padding-right: 0.3rem"></i> Source</a>
                 {% endif %}
                 <a href="{{ projeto.url }}"><i class="bi

@@ -9,10 +9,25 @@ new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-N8XJL7JC');</script>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Kaylon Souza</title>
     <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <link rel="canonical" href="https://kaaylooon.github.io{{ page.url }}">
+    <meta name="theme-color" content="#1a1b26">
+    <meta property="og:site_name" content="Kaylon Souza">
+    <meta property="og:title" content="{{ page.title }} | Kaylon Souza">
+    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://kaaylooon.github.io{{ page.url }}">
+    <meta property="og:image" content="https://kaaylooon.github.io/assets/particles.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title }} | Kaylon Souza">
+    <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <meta name="twitter:image" content="https://kaaylooon.github.io/assets/particles.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <script>
@@ -26,287 +41,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   };
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-
-    <style>
-        :root {
-            --bg-page: #1a1b26;
-            --bg-card: #24283b;
-            --text-main: #c0caf5;
-            --text-dim: #7982a9;
-            --border-color: #414868;
-            --accent-blue: #7aa2f7;
-            --accent-royal: #bb9af7;
-            --status-progress: #e0af68;
-            --status-done: #9ece6a;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--bg-page);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        h1, h2, h3, .serif {
-            font-family: 'Arial', serif;
-            font-weight: 800;
-        }
-
-        h1 {
-            font-size: 3rem;
-            letter-spacing: -1px;
-            margin-bottom: 0.75rem;
-            color: #ffffff;
-            line-height: 1.2;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border-color);
-            color: var(--accent-blue);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            margin: 1.5rem 0 1rem;
-            color: #ffffff;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Navbar Sombria */
-        .sticky-nav {
-            position: sticky;
-            top: 0;
-            background-color: rgba(26, 27, 38, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 100;
-            padding: 1.2rem 0;
-            margin-bottom: 2rem;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-brand {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #fff;
-        }
-
-        .nav-brand a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            font-weight: 400;
-            text-decoration: none;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-blue);
-        }
-
-        /* Project Content */
-        .post-header {
-            margin-bottom: 2rem;
-        }
-
-        .post-meta {
-            display: flex;
-            align-items: center;
-            gap: 1.25rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-dim);
-            font-family: monospace;
-            font-size: 0.9rem;
-            flex-wrap: wrap;
-        }
-
-        .post-meta i {
-            margin-right: 0.25rem;
-        }
-
-        .project-tech {
-            color: var(--accent-royal);
-        }
-
-        .project-status {
-            color: var(--status-progress);
-            font-weight: bold;
-        }
-
-        .post-content {
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        .post-content p {
-            margin-bottom: 1.25rem;
-        }
-
-        .post-content h2 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .post-content h3 {
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .post-content h4 {
-            font-size: 1.1rem;
-            margin: 1.25rem 0 0.5rem;
-            color: var(--accent-blue);
-        }
-
-        .post-content a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
-
-        .post-content a:hover {
-            text-decoration: underline;
-        }
-
-        .post-content blockquote {
-            border-left: 3px solid var(--accent-blue);
-            padding-left: 1.25rem;
-            margin: 1.25rem 0;
-            color: var(--text-dim);
-            font-style: italic;
-        }
-
-        .post-content code {
-            background: var(--bg-card);
-            padding: 0.2rem 0.4rem;
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 0.9em;
-            color: var(--accent-royal);
-        }
-
-        .post-content pre {
-            background: var(--bg-card);
-            padding: 1rem;
-            border-radius: 12px;
-            overflow-x: auto;
-            margin: 1.25rem 0;
-            border: 1px solid var(--border-color);
-        }
-
-        .post-content pre code {
-            background: none;
-            padding: 0;
-            color: var(--text-main);
-        }
-
-        .post-content ul, .post-content ol {
-            margin: 1rem 0;
-            padding-left: 1.5rem;
-        }
-
-        .post-content li {
-            margin: 0.5rem 0;
-        }
-
-        .post-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            margin: 1.5rem 0;
-            border: 1px solid var(--border-color);
-        }
-
-        .post-content hr {
-            border: 0;
-            border-top: 1px solid var(--border-color);
-            margin: 2rem 0;
-        }
-
-        .post-content table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.25rem 0;
-        }
-
-        .post-content th, .post-content td {
-            border: 1px solid var(--border-color);
-            padding: 0.5rem;
-            text-align: left;
-        }
-
-        .post-content th {
-            background: var(--bg-card);
-            font-weight: 600;
-        }
-
-        /* Back Link */
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-
-        .back-link:hover {
-            color: var(--accent-blue);
-        }
-
-        /* Footer */
-        footer {
-            padding: 4rem 0 3rem;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            color: var(--text-dim);
-            font-size: 0.8rem;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.25rem; }
-            h3 { font-size: 1.1rem; }
-            .post-content { font-size: 1rem; }
-            .nav-links { display: none; }
-            .container { padding: 0 1.25rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8XJL7JC"
@@ -341,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             {% endif %}
 
             {% if page.repo %}
-            <span><i class="bi bi-github"></i> <a href="{{ page.repo }}" target="_blank" style="color: var(--text-dim); text-decoration: none;">Repositório</a></span>
+            <span><i class="bi bi-github"></i> <a href="{{ page.repo }}" target="_blank" rel="noopener noreferrer" style="color: var(--text-dim); text-decoration: none;">Repositório</a></span>
             {% endif %}
         </div>
     </article>
