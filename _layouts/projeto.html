@@ -81,6 +81,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </article>
 
+    {% assign project_images = page.images %}
+    {% if project_images == nil and page.image %}
+      {% assign project_images = page.image | split: "|" %}
+    {% endif %}
+    {% if project_images and project_images.size > 0 %}
+      <section class="project-carousel" aria-label="Galeria do projeto">
+        <div class="project-carousel-shell" data-carousel>
+          <div class="project-carousel-track">
+            {% for image in project_images %}
+              {% assign image_url = image | strip %}
+              {% if image_url != blank %}
+                <figure class="project-carousel-slide">
+                  <img src="{{ image_url }}" alt="{{ page.title }} - imagem {{ forloop.index }}">
+                </figure>
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% if project_images.size > 1 %}
+            <button class="project-carousel-button prev" type="button" data-carousel-prev aria-label="Imagem anterior">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="project-carousel-button next" type="button" data-carousel-next aria-label="Próxima imagem">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          {% endif %}
+        </div>
+        {% if project_images.size > 1 %}
+          <div class="project-carousel-dots" data-carousel-dots>
+            {% for image in project_images %}
+              {% assign image_url = image | strip %}
+              {% if image_url != blank %}
+                <button class="project-carousel-dot{% if forloop.first %} is-active{% endif %}" type="button" data-carousel-dot aria-label="Ir para imagem {{ forloop.index }}"></button>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
+
     <div class="post-content">
         {{ content }}
     </div>
@@ -90,6 +129,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
     <p>Kaylon Souza &bull; 2026<br>
 </footer>
+
+<script>
+  (function() {
+    const shell = document.querySelector('[data-carousel]');
+    if (!shell) return;
+
+    const track = shell.querySelector('.project-carousel-track');
+    const slides = Array.from(shell.querySelectorAll('.project-carousel-slide'));
+    const prevButton = shell.querySelector('[data-carousel-prev]');
+    const nextButton = shell.querySelector('[data-carousel-next]');
+    const dots = Array.from(document.querySelectorAll('[data-carousel-dot]'));
+    if (slides.length <= 1) return;
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      if (prevButton) prevButton.disabled = currentIndex === 0;
+      if (nextButton) nextButton.disabled = currentIndex === slides.length - 1;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('is-active', index === currentIndex);
+      });
+    }
+
+    if (prevButton) {
+      prevButton.addEventListener('click', () => {
+        currentIndex = Math.max(0, currentIndex - 1);
+        updateCarousel();
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener('click', () => {
+        currentIndex = Math.min(slides.length - 1, currentIndex + 1);
+        updateCarousel();
+      });
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel();
+      });
+    });
+
+    updateCarousel();
+  })();
+</script>
 
 </body>
 </html>

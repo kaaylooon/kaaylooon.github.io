@@ -4,6 +4,9 @@ title: "Katálogo"
 stack: "Python · Flask"
 status: "Concluído"
 image: "/assets/katalogo-1.png"
+images:
+  - "/assets/katalogo-1.png"
+  - "/assets/katalogo-2.png"
 repo: "https://github.com/kaaylooon/Katalogo"
 description: "Serviço web que permite adicionar, listar e remover serviços/negócios locais. O Katálogo tem todos os componentes: comentários, avaliações, localização, informações sobre o negócio e etc."
 ---

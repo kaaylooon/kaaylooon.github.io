@@ -4,6 +4,9 @@ title: "Kext"
 stack: "C"
 status: "Em progresso"
 image: "/assets/kext2.png"
+images:
+  - "/assets/kext2.png"
+  - "/assets/kext.png"
 repo: "https://github.com/kaaylooon/kext"
 description: "Editor de texto vi-based"
 ---
