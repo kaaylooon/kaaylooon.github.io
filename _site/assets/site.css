@@ -675,6 +675,26 @@ section {
     margin: 1rem 0;
 }
 
+.skills-group {
+    margin: 0 0 2rem;
+}
+
+.skills-group h3 {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+}
+
+.skills-group .bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.skills-group .bento-card {
+    min-height: 100px;
+}
+
 .bento-card {
     background-color: var(--bg-card);
     border: var(--card-border) solid var(--border-color);
