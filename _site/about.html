@@ -1,6 +1,3 @@
----
-layout: null
----
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -13,36 +10,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Kaylon Souza</title>
-    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
-    <link rel="canonical" href="https://kaaylooon.github.io{{ page.url }}">
+    <title>Sobre | Kaylon Souza</title>
+    <meta name="description" content="Sobre Kaylon Souza: matemática, física, programação e objetivos.">
+    <link rel="canonical" href="https://kaaylooon.github.io/about.html">
     <meta name="theme-color" content="#1a1b26">
     <meta property="og:site_name" content="Kaylon Souza">
-    <meta property="og:title" content="{{ page.title }} | Kaylon Souza">
-    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://kaaylooon.github.io{{ page.url }}">
+    <meta property="og:title" content="Sobre | Kaylon Souza">
+    <meta property="og:description" content="Sobre Kaylon Souza: matemática, física, programação e objetivos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaaylooon.github.io/about.html">
     <meta property="og:image" content="https://kaaylooon.github.io/assets/particles.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title }} | Kaylon Souza">
-    <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <meta name="twitter:title" content="Sobre | Kaylon Souza">
+    <meta name="twitter:description" content="Sobre Kaylon Souza: matemática, física, programação e objetivos.">
     <meta name="twitter:image" content="https://kaaylooon.github.io/assets/particles.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
-    <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true
-    },
-    svg: { fontCache: 'global' }
-  };
-</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
@@ -50,6 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8XJL7JC"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <button class="lang-switch-fixed" id="langToggle">🇧🇷</button>
 
 <nav class="sticky-nav">
@@ -66,44 +53,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 
 <main class="container">
-    <a href="/#posts" class="back-link">
+    <a href="/" class="back-link">
         <i class="bi bi-arrow-left"></i> <span data-en="Go back" data-pt="Voltar">Voltar</span>
     </a>
 
     <article class="post-header">
-        <h1>{{ page.title }}</h1>
-        <div class="post-meta">
-            <span class="date"><i class="bi bi-calendar3"></i> {{ page.date | date: "%B %d, %Y" }}</span>
-            {% if page.author %}
-            <span><i class="bi bi-person"></i> {{ page.author }}</span>
-            {% endif %}
-            {% if page.reading_time %}
-            <span><i class="bi bi-clock"></i> {{ page.reading_time }} min read</span>
-            {% endif %}
-        </div>
+        <h1 data-pt="Sobre" data-en="About">Sobre</h1>
+        <!-- sem post-meta (data, autor etc) por não ser um post -->
     </article>
 
-    <div class="post-content">
-        {{ content }}
+    <div class="post-content"
+         data-pt="
+            <p>Estudei matemática por obras nacionais e dei algumas 'olhadas' em
+            clássicos internacionais (Titu, por exemplo). Completei a base com
+            máximo aprofundamento, e também passei pelo conteúdo do superior:
+            cálculo, álgebra linear, teoria dos números etc. Em física,
+            completei a física clássica e tive contato com o superior: relatividade, moderna etc.</p>
+            <p>Em programação, passei um tempo considerável com Python e C++, usando RayLib para simulações físicas (colisões, n-body problem…). É um hobby interessante.</p>
+            <p>Quero ser poliglota. É um dos meus objetivos — em breve, colocarei em prática.</p>
+            <p>Não são menções vagas de 'qualificações'. Estas são algumas coisas que me definem.</p>
+            <blockquote>
+                'It is a ridiculous thing for a man not to fly from his own badness, which is indeed possible, but to fly from other men's badness, which is impossible.'<br>
+                — Marco Aurélio, Meditações
+            </blockquote>
+         "
+         data-en="
+            <p>I studied mathematics through national works and took a look at international classics (Titu, for example). I covered all high school content with maximum depth, and also went through calculus, linear algebra, number theory, etc. In physics, I completed the basics and had contact with higher-level topics: relativity, modern physics, etc.</p>
+            <p>In programming, I spent considerable time with Python and C++, using RayLib for physical simulations (collisions, n-body problem…). It's an interesting hobby.</p>
+            <p>I want to be a polyglot. It's one of my goals — I'll put it into practice soon.</p>
+            <p>These are not vague mentions of 'qualifications.' These are some of the things that define me.</p>
+            <blockquote>
+                'It is a ridiculous thing for a man not to fly from his own badness, which is indeed possible, but to fly from other men's badness, which is impossible.'<br>
+                — Marcus Aurelius, Meditations
+            </blockquote>
+         ">
+        <!-- O conteúdo inicial (português) será inserido pelo JavaScript -->
     </div>
-
-    <nav class="page-pager" aria-label="Navegação da publicação">
-        {% if page.previous %}
-        <a class="pager-card pager-card--prev" href="{{ page.previous.url }}">
-            <span class="pager-kicker" data-en="Previous" data-pt="Anterior">Anterior</span>
-            <strong>{{ page.previous.title }}</strong>
-            <span class="pager-meta" data-en="Newer post" data-pt="Mais recente">Mais recente</span>
-        </a>
-        {% endif %}
-        {% if page.next %}
-        <a class="pager-card pager-card--next" href="{{ page.next.url }}">
-            <span class="pager-kicker" data-en="Next" data-pt="Próximo">Próximo</span>
-            <strong>{{ page.next.title }}</strong>
-            <span class="pager-meta" data-en="Older post" data-pt="Mais antigo">Mais antigo</span>
-        </a>
-        {% endif %}
-    </nav>
-
 </main>
 
 <footer>
@@ -115,16 +100,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         let currentLang = 'pt';
         const toggleBtn = document.getElementById('langToggle');
 
-        if (!toggleBtn) {
-            document.documentElement.lang = currentLang;
-            return;
-        }
-
         function setLanguage(lang) {
             const elements = document.querySelectorAll('[data-en][data-pt]');
             elements.forEach(el => {
-                const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
-                if (text) el.innerText = text;
+                const html = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-pt');
+                if (html) el.innerHTML = html;
             });
             toggleBtn.innerHTML = lang === 'en' ? '🇧🇷' : '🇺🇸';
             currentLang = lang;

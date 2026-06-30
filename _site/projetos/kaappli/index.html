@@ -1,6 +1,3 @@
----
-layout: null
----
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -11,22 +8,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-N8XJL7JC');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} | Kaylon Souza</title>
-    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
-    <link rel="canonical" href="https://kaaylooon.github.io{{ page.url }}">
+    <title>Kaappli | Kaylon Souza</title>
+    <meta name="description" content="Kaappli é um aplicativo desktop construído com Electron e JavaScript puro, focado no aprendizado do alfabeto japonês (Hiragana e Katakana).
+">
+    <link rel="canonical" href="https://kaaylooon.github.io/projetos/kaappli/">
     <meta name="theme-color" content="#1a1b26">
     <meta property="og:site_name" content="Kaylon Souza">
-    <meta property="og:title" content="{{ page.title }} | Kaylon Souza">
-    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <meta property="og:title" content="Kaappli | Kaylon Souza">
+    <meta property="og:description" content="Kaappli é um aplicativo desktop construído com Electron e JavaScript puro, focado no aprendizado do alfabeto japonês (Hiragana e Katakana).
+">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://kaaylooon.github.io{{ page.url }}">
+    <meta property="og:url" content="https://kaaylooon.github.io/projetos/kaappli/">
     <meta property="og:image" content="https://kaaylooon.github.io/assets/particles.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ page.title }} | Kaylon Souza">
-    <meta name="twitter:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <meta name="twitter:title" content="Kaappli | Kaylon Souza">
+    <meta name="twitter:description" content="Kaappli é um aplicativo desktop construído com Electron e JavaScript puro, focado no aprendizado do alfabeto japonês (Hiragana e Katakana).
+">
     <meta name="twitter:image" content="https://kaaylooon.github.io/assets/particles.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
@@ -66,95 +66,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <i class="bi bi-arrow-left"></i> <span data-en="Go back" data-pt="Voltar para Projetos">Voltar para Projetos</span>
         </a>
 
-        <h1>{{ page.title }}</h1>
+        <h1>Kaappli</h1>
 
-        {% if page.description %}
-          <p class="project-intro">{{ page.description }}</p>
-        {% endif %}
+        
+          <p class="project-intro">Aplicacão web (Electron) interativa para prática de Hiragana e Katakana, com geração dinâmica de caracteres e validação das respostas romanizadas.</p>
+        
 
         <div class="bento-grid project-meta-grid">
-            {% if page.stack %}
+            
               <div class="bento-card bento-sm">
                 <i class="bi bi-cpu"></i>
                 <div>
                   <div class="card-label" data-en="Stack" data-pt="Stack">Stack</div>
-                  <div class="card-value">{{ page.stack }}</div>
+                  <div class="card-value">JS · Electron</div>
                 </div>
               </div>
-            {% endif %}
+            
 
-            {% if page.status %}
+            
               <div class="bento-card bento-sm">
                 <i class="bi bi-gear-wide-connected"></i>
                 <div>
                   <div class="card-label" data-en="Status" data-pt="Status">Status</div>
-                  <div class="card-value">{{ page.status }}</div>
+                  <div class="card-value">Concluído</div>
                 </div>
               </div>
-            {% endif %}
+            
 
-            {% if page.repo %}
-              <a class="bento-card bento-sm project-meta-link" href="{{ page.repo }}" target="_blank" rel="noopener noreferrer">
+            
+              <a class="bento-card bento-sm project-meta-link" href="https://github.com/kaaylooon/Kaappli" target="_blank" rel="noopener noreferrer">
                 <i class="bi bi-github"></i>
                 <div>
                   <div class="card-label" data-en="Source" data-pt="Repositório">Repositório</div>
                   <div class="card-value">GitHub</div>
                 </div>
               </a>
-            {% endif %}
+            
         </div>
     </section>
 
-    {% assign project_image = page.image %}
-    {% if project_image == nil and page.images %}
-      {% assign project_image = page.images | first %}
-    {% endif %}
-    {% if project_image %}
-      <section class="project-media-section" aria-label="Imagem do projeto">
-        <div class="project-media-frame">
-          <img src="{{ project_image }}" alt="{{ page.title }}">
-        </div>
-      </section>
-    {% endif %}
+    
+    
+    
 
     <section class="project-content-section">
         <h2 data-en="Overview" data-pt="Visão geral">Visão geral</h2>
         <div class="post-content">
-            {{ content }}
+            <p>Kaappli é um aplicativo desktop construído com Electron e JavaScript puro, focado no aprendizado do alfabeto japonês (Hiragana e Katakana).</p>
+
+<p>Ele gera caracteres aleatórios e o usuário deve digitar a leitura romanizada (romaji). O app fornece feedback instantâneo, pontuação e progresso, sendo uma ferramenta simples e eficaz para treinar o reconhecimento dos silabários japoneses.</p>
+
         </div>
     </section>
 
-    {% assign ordered_projects = site.projetos | sort: "path" %}
-    {% assign previous_project = nil %}
-    {% assign next_project = nil %}
-    {% for projeto in ordered_projects %}
-      {% if projeto.url == page.url %}
-        {% assign previous_index = forloop.index0 | minus: 1 %}
-        {% assign next_index = forloop.index0 | plus: 1 %}
-        {% if previous_index >= 0 %}
-          {% assign previous_project = ordered_projects[previous_index] %}
-        {% endif %}
-        {% if next_index < ordered_projects.size %}
-          {% assign next_project = ordered_projects[next_index] %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
+    
+    
+    
+    
 
     <nav class="page-pager" aria-label="Navegação do projeto">
-        {% if previous_project %}
-        <a class="pager-card pager-card--prev" href="{{ previous_project.url }}">
+        
+        <a class="pager-card pager-card--prev" href="/projetos/aurium-initium/">
             <span class="pager-kicker" data-en="Previous project" data-pt="Projeto anterior">Projeto anterior</span>
-            <strong>{{ previous_project.title }}</strong>
+            <strong>Aurium Initium</strong>
             <span class="pager-meta" data-en="See the previous item in the list" data-pt="Veja o item anterior da lista">Veja o item anterior da lista</span>
         </a>
-        {% endif %}
-        {% if next_project %}
-        <a class="pager-card pager-card--next" href="{{ next_project.url }}">
+        
+        
+        <a class="pager-card pager-card--next" href="/projetos/kapraxis/">
             <span class="pager-kicker" data-en="Next project" data-pt="Próximo projeto">Próximo projeto</span>
-            <strong>{{ next_project.title }}</strong>
+            <strong>Kapraxis</strong>
             <span class="pager-meta" data-en="Continue through the list" data-pt="Continue pela lista">Continue pela lista</span>
         </a>
-        {% endif %}
+        
     </nav>
 
 </main>
