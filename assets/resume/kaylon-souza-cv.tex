@@ -1,0 +1,151 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[portuguese]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\hypersetup{
+  pdftitle={Kaylon Souza - Currículo},
+  pdfauthor={Kaylon Souza},
+  pdfsubject={Currículo técnico},
+  pdfkeywords={Kaylon Souza, currículo, personal page, Python, TypeScript, React Native, Flask, C++, software}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    {\Huge \scshape Kaylon Souza} \\ \vspace{1pt}
+    Macajuba - BA, Brasil \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ (11) 91659-1346 ~
+        \href{mailto:kaylon.contact@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{kaylon.contact@gmail.com}} \\
+    \href{https://kaaylooon.github.io}{\raisebox{-0.2\height}\faGlobe\ \underline{kaaylooon.github.io}} ~
+        \href{https://linkedin.com/in/kaylonsouza}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/kaylonsouza}} ~
+        \href{https://github.com/kaaylooon}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/kaaylooon}}
+    \vspace{-8pt}
+\end{center}
+
+
+\section{Resumo}
+Estudante focado em desenvolvimento de software com experiência prática em Python, C/C++, TypeScript, Flask, React Native e modelagem de aplicações próprias.
+
+\section{Formação}
+\resumeSubHeadingListStart
+  \resumeSubheading
+      {Colégio Estadual Carlito de Carvalho}{Fev. 2024 -- Dez. 2026}
+      {Curso Técnico de Administração Integrado ao Ensino Médio}{Bahia, Brasil}
+\resumeSubHeadingListEnd
+
+\section{Projetos}
+\resumeSubHeadingListStart
+\resumeProjectHeading{\href{https://kaaylooon.github.io/projetos/motriz/}{\textbf{Motriz}} | \emph{TypeScript, Expo, React Native, AsyncStorage}}{2026 -- Presente}
+\resumeItemListStart
+  \resumeItem{Aplicativo mobile para organizar ciclos de estudo e tarefas, combinando distribuição ponderada de disciplinas com uma lista inspirada em todo.txt.}
+  \resumeItem{Gera blocos de estudo a partir de pesos por dificuldade e quantidade de tópicos, com intercalação para reduzir repetições próximas.}
+  \resumeItem{Mantém persistência local de ciclo, disciplinas, tarefas e configurações usando AsyncStorage e tipagem estrita com TypeScript.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\href{https://kaaylooon.github.io/projetos/katalogo/}{\textbf{Katálogo}} | \emph{Python, Flask, SQLite/PostgreSQL, HTML/CSS}}{2024}
+\resumeItemListStart
+  \resumeItem{Aplicação web completa para catálogo de negócios locais com cadastro, listagem, avaliações, comentários e informações estruturadas.}
+  \resumeItem{Consolida conceitos de CRUD, autenticação, banco de dados e interface responsiva em um fluxo único.}
+  \resumeItem{Disponibiliza repositório público e página dedicada no blog para documentação do projeto.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\href{https://kaaylooon.github.io/projetos/kaappli/}{\textbf{Kaappli}} | \emph{JavaScript, Electron, HTML/CSS}}{2024}
+\resumeItemListStart
+  \resumeItem{Aplicativo desktop interativo para prática de Hiragana e Katakana com geração dinâmica de caracteres.}
+  \resumeItem{Valida respostas romanizadas, exibe feedback imediato e acompanha progresso de estudo.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\href{https://kaaylooon.github.io/projetos/kapraxis/}{\textbf{Kapraxis}} | \emph{C++, Qt}}{2024 -- Presente}
+\resumeItemListStart
+  \resumeItem{Aplicativo de estudos com flashcards, revisão espaçada, temporizador e estatísticas de desempenho.}
+  \resumeItem{Centraliza ferramentas de rotina acadêmica em uma interface desktop única.}
+\resumeItemListEnd
+
+\resumeProjectHeading{\href{https://kaaylooon.github.io/projetos/kext/}{\textbf{Kext}} | \emph{C, Terminal UI}}{2024 -- Presente}
+\resumeItemListStart
+  \resumeItem{Editor de texto inspirado no vi, escrito em C puro com foco em leveza e rapidez no terminal.}
+  \resumeItem{Projeto em andamento com modos de inserção e comando, mirando syntax highlighting e múltiplos buffers.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\section{Competências Técnicas}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+ \textbf{Linguagens}{: Python, C, C++, JavaScript, TypeScript, SQL} \\
+ \textbf{Ferramentas}{: Git, Linux, LaTeX, Expo, AsyncStorage} \\
+ \textbf{Tecnologias}{: Flask, Django, Qt, React Native, Raylib, Electron, SQLite/PostgreSQL} \\
+}}
+\end{itemize}
+
+
+\section{Habilidades Extras}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+ \textbf{Idiomas:} Português nativo; Inglês B2/C1; Francês A1; Espanhol A1. \\
+
+ \textbf{Base Acadêmica:} Estudo aprofundado de matemática e física, incluindo cálculo, álgebra linear, teoria dos números, relatividade e tópicos de física moderna. \\
+
+ \textbf{Olimpíadas Científicas:} Ouro na OLITEF (2024), O2 (2024) e OBLI (2024); prata na OBA (2025 e 2026); bronze na OBMEP (2025), OBLI (2025), OBG (2024) e OLITEF (2025); menção na OBF (2025). \\
+}}
+\end{itemize}
+
+
+\end{document}

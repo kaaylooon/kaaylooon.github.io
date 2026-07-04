@@ -1,0 +1,112 @@
+person:
+  name: "Kaylon Souza"
+  location: "Macajuba - BA, Brasil"
+  phone: "(11) 91659-1346"
+  email: "kaylon.contact@gmail.com"
+  website:
+    url: "https://kaaylooon.github.io"
+    label: "kaaylooon.github.io"
+  linkedin:
+    url: "https://linkedin.com/in/kaylonsouza"
+    label: "linkedin.com/in/kaylonsouza"
+  github:
+    url: "https://github.com/kaaylooon"
+    label: "github.com/kaaylooon"
+
+summary: "Estudante focado em desenvolvimento de software com experiência prática em Python, C/C++, TypeScript, Flask, React Native e modelagem de aplicações próprias."
+
+education:
+  - institution: "Colégio Estadual Carlito de Carvalho"
+    period: "Fev. 2024 -- Dez. 2026"
+    degree: "Curso Técnico de Administração Integrado ao Ensino Médio"
+    location: "Bahia, Brasil"
+
+skills:
+  - label: "Linguagens"
+    items:
+      - "Python"
+      - "C"
+      - "C++"
+      - "JavaScript"
+      - "TypeScript"
+      - "SQL"
+  - label: "Ferramentas"
+    items:
+      - "Git"
+      - "Linux"
+      - "LaTeX"
+      - "Expo"
+      - "AsyncStorage"
+  - label: "Tecnologias"
+    items:
+      - "Flask"
+      - "Django"
+      - "Qt"
+      - "React Native"
+      - "Raylib"
+      - "Electron"
+      - "SQLite/PostgreSQL"
+
+extras:
+  - label: "Idiomas"
+    value: "Português nativo; Inglês B2/C1; Francês A1; Espanhol A1."
+  - label: "Base Acadêmica"
+    value: "Estudo aprofundado de matemática e física, incluindo cálculo, álgebra linear, teoria dos números, relatividade e tópicos de física moderna."
+  - label: "Olimpíadas Científicas"
+    value: "Ouro na OLITEF (2024), O2 (2024) e OBLI (2024); prata na OBA (2025 e 2026); bronze na OBMEP (2025), OBLI (2025), OBG (2024) e OLITEF (2025); menção na OBF (2025)."
+
+projects:
+  include:
+    - "motriz"
+    - "katalogo"
+    - "kaappli"
+    - "kapraxis"
+    - "kext"
+  overrides:
+    motriz:
+      date: "2026 -- Presente"
+      technologies:
+        - "TypeScript"
+        - "Expo"
+        - "React Native"
+        - "AsyncStorage"
+      bullets:
+        - "Aplicativo mobile para organizar ciclos de estudo e tarefas, combinando distribuição ponderada de disciplinas com uma lista inspirada em todo.txt."
+        - "Gera blocos de estudo a partir de pesos por dificuldade e quantidade de tópicos, com intercalação para reduzir repetições próximas."
+        - "Mantém persistência local de ciclo, disciplinas, tarefas e configurações usando AsyncStorage e tipagem estrita com TypeScript."
+    katalogo:
+      date: "2024"
+      technologies:
+        - "Python"
+        - "Flask"
+        - "SQLite/PostgreSQL"
+        - "HTML/CSS"
+      bullets:
+        - "Aplicação web completa para catálogo de negócios locais com cadastro, listagem, avaliações, comentários e informações estruturadas."
+        - "Consolida conceitos de CRUD, autenticação, banco de dados e interface responsiva em um fluxo único."
+        - "Disponibiliza repositório público e página dedicada no blog para documentação do projeto."
+    kaappli:
+      date: "2024"
+      technologies:
+        - "JavaScript"
+        - "Electron"
+        - "HTML/CSS"
+      bullets:
+        - "Aplicativo desktop interativo para prática de Hiragana e Katakana com geração dinâmica de caracteres."
+        - "Valida respostas romanizadas, exibe feedback imediato e acompanha progresso de estudo."
+    kapraxis:
+      date: "2024 -- Presente"
+      technologies:
+        - "C++"
+        - "Qt"
+      bullets:
+        - "Aplicativo de estudos com flashcards, revisão espaçada, temporizador e estatísticas de desempenho."
+        - "Centraliza ferramentas de rotina acadêmica em uma interface desktop única."
+    kext:
+      date: "2024 -- Presente"
+      technologies:
+        - "C"
+        - "Terminal UI"
+      bullets:
+        - "Editor de texto inspirado no vi, escrito em C puro com foco em leveza e rapidez no terminal."
+        - "Projeto em andamento com modos de inserção e comando, mirando syntax highlighting e múltiplos buffers."
