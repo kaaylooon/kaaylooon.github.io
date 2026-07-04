@@ -3,6 +3,18 @@ layout: projeto
 title: "Motriz"
 stack: "TypeScript · Expo · React Native"
 status: "Em progresso"
+image: "/assets/motriz1.png"
+images:
+  - "/assets/motriz1.png"
+  - "/assets/motriz-2.png"
+  - "/assets/motriz-3.png"
+  - "/assets/motriz-4.png"
+  - "/assets/motriz-5.png"
+  - "/assets/motriz-6.png"
+  - "/assets/motriz-7.png"
+  - "/assets/motriz-8.png"
+  - "/assets/motriz-9.png"
+  - "/assets/motriz-10.png"
 repo: "https://github.com/kaaylooon/motriz"
 description: "Aplicativo mobile para organizar ciclos de estudo e tarefas, combinando distribuição ponderada de disciplinas com uma lista de tarefas inspirada em todo.txt."
 ---
