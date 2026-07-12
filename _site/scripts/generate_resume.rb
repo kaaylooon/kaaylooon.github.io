@@ -70,8 +70,11 @@ def latex_escape(text)
 end
 
 def render_header(person)
+  contact_line = []
+  contact_line << "\\raisebox{-0.1\\height}\\faPhone\\ #{latex_escape(person.fetch("phone"))}"
+  contact_line << "\\href{mailto:#{latex_escape(person.fetch("email"))}}{\\raisebox{-0.2\\height}\\faEnvelope\\ \\underline{#{latex_escape(person.fetch("email"))}}}"
+
   header_links = []
-  header_links << "\\href{mailto:#{latex_escape(person.fetch("email"))}}{\\raisebox{-0.2\\height}\\faEnvelope\\ \\underline{#{latex_escape(person.fetch("email"))}}}"
   if person["website"]
     header_links << "\\href{#{latex_escape(person.dig("website", "url"))}}{\\raisebox{-0.2\\height}\\faGlobe\\ \\underline{#{latex_escape(person.dig("website", "label"))}}}"
   end
@@ -82,7 +85,7 @@ def render_header(person)
     \\begin{center}
         {\\Huge \\scshape #{latex_escape(person.fetch("name"))}} \\\\ \\vspace{1pt}
         #{latex_escape(person.fetch("location"))} \\\\ \\vspace{1pt}
-        \\small \\raisebox{-0.1\\height}\\faPhone\\ #{latex_escape(person.fetch("phone"))} ~
+        \\small #{contact_line.join(" ~\n        ")} \\\\
         #{header_links.join(" ~\n        ")}
         \\vspace{-8pt}
     \\end{center}

@@ -45,7 +45,12 @@ skills:
       - "React Native"
       - "Raylib"
       - "Electron"
-      - "SQLite/PostgreSQL"
+      - "Docker"
+      - "Supabase"
+      - "SQLite"
+      - "PostgreSQL"
+      - "Google AdMob"
+      - "N8N"
 
 extras:
   - label: "Idiomas"
