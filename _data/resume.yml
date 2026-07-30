@@ -13,7 +13,7 @@ person:
     url: "https://github.com/kaaylooon"
     label: "github.com/kaaylooon"
 
-summary: "Estudante focado em desenvolvimento de software com experiência prática em Python, C/C++, TypeScript, Flask, React Native e modelagem de aplicações próprias."
+summary: "Full-stack | Node.js • TypeScript • React Native • Python, com experiência prática em desenvolvimento de aplicações próprias."
 
 education:
   - institution: "Colégio Estadual Carlito de Carvalho"
@@ -25,32 +25,34 @@ skills:
   - label: "Linguagens"
     items:
       - "Python"
-      - "C"
-      - "C++"
-      - "JavaScript"
       - "TypeScript"
+      - "JavaScript"
       - "SQL"
-  - label: "Ferramentas"
+  - label: "Mobile e Web"
     items:
+      - "React Native"
+      - "Expo"
+      - "Flask"
+      - "Django"
+      - "HTML/CSS"
+      - "Bootstrap"
+  - label: "Backend"
+    items:
+      - "Node.js"
+  - label: "Desktop e Sistemas"
+    items:
+      - "Qt"
+      - "Electron"
+      - "Raylib"
+      - "Terminal UI (TUI)"
+  - label: "Bancos de Dados e Ferramentas"
+    items:
+      - "PostgreSQL"
+      - "SQLite"
       - "Git"
       - "Linux"
       - "LaTeX"
-      - "Expo"
       - "AsyncStorage"
-  - label: "Tecnologias"
-    items:
-      - "Flask"
-      - "Django"
-      - "Qt"
-      - "React Native"
-      - "Raylib"
-      - "Electron"
-      - "Docker"
-      - "Supabase"
-      - "SQLite"
-      - "PostgreSQL"
-      - "Google AdMob"
-      - "N8N"
 
 extras:
   - label: "Idiomas"

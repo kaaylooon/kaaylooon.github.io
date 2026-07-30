@@ -225,7 +225,7 @@ latex = <<~LATEX
     pdftitle={Kaylon Souza - Currículo},
     pdfauthor={Kaylon Souza},
     pdfsubject={Currículo técnico},
-    pdfkeywords={Kaylon Souza, currículo, personal page, Python, TypeScript, React Native, Flask, C++, software}
+    pdfkeywords={Kaylon Souza, currículo, personal page, Node.js, Python, TypeScript, React Native, Flask, JavaScript, software}
   }
 
   \\pagestyle{fancy}
