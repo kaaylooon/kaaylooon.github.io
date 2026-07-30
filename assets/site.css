@@ -296,6 +296,7 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    padding-top: 0.75rem;
     margin-bottom: 2rem;
     color: var(--text-dim);
     text-decoration: none;
@@ -540,6 +541,11 @@ section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.archive-intro {
+    max-width: 70ch;
+    margin-bottom: 2rem;
 }
 
 .post-item {
