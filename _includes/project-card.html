@@ -6,7 +6,7 @@
 
   {% if projeto.image %}
     <div class="project-image">
-      <img src="{{ projeto.image }}" alt="{{ projeto.title | escape }}">
+      <img src="{{ projeto.image }}" alt="{{ projeto.title | escape }}" loading="lazy" decoding="async">
     </div>
   {% endif %}
 
