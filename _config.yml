@@ -1,3 +1,4 @@
+title: Kaylon Souza
 email: kaylon.contact@gmail.com
 description: Personal Page
 baseurl: ""
@@ -11,6 +12,13 @@ collections:
   projetos:
     output: true
     permalink: /projetos/:path/
+
+defaults:
+  - scope:
+      path: "_projetos"
+    values:
+      layout: projeto
+      og_type: article
 
 exclude:
   - Gemfile

@@ -4,21 +4,21 @@
 
 :root {
     color-scheme: dark;
-    --bg-page: #050505;
-    --bg-card: #101010;
-    --text-main: #f2f2f2;
-    --text-dim: #a5a5a5;
-    --border-color: #2a2a2a;
-    --accent-blue: #f2f2f2;
-    --accent-royal: #d0d0d0;
-    --status-progress: #bdbdbd;
+    --bg-page: #0b0a09;
+    --bg-card: #151311;
+    --text-main: #f6f1ea;
+    --text-dim: #aba59d;
+    --border-color: #2a2420;
+    --accent-blue: #f6f1ea;
+    --accent-royal: #ddd4c7;
+    --status-progress: #c0b8ae;
     --status-done: #ffffff;
     --shell-max: 1000px;
     --content-max: 800px;
-    --card-padding: 1.25rem;
-    --card-radius: 16px;
+    --card-padding: 1.05rem;
+    --card-radius: 12px;
     --card-border: 1px;
-    --card-hover-shift: -2px;
+    --card-hover-shift: 0px;
 }
 
 html,
@@ -28,7 +28,7 @@ body {
 
 body {
     margin: 0;
-    background: var(--bg-page);
+    background: linear-gradient(180deg, #0d0c0b 0%, #090807 100%);
     color: var(--text-main);
     font-family: "Inter", sans-serif;
     line-height: 1.6;
@@ -49,13 +49,13 @@ h1,
 h2,
 h3,
 .serif {
-    font-family: "Arial", serif;
-    font-weight: 800;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 600;
 }
 
 h1 {
     font-size: clamp(2.2rem, 5vw, 3rem);
-    letter-spacing: -1px;
+    letter-spacing: -0.02em;
     margin-bottom: 0.75rem;
     color: #ffffff;
     line-height: 1.2;
@@ -67,8 +67,8 @@ h2 {
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border-color);
     color: var(--accent-blue);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 h3 {
@@ -96,8 +96,7 @@ section {
 .sticky-nav {
     position: sticky;
     top: 0;
-    background-color: rgba(5, 5, 5, 0.95);
-    backdrop-filter: blur(10px);
+    background-color: rgba(11, 10, 9, 0.98);
     border-bottom: 1px solid var(--border-color);
     z-index: 100;
     padding: 1.2rem 0;
@@ -133,8 +132,8 @@ section {
 
 .nav-links a {
     color: var(--text-dim);
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 0.92rem;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
@@ -148,7 +147,7 @@ section {
     z-index: 999;
     width: 50px;
     height: 50px;
-    border-radius: 8px;
+    border-radius: 10px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     color: #ffffff;
@@ -320,7 +319,7 @@ section {
     gap: 0.5rem;
     padding: 0.7rem 1rem;
     border: 1px solid var(--border-color);
-    border-radius: 999px;
+    border-radius: 12px;
     background: var(--bg-card);
     color: var(--text-main);
     font-size: 0.9rem;
@@ -355,13 +354,13 @@ section {
     border: var(--card-border) solid var(--border-color);
     border-radius: var(--card-radius);
     color: var(--text-main);
-    transition: border-color 0.2s, transform 0.2s;
+    transition: border-color 0.2s, background-color 0.2s;
 }
 
 .page-link-card:hover {
     color: var(--text-main);
     border-color: var(--text-dim);
-    transform: translateY(var(--card-hover-shift));
+    transform: none;
 }
 
 .page-link-card i {
@@ -429,12 +428,12 @@ section {
     display: inline-block;
     width: 100%;
     break-inside: avoid;
-    transition: border-color 0.2s, transform 0.2s;
+    transition: border-color 0.2s, background-color 0.2s;
 }
 
 .project-card:hover {
     border-color: var(--text-dim);
-    transform: translateY(var(--card-hover-shift));
+    transform: none;
 }
 
 .project-header {
@@ -501,12 +500,16 @@ section {
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--border-color);
+    max-height: 220px;
+    background: var(--bg-card);
 }
 
 .project-image img {
     width: 100%;
-    height: auto;
+    height: 220px;
     display: block;
+    object-fit: cover;
+    object-position: center;
 }
 
 .project-media-section,
@@ -575,7 +578,7 @@ section {
 
 .contact-links {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
 }
 
@@ -599,12 +602,12 @@ section {
 
 .contact-card {
     background: var(--bg-card);
-    padding: var(--card-padding);
+    padding: 1.1rem 1.15rem;
     border-radius: var(--card-radius);
     border: var(--card-border) solid var(--border-color);
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 0.9rem;
     color: var(--text-main);
 }
 
@@ -612,9 +615,17 @@ section {
     color: var(--text-main);
 }
 
+.contact-card > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 0;
+}
+
 .contact-card i {
     font-size: 1.2rem;
     color: var(--text-dim);
+    margin-top: 0.1rem;
 }
 
 .contact-card-label {
@@ -628,6 +639,8 @@ section {
 .contact-card-value {
     color: var(--text-main);
     font-weight: 600;
+    line-height: 1.35;
+    word-break: break-word;
 }
 
 .page-pager {
@@ -645,13 +658,13 @@ section {
     border-radius: var(--card-radius);
     background: var(--bg-card);
     color: var(--text-main);
-    transition: border-color 0.2s, transform 0.2s;
+    transition: border-color 0.2s, background-color 0.2s;
 }
 
 .pager-card:hover {
     color: var(--text-main);
     border-color: var(--text-dim);
-    transform: translateY(var(--card-hover-shift));
+    transform: none;
 }
 
 .pager-card--next {
@@ -709,12 +722,12 @@ section {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .bento-card:hover {
-    transform: translateY(var(--card-hover-shift));
     border-color: var(--text-dim);
+    transform: none;
 }
 
 .bento-lg {
@@ -749,9 +762,9 @@ section {
 }
 
 .bento-card .card-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 0.72rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
     color: var(--text-dim);
 }
 
@@ -773,7 +786,7 @@ section {
     justify-content: center;
     padding: 0.2rem 0.55rem;
     border: 1px solid var(--border-color);
-    border-radius: 999px;
+    border-radius: 10px;
     color: var(--text-main);
     font-size: 0.7rem;
     font-weight: 700;
@@ -840,6 +853,14 @@ footer {
         padding: var(--card-padding);
     }
 
+    .project-image {
+        max-height: 180px;
+    }
+
+    .project-image img {
+        height: 180px;
+    }
+
     .page-links-grid {
         grid-template-columns: 1fr;
     }
@@ -861,6 +882,11 @@ footer {
 
     .project-image {
         margin: 0.75rem 0;
+        max-height: 160px;
+    }
+
+    .project-image img {
+        height: 160px;
     }
 
     .project-media-frame {

@@ -1,0 +1,18 @@
+{% assign posts_href = include.posts_href | default: page.posts_href %}
+{% assign posts_path = include.posts_path | default: page.posts_path | default: posts_href | default: "/posts/" %}
+{% assign posts_anchor = include.posts_anchor | default: page.posts_anchor | default: "" %}
+{% assign home_href = include.home_href | default: "/" %}
+<button class="lang-switch-fixed" id="langToggle" type="button" aria-label="Alternar idioma">🇧🇷</button>
+<nav class="sticky-nav">
+  <div class="nav-container">
+    <span class="nav-brand"><a href="{{ home_href | relative_url }}">Kaylon Souza</a></span>
+    <ul class="nav-links">
+      <li><a href="{{ home_href | relative_url }}#conquistas" data-en="Achievements" data-pt="Distinções">Distinções</a></li>
+      <li><a href="{{ home_href | relative_url }}#idiomas" data-en="Languages" data-pt="Idiomas">Idiomas</a></li>
+      <li><a href="{{ home_href | relative_url }}#habilidades" data-en="Skills" data-pt="Habilidades">Habilidades</a></li>
+      <li><a href="{{ home_href | relative_url }}#projetos" data-en="Projects" data-pt="Projetos">Projetos</a></li>
+      <li><a href="{{ posts_path | relative_url }}{{ posts_anchor }}" data-en="Posts" data-pt="Publicações">Publicações</a></li>
+      <li><a href="{{ home_href | relative_url }}#contato" data-en="Contact" data-pt="Contato">Contato</a></li>
+    </ul>
+  </div>
+</nav>

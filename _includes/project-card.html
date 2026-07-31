@@ -1,0 +1,40 @@
+{% assign projeto = include.projeto %}
+<div class="project-card">
+  <div class="project-header">
+    <h3>{{ projeto.title | escape }}</h3>
+  </div>
+
+  {% if projeto.image %}
+    <div class="project-image">
+      <img src="{{ projeto.image }}" alt="{{ projeto.title | escape }}">
+    </div>
+  {% endif %}
+
+  {% assign projeto_status_pt = projeto.status | default: "Em progresso" %}
+  {% assign projeto_status_en = "In progress" %}
+  {% assign projeto_icon = "bi-gear-wide-connected" %}
+  {% if projeto.status == 'Concluído' or projeto.status == 'Completed' %}
+    {% assign projeto_status_pt = "Concluído" %}
+    {% assign projeto_status_en = "Completed" %}
+    {% assign projeto_icon = "bi-check-circle-fill" %}
+  {% endif %}
+  <div class="project-status {% if projeto.status == 'Concluído' or projeto.status == 'Completed' %}status-done{% else %}status-progress{% endif %}">
+    <i class="bi {{ projeto_icon }}"></i>
+    <span data-en="{{ projeto_status_en }}" data-pt="{{ projeto_status_pt }}">{{ projeto_status_pt }}</span>
+  </div>
+
+  <p class="project-description">{{ projeto.description | default: projeto.excerpt }}</p>
+
+  <div class="project-footer">
+    {% if projeto.repo %}
+      <a href="{{ projeto.repo }}" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-github" style="padding-right: 0.3rem"></i>
+        <span data-pt="Repositório" data-en="Source">Repositório</span>
+      </a>
+    {% endif %}
+    <a href="{{ projeto.url }}">
+      <i class="bi bi-arrow-right-circle" style="padding-right: 0.3rem"></i>
+      <span data-pt="Saiba mais" data-en="Read more">Saiba mais</span>
+    </a>
+  </div>
+</div>
