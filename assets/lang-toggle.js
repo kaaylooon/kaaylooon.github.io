@@ -28,7 +28,8 @@
     document.documentElement.lang = lang;
 
     if (toggleBtn) {
-      toggleBtn.textContent = lang === 'en' ? '🇧🇷' : '🇺🇸';
+      toggleBtn.setAttribute('aria-label', lang === 'en' ? 'Mudar para português' : 'Switch to English');
+      toggleBtn.setAttribute('title', lang === 'en' ? 'Mudar para português' : 'Switch to English');
     }
   }
 

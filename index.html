@@ -18,7 +18,7 @@ og_type: website
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     {% include site-nav.html posts_path="/" posts_anchor="#posts" %}
-    <main class="container" style="--content-max: 1000px;">
+    <main class="container">
       <section id="home">
         <h1>Kaylon Souza</h1>
         <p style="color: var(--text-dim); font-size: 1rem; max-width: 700px;">
@@ -368,8 +368,28 @@ og_type: website
         </div>
       </section>
 
-      <section id="contato">
-        <h2 data-en="Contact" data-pt="Contato">Contact</h2>
+      <section id="contato" class="contact-section">
+        <div class="section-heading section-heading--left">
+          <h2 data-en="Contact" data-pt="Contato">Contact</h2>
+        </div>
+
+        <div class="contact-panel contact-panel--featured">
+          <div class="contact-intro">
+            <div class="contact-status contact-status--centered">
+              <span data-en="Open to collaborations and research" data-pt="Aberto a colaborações e pesquisa">Aberto a colaborações e pesquisa</span>
+            </div>
+            <div class="contact-cta">
+              <a class="button-link" href="mailto:kaylon.contact@gmail.com">
+                <i class="bi bi-envelope"></i>
+                <span data-en="Hire Me" data-pt="Me Contrate">Hire Me</span>
+              </a>
+              <a class="button-link button-link--secondary" href="/assets/resume/kaylon-souza-cv.pdf" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-file-earmark-pdf"></i>
+                <span data-en="View My Resume" data-pt="Ver Meu Currículo">View My Resume</span>
+              </a>
+            </div>
+          </div>
+
           <div class="contact-links">
             <a class="contact-card" href="mailto:kaylon.contact@gmail.com">
               <i class="bi bi-envelope"></i>
@@ -392,20 +412,10 @@ og_type: website
                 <div class="contact-card-value">linkedin.com/in/kaylonsouza</div>
               </div>
             </a>
-            <a class="contact-card" href="/assets/resume/kaylon-souza-cv.pdf" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-file-earmark-pdf"></i>
-              <div>
-                <div class="contact-card-label" data-en="Resume" data-pt="Currículo">Currículo</div>
-                <div class="contact-card-value" data-en="Download PDF" data-pt="Baixar PDF">Baixar PDF</div>
-              </div>
-            </a>
           </div>
       </section>
-      <footer>
-        <p>{{ site.title | default: "Kaylon Souza" }} &bull; {{ site.time | date: "%Y" }}</p>
-        <img src="https://visitor-badge.laobi.icu/badge?page_id=kaaylooon.github.io&title=(...)&color=transparent&left_color=transparent" alt="visitantes" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-      </footer>
     </main>
+    {% include site-footer.html home_href="/" posts_path="/" %}
     <script src="{{ '/assets/lang-toggle.js' | relative_url }}" defer></script>
   </body>
 </html>

@@ -13,7 +13,7 @@ person:
     url: "https://github.com/kaaylooon"
     label: "github.com/kaaylooon"
 
-summary: "Full-stack | Node.js • TypeScript • React Native • Python, com experiência prática em desenvolvimento de aplicações próprias."
+summary: "Full-stack | Node.js • TypeScript • React Native • Python, com experiência prática obtida no desenvolvimento de aplicações próprias."
 
 education:
   - institution: "Colégio Estadual Carlito de Carvalho"
@@ -36,9 +36,6 @@ skills:
       - "Django"
       - "HTML/CSS"
       - "Bootstrap"
-  - label: "Backend"
-    items:
-      - "Node.js"
   - label: "Desktop e Sistemas"
     items:
       - "Qt"
@@ -78,9 +75,9 @@ projects:
         - "React Native"
         - "AsyncStorage"
       bullets:
-        - "Aplicativo mobile para organizar ciclos de estudo e tarefas, combinando distribuição ponderada de disciplinas com uma lista inspirada em todo.txt."
-        - "Gera blocos de estudo a partir de pesos por dificuldade e quantidade de tópicos, com intercalação para reduzir repetições próximas."
-        - "Mantém persistência local de ciclo, disciplinas, tarefas e configurações usando AsyncStorage e tipagem estrita com TypeScript."
+        - "Desenvolvo no Motriz, com TypeScript, JavaScript, React Native e Expo, um fluxo de estudo que organiza tarefas e reduz retrabalho."
+        - "Implementei em TypeScript, React Native e AsyncStorage a persistência local de ciclos, disciplinas e tarefas para manter o app utilizável offline."
+        - "Estruturei no Motriz a lógica de distribuição com TypeScript, Expo e React Native para gerenciar blocos de estudos."
     katalogo:
       date: "2024"
       technologies:
@@ -88,10 +85,11 @@ projects:
         - "Flask"
         - "SQLite/PostgreSQL"
         - "HTML/CSS"
+        - "Bootstrap"
       bullets:
-        - "Aplicação web completa para catálogo de negócios locais com cadastro, listagem, avaliações, comentários e informações estruturadas."
-        - "Consolida conceitos de CRUD, autenticação, banco de dados e interface responsiva em um fluxo único."
-        - "Disponibiliza repositório público e página dedicada no blog para documentação do projeto."
+        - "Construí no Katálogo, com Python, Flask, HTML, CSS, Bootstrap e SQLite/PostgreSQL, um catálogo de negócios locais com cadastro, avaliações e comentários."
+        - "Modelei o CRUD e a autenticação em Flask, SQL e PostgreSQL."
+        - "Documentei no GitHub e GitHub Pages para facilitar apresentação e manutenção."
     kaappli:
       date: "2024"
       technologies:
@@ -99,21 +97,21 @@ projects:
         - "Electron"
         - "HTML/CSS"
       bullets:
-        - "Aplicativo desktop interativo para prática de Hiragana e Katakana com geração dinâmica de caracteres."
-        - "Valida respostas romanizadas, exibe feedback imediato e acompanha progresso de estudo."
+        - "Criei no Kaappli, com JavaScript, Electron e HTML/CSS, um treino de Hiragana e Katakana para prática guiada no desktop."
+        - "Validei em JavaScript, Electron e HTML/CSS as respostas romanizadas com feedback imediato para acelerar o aprendizado."
     kapraxis:
       date: "2024 -- Presente"
       technologies:
         - "C++"
         - "Qt"
       bullets:
-        - "Aplicativo de estudos com flashcards, revisão espaçada, temporizador e estatísticas de desempenho."
-        - "Centraliza ferramentas de rotina acadêmica em uma interface desktop única."
+        - "Desenvolvo no Kapraxis, com C++ e Qt, um app de estudos com flashcards, revisão espaçada e estatísticas de desempenho."
+        - "Organizei em Qt e C++ uma interface única para centralizar a rotina acadêmica e reduzir a troca entre aplicativos."
     kext:
       date: "2024 -- Presente"
       technologies:
         - "C"
         - "Terminal UI"
       bullets:
-        - "Editor de texto inspirado no vi, escrito em C puro com foco em leveza e rapidez no terminal."
-        - "Projeto em andamento com modos de inserção e comando, mirando syntax highlighting e múltiplos buffers."
+        - "Desenvolvo no Kext, com C, TUI e vi, um editor minimalista para acelerar edição rápida no terminal."
+        - "Estou implementando em C, TUI e buffers múltiplos a navegação, a edição e o syntax highlighting do editor."

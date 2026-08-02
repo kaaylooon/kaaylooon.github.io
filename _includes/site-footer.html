@@ -1,3 +1,20 @@
-<footer>
-  <p>{{ site.title | default: "Kaylon Souza" }} &bull; {{ site.time | date: "%Y" }}</p>
+{% assign home_href = include.home_href | default: "/" %}
+<footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-left">
+      <div class="footer-icons" aria-label="Contato">
+        <a class="footer-icon-link" href="mailto:kaylon.contact@gmail.com" aria-label="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+        <a class="footer-icon-link" href="https://github.com/kaaylooon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a class="footer-icon-link" href="https://linkedin.com/in/kaylonsouza" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-copyright">© 2026 KAYLON</div>
+  </div>
 </footer>

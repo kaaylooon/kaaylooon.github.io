@@ -276,8 +276,7 @@ latex = <<~LATEX
 
   #{render_header(resume_data.fetch("person"))}
 
-  \\section{Resumo}
-  #{latex_escape(resume_data.fetch("summary"))}
+  #{resume_data["summary"] ? "\\section{Resumo}\n  #{latex_escape(resume_data["summary"])}" : ""}
 
   #{render_education(Array(resume_data["education"]))}
 

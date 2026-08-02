@@ -18,7 +18,7 @@
 <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <link rel="canonical" href="https://kaaylooon.github.io/about.html">
-<meta name="theme-color" content="#1a1b26">
+<meta name="theme-color" content="#0d0c0b">
 <meta property="og:site_name" content="Kaylon Souza">
 
 <meta property="og:title" content="Sobre | Kaylon Souza">
@@ -85,18 +85,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-<button class="lang-switch-fixed" id="langToggle" type="button" aria-label="Alternar idioma">🇧🇷</button>
 <nav class="sticky-nav">
-  <div class="nav-container">
-    <span class="nav-brand"><a href="/">Kaylon Souza</a></span>
-    <ul class="nav-links">
-      <li><a href="/#conquistas" data-en="Achievements" data-pt="Distinções">Distinções</a></li>
-      <li><a href="/#idiomas" data-en="Languages" data-pt="Idiomas">Idiomas</a></li>
-      <li><a href="/#habilidades" data-en="Skills" data-pt="Habilidades">Habilidades</a></li>
-      <li><a href="/#projetos" data-en="Projects" data-pt="Projetos">Projetos</a></li>
-      <li><a href="/posts/" data-en="Posts" data-pt="Publicações">Publicações</a></li>
-      <li><a href="/#contato" data-en="Contact" data-pt="Contato">Contato</a></li>
-    </ul>
+  <div class="nav-shell">
+    <a class="nav-brand" href="/">
+      <span>Kaylon Souza</span>
+    </a>
+
+    <details class="nav-more">
+      <summary class="nav-more-toggle" aria-label="Mais seções">
+        <i class="bi bi-three-dots" aria-hidden="true"></i>
+      </summary>
+
+      <nav class="nav-more-nav" aria-label="Sections navigation">
+        <a href="/#home">Home</a>
+        <a href="/#conquistas" data-en="Achievements" data-pt="Distinções">Distinções</a>
+        <a href="/#idiomas" data-en="Languages" data-pt="Idiomas">Idiomas</a>
+        <a href="/#habilidades" data-en="Skills" data-pt="Habilidades">Habilidades</a>
+        <a href="/#projetos" data-en="Projects" data-pt="Projetos">Projetos</a>
+        <a href="/#contato" data-en="Contact" data-pt="Contato">Contato</a>
+        <a href="/posts/" data-en="Posts" data-pt="Publicações">Posts</a>
+      </nav>
+    </details>
+
+    <div class="nav-meta">
+      <ul class="nav-links">
+        <li><a href="/#conquistas" data-en="Achievements" data-pt="Distinções">Distinções</a></li>
+        <li><a href="/#idiomas" data-en="Languages" data-pt="Idiomas">Idiomas</a></li>
+        <li><a href="/#habilidades" data-en="Skills" data-pt="Habilidades">Habilidades</a></li>
+        <li><a href="/#projetos" data-en="Projects" data-pt="Projetos">Projetos</a></li>
+        <li><a href="/posts/" data-en="Posts" data-pt="Publicações">Publicações</a></li>
+        <li><a href="/#contato" data-en="Contact" data-pt="Contato">Contato</a></li>
+      </ul>
+    </div>
+
+    <button class="lang-toggle-icon" id="langToggle" type="button" aria-label="Alternar idioma">
+      <i class="bi bi-translate" aria-hidden="true"></i>
+    </button>
   </div>
 </nav>
 
@@ -135,8 +159,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 </main>
 
-<footer>
-  <p>Kaylon Souza &bull; 2026</p>
+
+<footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-left">
+      <div class="footer-icons" aria-label="Contato">
+        <a class="footer-icon-link" href="mailto:kaylon.contact@gmail.com" aria-label="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+        <a class="footer-icon-link" href="https://github.com/kaaylooon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a class="footer-icon-link" href="https://linkedin.com/in/kaylonsouza" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-copyright">© 2026 KAYLON</div>
+  </div>
 </footer>
 
 
