@@ -1,6 +1,6 @@
 person:
   name: "Kaylon Souza"
-  location: "Macajuba - BA, Brasil"
+  location: "Bahia, Brasil"
   phone: "(11) 91659-1346"
   email: "kaylon.contact@gmail.com"
   website:
@@ -53,7 +53,7 @@ skills:
 
 extras:
   - label: "Idiomas"
-    value: "Português nativo; Inglês B2/C1; Francês e Espanhol em início de aprendizado."
+    value: "Português nativo; Inglês B2/C1; Alemão e Espanhol em início de aprendizado."
   - label: "Base Acadêmica"
     value: "Estudo aprofundado de matemática e física, incluindo cálculo, álgebra linear, teoria dos números, relatividade e tópicos de física moderna."
   - label: "Olimpíadas Científicas"
