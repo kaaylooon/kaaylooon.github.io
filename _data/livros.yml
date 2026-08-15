@@ -1,0 +1,17 @@
+# EXEMPLO - substitua
+- titulo: "Título do Livro Exemplo"
+  autor: "Nome do Autor Exemplo"
+  ano: 2024
+  status: lido        # lido | lendo
+  nota:
+    pt: "Nota de exemplo em português."
+    en: "Example note in English."
+
+# EXEMPLO - substitua
+- titulo: "Segundo Livro Exemplo"
+  autor: "Outro Autor Exemplo"
+  ano: 2025
+  status: lendo       # lido | lendo
+  nota:
+    pt: "Segunda nota de exemplo em português."
+    en: "Second example note in English."
