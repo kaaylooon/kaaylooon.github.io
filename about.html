@@ -1,7 +1,7 @@
 ---
 layout: null
 title: "Sobre"
-description: "Sobre Kaylon Souza: matemática, física, programação e objetivos."
+description: "Sobre Kaylon Souza: matemática, física, programação, hobbies e objetivos."
 og_type: website
 posts_href: "/posts/"
 ---
@@ -50,6 +50,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </blockquote>
         </div>
     </div>
+
+    <section id="hobbies" class="favoritos-section">
+        <h2 data-pt="Hobbies" data-en="Hobbies">Hobbies</h2>
+        {% for grupo in site.data.favoritos %}
+        <div class="favorito-grupo">
+            <h3><span data-pt="{{ grupo.categoria.pt }}" data-en="{{ grupo.categoria.en }}">{{ grupo.categoria.pt }}</span></h3>
+            <ul class="favorito-lista">
+                {% for item in grupo.itens %}
+                <li class="favorito-item">
+                    <span class="favorito-nome" data-pt="{{ item.nome.pt }}" data-en="{{ item.nome.en }}">{{ item.nome.pt }}</span>
+                    {% if item.nota %}
+                    <span class="favorito-nota" data-pt="{{ item.nota.pt }}" data-en="{{ item.nota.en }}">{{ item.nota.pt }}</span>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section id="livros" class="favoritos-section">
+        <h2 data-pt="Livros" data-en="Books">Livros</h2>
+        <div class="livro-list">
+            {% for livro in site.data.livros %}
+            {% if livro.status == "lido" %}
+            {% assign status_pt = "Lido" %}
+            {% assign status_en = "Read" %}
+            {% else %}
+            {% assign status_pt = "Lendo" %}
+            {% assign status_en = "Reading" %}
+            {% endif %}
+            <div class="livro-item">
+                <div class="livro-meta">
+                    <span class="livro-titulo" data-pt="{{ livro.titulo }}" data-en="{{ livro.titulo }}">{{ livro.titulo }}</span>
+                    <span class="livro-ano">{{ livro.ano }}</span>
+                    {% if livro.status == "lido" %}
+                    <span class="livro-status livro-status--lido" data-pt="{{ status_pt }}" data-en="{{ status_en }}">{{ status_pt }}</span>
+                    {% else %}
+                    <span class="livro-status livro-status--lendo" data-pt="{{ status_pt }}" data-en="{{ status_en }}">{{ status_pt }}</span>
+                    {% endif %}
+                </div>
+                {% if livro.nota %}
+                <p class="livro-nota" data-pt="{{ livro.nota.pt }}" data-en="{{ livro.nota.en }}">{{ livro.nota.pt }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
 </main>
 
 {% include site-footer.html %}
