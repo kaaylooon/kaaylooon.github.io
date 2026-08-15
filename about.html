@@ -71,7 +71,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section id="livros" class="favoritos-section">
-        <h2 data-pt="Livros" data-en="Books">Livros</h2>
+        <h2 data-pt="Livros favoritos" data-en="Favorite books">Livros favoritos</h2>
         <div class="livro-list">
             {% for livro in site.data.livros %}
             {% if livro.status == "lido" %}
@@ -84,7 +84,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="livro-item">
                 <div class="livro-meta">
                     <span class="livro-titulo" data-pt="{{ livro.titulo }}" data-en="{{ livro.titulo }}">{{ livro.titulo }}</span>
-                    <span class="livro-ano">{{ livro.ano }}</span>
                     {% if livro.status == "lido" %}
                     <span class="livro-status livro-status--lido" data-pt="{{ status_pt }}" data-en="{{ status_en }}">{{ status_pt }}</span>
                     {% else %}
