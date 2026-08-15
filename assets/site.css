@@ -1359,7 +1359,7 @@ section:first-of-type {
     color: var(--text-main);
 }
 
-.livro-autor {
+.livro-ano {
     font-size: 0.9rem;
     color: var(--text-dim);
 }

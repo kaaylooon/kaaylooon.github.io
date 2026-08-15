@@ -1,32 +1,18 @@
-# EXEMPLO - substitua
 - categoria:
-    pt: "Música"
-    en: "Music"
+    pt: "Jogos"
+    en: "Games"
   itens:
-    # EXEMPLO - substitua
     - nome:
-        pt: "Álbum Exemplo"
-        en: "Example Album"
-      nota:
-        pt: "Álbum fictício usado como exemplo."
-        en: "Fictional album used as an example."
-    # EXEMPLO - substitua
+        pt: "Chess"
+        en: "Chess"
     - nome:
-        pt: "Artista Exemplo"
-        en: "Example Artist"
-      nota:
-        pt: "Artista fictício usado como exemplo."
-        en: "Fictional artist used as an example."
+        pt: "Godot"
+        en: "Godot"
 
-# EXEMPLO - substitua
 - categoria:
-    pt: "Filmes"
-    en: "Movies"
+    pt: "Leitura"
+    en: "Reading"
   itens:
-    # EXEMPLO - substitua
     - nome:
-        pt: "Filme Exemplo"
-        en: "Example Movie"
-      nota:
-        pt: "Filme fictício usado como exemplo."
-        en: "Fictional movie used as an example."
+        pt: "Mangá"
+        en: "Manga"

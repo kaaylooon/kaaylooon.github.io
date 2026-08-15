@@ -27,12 +27,6 @@ permalink: /favoritos/
 
         <section id="gostos" class="favoritos-section">
             <h2 data-pt="Hobbies" data-en="Hobbies">Hobbies</h2>
-            <div data-language-block="pt">
-                <p>Meus hobbies, organizados por categoria.</p>
-            </div>
-            <div data-language-block="en" hidden aria-hidden="true">
-                <p>My hobbies, grouped by category.</p>
-            </div>
 
             {% for grupo in site.data.favoritos %}
             <div class="favorito-grupo">
@@ -53,12 +47,6 @@ permalink: /favoritos/
 
         <section id="livros" class="favoritos-section">
             <h2 data-pt="Livros" data-en="Books">Livros</h2>
-            <div data-language-block="pt">
-                <p>Livros que gostei de ler, com o status de leitura.</p>
-            </div>
-            <div data-language-block="en" hidden aria-hidden="true">
-                <p>Books I enjoyed reading, with their reading status.</p>
-            </div>
 
             <div class="livro-list">
                 {% for livro in site.data.livros %}
@@ -72,7 +60,7 @@ permalink: /favoritos/
                 <div class="livro-item">
                     <div class="livro-meta">
                         <span class="livro-titulo" data-pt="{{ livro.titulo }}" data-en="{{ livro.titulo }}">{{ livro.titulo }}</span>
-                        <span class="livro-autor">{{ livro.autor }} · {{ livro.ano }}</span>
+                        <span class="livro-ano">{{ livro.ano }}</span>
                         {% if livro.status == "lido" %}
                         <span class="livro-status livro-status--lido" data-pt="{{ status_pt }}" data-en="{{ status_en }}">{{ status_pt }}</span>
                         {% else %}
