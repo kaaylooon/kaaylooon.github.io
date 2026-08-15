@@ -1331,41 +1331,6 @@ section:first-of-type {
     color: var(--text-dim);
 }
 
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    border-left: 2px solid var(--border-color);
-    margin-left: 0.35rem;
-    padding-left: 1.25rem;
-}
-
-.timeline-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-}
-
-.timeline-periodo {
-    font-family: monospace;
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-}
-
-.timeline-titulo {
-    margin: 0;
-    font-size: 1.05rem;
-    color: var(--text-main);
-}
-
-.timeline-descricao {
-    margin: 0;
-    font-size: 0.95rem;
-    color: var(--text-dim);
-}
-
 .livro-list {
     display: flex;
     flex-direction: column;
@@ -1426,11 +1391,6 @@ section:first-of-type {
 }
 
 @media (max-width: 768px) {
-    .timeline {
-        margin-left: 0.2rem;
-        padding-left: 0.9rem;
-    }
-
     .livro-meta {
         flex-direction: column;
         align-items: flex-start;

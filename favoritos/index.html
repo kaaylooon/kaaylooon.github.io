@@ -1,7 +1,7 @@
 ---
 layout: null
 title: "Favoritos"
-description: "Coisas que eu gosto, experiências marcantes e livros que valem a pena."
+description: "Hobbies e livros que valem a pena."
 og_type: website
 permalink: /favoritos/
 ---
@@ -26,12 +26,12 @@ permalink: /favoritos/
     <div class="post-content">
 
         <section id="gostos" class="favoritos-section">
-            <h2 data-pt="Coisas que eu gosto" data-en="Things I like">Coisas que eu gosto</h2>
+            <h2 data-pt="Hobbies" data-en="Hobbies">Hobbies</h2>
             <div data-language-block="pt">
-                <p>Uma seleção de coisas que me marcam, organizada por categoria.</p>
+                <p>Meus hobbies, organizados por categoria.</p>
             </div>
             <div data-language-block="en" hidden aria-hidden="true">
-                <p>A selection of things that stand out to me, grouped by category.</p>
+                <p>My hobbies, grouped by category.</p>
             </div>
 
             {% for grupo in site.data.favoritos %}
@@ -49,28 +49,6 @@ permalink: /favoritos/
                 </ul>
             </div>
             {% endfor %}
-        </section>
-
-        <section id="experiencias" class="favoritos-section">
-            <h2 data-pt="Experiências" data-en="Experiences">Experiências</h2>
-            <div data-language-block="pt">
-                <p>Momentos e vivências que me marcaram, do mais recente ao mais antigo.</p>
-            </div>
-            <div data-language-block="en" hidden aria-hidden="true">
-                <p>Moments and experiences that shaped me, from most to least recent.</p>
-            </div>
-
-            <div class="timeline">
-                {% for exp in site.data.experiencias reversed %}
-                <div class="timeline-item">
-                    <span class="timeline-periodo">{{ exp.periodo }}</span>
-                    <h3 class="timeline-titulo"><span data-pt="{{ exp.titulo.pt }}" data-en="{{ exp.titulo.en }}">{{ exp.titulo.pt }}</span></h3>
-                    {% if exp.descricao %}
-                    <p class="timeline-descricao"><span data-pt="{{ exp.descricao.pt }}" data-en="{{ exp.descricao.en }}">{{ exp.descricao.pt }}</span></p>
-                    {% endif %}
-                </div>
-                {% endfor %}
-            </div>
         </section>
 
         <section id="livros" class="favoritos-section">
