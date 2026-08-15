@@ -1,18 +1,21 @@
-- categoria:
-    pt: "Jogos"
-    en: "Games"
-  itens:
-    - nome:
-        pt: "Chess"
-        en: "Chess"
-    - nome:
-        pt: "Godot"
-        en: "Godot"
-
-- categoria:
-    pt: "Leitura"
-    en: "Reading"
-  itens:
-    - nome:
-        pt: "Mangá"
-        en: "Manga"
+- nome:
+    pt: "Chess"
+    en: "Chess"
+- nome:
+    pt: "Godot"
+    en: "Godot"
+- nome:
+    pt: "Mangá"
+    en: "Manga"
+- nome:
+    pt: "Produção musical"
+    en: "Music production"
+- nome:
+    pt: "Violão"
+    en: "Guitar"
+- nome:
+    pt: "Política"
+    en: "Politics"
+- nome:
+    pt: "Mitologia"
+    en: "Mythology"

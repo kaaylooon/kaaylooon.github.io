@@ -1313,8 +1313,8 @@ section:first-of-type {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
 }
 
@@ -1381,6 +1381,11 @@ section:first-of-type {
 }
 
 @media (max-width: 768px) {
+    .favorito-lista,
+    .livro-list {
+        grid-template-columns: 1fr;
+    }
+
     .livro-meta {
         flex-direction: column;
         align-items: flex-start;

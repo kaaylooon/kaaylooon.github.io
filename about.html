@@ -53,21 +53,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section id="hobbies" class="favoritos-section">
         <h2 data-pt="Hobbies" data-en="Hobbies">Hobbies</h2>
-        {% for grupo in site.data.favoritos %}
-        <div class="favorito-grupo">
-            <h3><span data-pt="{{ grupo.categoria.pt }}" data-en="{{ grupo.categoria.en }}">{{ grupo.categoria.pt }}</span></h3>
-            <ul class="favorito-lista">
-                {% for item in grupo.itens %}
-                <li class="favorito-item">
-                    <span class="favorito-nome" data-pt="{{ item.nome.pt }}" data-en="{{ item.nome.en }}">{{ item.nome.pt }}</span>
-                    {% if item.nota %}
-                    <span class="favorito-nota" data-pt="{{ item.nota.pt }}" data-en="{{ item.nota.en }}">{{ item.nota.pt }}</span>
-                    {% endif %}
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endfor %}
+        <ul class="favorito-lista">
+            {% for item in site.data.favoritos %}
+            <li class="favorito-item">
+                <span class="favorito-nome" data-pt="{{ item.nome.pt }}" data-en="{{ item.nome.en }}">{{ item.nome.pt }}</span>
+                {% if item.nota %}
+                <span class="favorito-nota" data-pt="{{ item.nota.pt }}" data-en="{{ item.nota.en }}">{{ item.nota.pt }}</span>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
     </section>
 
     <section id="livros" class="favoritos-section">
