@@ -1,0 +1,32 @@
+# EXEMPLO - substitua
+- categoria:
+    pt: "Música"
+    en: "Music"
+  itens:
+    # EXEMPLO - substitua
+    - nome:
+        pt: "Álbum Exemplo"
+        en: "Example Album"
+      nota:
+        pt: "Álbum fictício usado como exemplo."
+        en: "Fictional album used as an example."
+    # EXEMPLO - substitua
+    - nome:
+        pt: "Artista Exemplo"
+        en: "Example Artist"
+      nota:
+        pt: "Artista fictício usado como exemplo."
+        en: "Fictional artist used as an example."
+
+# EXEMPLO - substitua
+- categoria:
+    pt: "Filmes"
+    en: "Movies"
+  itens:
+    # EXEMPLO - substitua
+    - nome:
+        pt: "Filme Exemplo"
+        en: "Example Movie"
+      nota:
+        pt: "Filme fictício usado como exemplo."
+        en: "Fictional movie used as an example."
