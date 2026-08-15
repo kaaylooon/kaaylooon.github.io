@@ -1,0 +1,17 @@
+# EXEMPLO - substitua
+- periodo: "2024"
+  titulo:
+    pt: "Primeira medalha olímpica"
+    en: "First olympic medal"
+  descricao:
+    pt: "Descrição de exemplo em português."
+    en: "Example description in English."
+
+# EXEMPLO - substitua
+- periodo: "2025"
+  titulo:
+    pt: "Segunda medalha olímpica"
+    en: "Second olympic medal"
+  descricao:
+    pt: "Descrição de exemplo em português."
+    en: "Example description in English."
