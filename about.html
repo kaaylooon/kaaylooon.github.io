@@ -1,7 +1,7 @@
 ---
 layout: null
 title: "Sobre"
-description: "Sobre Kaylon Souza: matemática, física, programação, hobbies e objetivos."
+description: "Sobre Kaylon Souza: matemática, física, programação e projetos."
 og_type: website
 posts_href: "/posts/"
 ---
@@ -32,66 +32,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div data-language-block="pt">
             <p>Estudei matemática por obras nacionais e dei algumas 'olhadas' em clássicos internacionais (Titu, por exemplo). Completei a base com máximo aprofundamento, e também passei pelo conteúdo do superior: cálculo, álgebra linear, teoria dos números etc. Em física, completei a física clássica e tive contato com o superior: relatividade, moderna etc.</p>
             <p>Em programação, atuo com Node.js, TypeScript, React Native e Python, com foco em criar aplicações completas e manter uma base técnica consistente. Também gosto de experimentar com Raylib em projetos e simulações.</p>
-            <p>Quero ser poliglota. É um dos meus objetivos, e pretendo colocá-lo em prática em breve.</p>
             <p>Não são menções vagas de 'qualificações'. Estas são algumas coisas que me definem.</p>
-            <blockquote>
-                "It is a ridiculous thing for a man not to fly from his own badness, which is indeed possible, but to fly from other men's badness, which is impossible."<br>
-                — Marco Aurélio, Meditações
-            </blockquote>
         </div>
         <div data-language-block="en" hidden aria-hidden="true">
             <p>I studied mathematics through national works and took a look at international classics (Titu, for example). I covered all high school content with maximum depth, and also went through calculus, linear algebra, number theory, etc. In physics, I completed the basics and had contact with higher-level topics: relativity, modern physics, etc.</p>
             <p>In programming, I work with Node.js, TypeScript, React Native and Python, focusing on building complete applications and keeping a consistent technical base. I also like experimenting with Raylib in projects and simulations.</p>
-            <p>I want to be a polyglot. It's one of my goals, and I plan to put it into practice soon.</p>
             <p>These are not vague mentions of "qualifications." These are some of the things that define me.</p>
-            <blockquote>
-                "It is a ridiculous thing for a man not to fly from his own badness, which is indeed possible, but to fly from other men's badness, which is impossible."<br>
-                — Marcus Aurelius, Meditations
-            </blockquote>
         </div>
     </div>
-
-    <section id="hobbies" class="favoritos-section">
-        <h2 data-pt="Hobbies" data-en="Hobbies">Hobbies</h2>
-        <ul class="favorito-lista">
-            {% for item in site.data.favoritos %}
-            <li class="favorito-item">
-                <span class="favorito-nome" data-pt="{{ item.nome.pt }}" data-en="{{ item.nome.en }}">{{ item.nome.pt }}</span>
-                {% if item.nota %}
-                <span class="favorito-nota" data-pt="{{ item.nota.pt }}" data-en="{{ item.nota.en }}">{{ item.nota.pt }}</span>
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-    </section>
-
-    <section id="livros" class="favoritos-section">
-        <h2 data-pt="Livros favoritos" data-en="Favorite books">Livros favoritos</h2>
-        <div class="livro-list">
-            {% for livro in site.data.livros %}
-            {% if livro.status == "lido" %}
-            {% assign status_pt = "Lido" %}
-            {% assign status_en = "Read" %}
-            {% else %}
-            {% assign status_pt = "Lendo" %}
-            {% assign status_en = "Reading" %}
-            {% endif %}
-            <div class="livro-item">
-                <div class="livro-meta">
-                    <span class="livro-titulo" data-pt="{{ livro.titulo }}" data-en="{{ livro.titulo }}">{{ livro.titulo }}</span>
-                    {% if livro.status == "lido" %}
-                    <span class="livro-status livro-status--lido" data-pt="{{ status_pt }}" data-en="{{ status_en }}">{{ status_pt }}</span>
-                    {% else %}
-                    <span class="livro-status livro-status--lendo" data-pt="{{ status_pt }}" data-en="{{ status_en }}">{{ status_pt }}</span>
-                    {% endif %}
-                </div>
-                {% if livro.nota %}
-                <p class="livro-nota" data-pt="{{ livro.nota.pt }}" data-en="{{ livro.nota.en }}">{{ livro.nota.pt }}</p>
-                {% endif %}
-            </div>
-            {% endfor %}
-        </div>
-    </section>
 </main>
 
 {% include site-footer.html %}

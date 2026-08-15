@@ -1,0 +1,8 @@
+Configuration file: /home/kaylon/dev/web-kaaylooon-pages/_config.yml
+            Source: /home/kaylon/dev/web-kaaylooon-pages
+       Destination: /home/kaylon/dev/web-kaaylooon-pages/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.339 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+grep status count: 2

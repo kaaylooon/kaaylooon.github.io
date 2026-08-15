@@ -1,7 +1,12 @@
 {% assign projeto = include.projeto %}
-<div class="project-card">
+<div class="project-card{% if projeto.featured %} featured{% endif %}">
   <div class="project-header">
     <h3>{{ projeto.title | escape }}</h3>
+    {% if projeto.featured %}
+      <span class="project-badge" aria-label="Destaque">
+        <i class="bi bi-star-fill"></i>
+      </span>
+    {% endif %}
   </div>
 
   {% if projeto.image %}
@@ -24,6 +29,12 @@
   </div>
 
   <p class="project-description">{{ projeto.description | default: projeto.excerpt }}</p>
+
+  {% if projeto.stack %}
+    <div class="project-stack">
+      <span class="tech-stack">{{ projeto.stack | escape }}</span>
+    </div>
+  {% endif %}
 
   <div class="project-footer">
     {% if projeto.repo %}

@@ -18,7 +18,7 @@ summary: "Full-stack | Node.js • TypeScript • React Native • Python, com e
 education:
   - institution: "Colégio Estadual Carlito de Carvalho"
     period: "Fev. 2024 -- Dez. 2026"
-    degree: "Curso Técnico de Administração Integrado ao Ensino Médio"
+    degree: "Curso Técnico de Administração Integrado ao Ensino Médio — Conclusão: Dez. 2026"
     location: "Bahia, Brasil"
 
 skills:
@@ -42,6 +42,7 @@ skills:
       - "Electron"
       - "Raylib"
       - "Terminal UI (TUI)"
+      - "Godot"
   - label: "Bancos de Dados e Ferramentas"
     items:
       - "PostgreSQL"
@@ -55,7 +56,7 @@ extras:
   - label: "Idiomas"
     value: "Português nativo; Inglês B2/C1; Alemão e Espanhol em início de aprendizado."
   - label: "Base Acadêmica"
-    value: "Estudo aprofundado de matemática e física, incluindo cálculo, álgebra linear, teoria dos números, relatividade e tópicos de física moderna."
+    value: "Estudo aprofundado de matemática e física (cálculo, álgebra linear, teoria dos números, relatividade e física moderna), aplicado à resolução de problemas de engenharia e ao desenvolvimento de software."
   - label: "Olimpíadas Científicas"
     value: "Ouro na OLITEF (2024), O2 (2024) e OBLI (2024); prata na OBA (2025 e 2026); bronze na OBMEP (2025), OBLI (2025), OBG (2024) e OLITEF (2025); menção na OBF (2025)."
 

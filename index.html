@@ -2,7 +2,7 @@
 layout: null
 permalink: /
 title: "Kaylon Souza"
-description: "Kaylon Souza: matemática, física, programação, projetos e idiomas."
+description: "Kaylon Souza: Desenvolvedor de Software full-stack & mobile — React Native, TypeScript, Node.js e Python."
 posts_path: "/"
 posts_anchor: "#posts"
 og_type: website
@@ -22,9 +22,9 @@ og_type: website
       <section id="home">
         <h1>Kaylon Souza</h1>
         <p style="color: var(--text-dim); font-size: 1rem; max-width: 700px;">
-          <span data-pt="Matemática, física, programação e idiomas. Um registro direto do que construo."
-            data-en="Mathematics, physics, programming and languages. A direct record of what I build.">
-            Matemática, física, programação e idiomas. Um registro direto do que construo.
+          <span data-pt="Desenvolvedor de Software (Full-stack & Mobile) — React Native, TypeScript, Node.js e Python."
+            data-en="Software Developer (Full-stack & Mobile) — React Native, TypeScript, Node.js and Python.">
+            Desenvolvedor de Software (Full-stack & Mobile) — React Native, TypeScript, Node.js e Python.
           </span>
           <br>
           <span class="hero-actions">
@@ -34,6 +34,19 @@ og_type: website
             </a>
           </span>
         </p>
+      </section>
+
+
+      <section id="projetos">
+        <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
+        <div class="project-list">
+          {% assign featured_projects = site.projetos | where: "featured", true | sort: "path" %}
+          {% assign regular_projects = site.projetos | where_exp: "p", "p.featured != true" | sort: "path" %}
+          {% assign sorted_projects = featured_projects | concat: regular_projects %}
+          {% for projeto in sorted_projects %}
+            {% include project-card.html projeto=projeto %}
+          {% endfor %}
+        </div>
       </section>
 
       <section id="conquistas">
@@ -141,76 +154,6 @@ og_type: website
         </p>
       </section>
 
-      <section id="idiomas">
-        <h2 data-en="Languages" data-pt="Idiomas">Idiomas</h2>
-        <div class="bento-grid">
-
-          <div class="bento-card bento-md-w lang-card">
-            <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
-              <span class="lang-badge">Nativo</span>
-            </div>
-            <div>
-              <div class="card-value" data-en="Portuguese" data-pt="Português">Português</div>
-              <p class="lang-quote">“Por causa das sobras, engoli com alguma dor meu orgulho que sempre fora feroz, e aceitei humilde o que o destino me dava de esmola.” <span style="font-style: normal;">~ Clarice Lispector</span></p>
-            </div>
-          </div>
-
-          <div class="bento-card bento-md-w lang-card">
-            <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
-              <span class="lang-badge">B2/C1</span>
-            </div>
-            <div>
-              <div class="card-value" data-en="English" data-pt="Inglês">Inglês</div>
-              <p class="lang-quote">“There are no mistakes, only lessons. Lessons will be repeated until they are learned.” <span style="font-style: normal;">~ Sanskrit Wisdom</span></p>
-            </div>
-          </div>
-
-
-          <div class="bento-card bento-md-w lang-card">
-            <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
-              <span class="lang-badge" data-en="Starting out" data-pt="Iniciando">Iniciando</span>
-            </div>
-            <div>
-              <div class="card-value" data-en="German" data-pt="Alemão">Alemão</div>
-              <p class="lang-quote">"Durch Schaden wird man klug." <span
-                style="font-style: normal;">~ Lutero</span></p>
-            </div>
-          </div>
-
-          <!--<div class="bento-card bento-sm lang-card">
-            <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
-              <span class="lang-badge">A1</span>
-            </div>
-            <div class="lang-card-top">
-              <div class="card-value" data-en="Mandarin" data-pt="Mandarim">Mandarim</div>
-              <span class="lang-script">中文</span>
-            </div>
-            <div>
-              <p class="lang-quote">“路漫漫其修远兮，吾将上下而求索。” <span style="font-style: normal;">~ 屈原</span></p>
-            </div>
-          </div>
-          -->
-          <div class="bento-card bento-md-w lang-card">
-            <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
-              <span class="lang-badge" data-en="Starting out" data-pt="Iniciando">Iniciando</span>
-            </div>
-            <div>
-              <div class="card-value" data-en="Spanish" data-pt="Espanhol">Espanhol</div>
-              <p class="lang-quote">“Caminante, no hay camino, se hace camino al andar.” <span style="font-style: normal;">- Antonio Machado</span></p>
-            </div>
-          </div>
-
-        </div>
-        <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 1rem;">
-          <span data-pt="Fonte:" data-en="Source:">Fonte:</span> <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/official-translations-of-the-cefr-global-scale" target="_blank" rel="noopener noreferrer">Conselho da Europa, CEFR Global Scale</a>
-        </p>
-      </section>
-
       <section id="habilidades">
         <h2 data-en="Skills" data-pt="Habilidades">Habilidades</h2>
 
@@ -300,6 +243,14 @@ og_type: website
             </div>
 
             <div class="bento-card bento-sm">
+              <i class="bi bi-controller"></i>
+              <div>
+                <div class="card-label" data-en="Games" data-pt="Jogos">Jogos</div>
+                <div class="card-value">Godot</div>
+              </div>
+            </div>
+
+            <div class="bento-card bento-sm">
               <i class="bi bi-terminal"></i>
               <div>
                 <div class="card-label" data-en="Systems" data-pt="Sistemas">Systems</div>
@@ -326,16 +277,76 @@ og_type: website
         </article>
       </section>
 
-      <section id="projetos">
-        <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
-        <div class="project-list">
-          {% assign sorted_projects = site.projetos | sort: "path" %}
-          {% for projeto in sorted_projects %}
-            {% include project-card.html projeto=projeto %}
-          {% endfor %}
-        </div>
-      </section>
 
+      <section id="idiomas">
+        <h2 data-en="Languages" data-pt="Idiomas">Idiomas</h2>
+        <div class="bento-grid">
+
+          <div class="bento-card bento-md-w lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge">Nativo</span>
+            </div>
+            <div>
+              <div class="card-value" data-en="Portuguese" data-pt="Português">Português</div>
+              <p class="lang-quote">“Por causa das sobras, engoli com alguma dor meu orgulho que sempre fora feroz, e aceitei humilde o que o destino me dava de esmola.” <span style="font-style: normal;">~ Clarice Lispector</span></p>
+            </div>
+          </div>
+
+          <div class="bento-card bento-md-w lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge">B2/C1</span>
+            </div>
+            <div>
+              <div class="card-value" data-en="English" data-pt="Inglês">Inglês</div>
+              <p class="lang-quote">“There are no mistakes, only lessons. Lessons will be repeated until they are learned.” <span style="font-style: normal;">~ Sanskrit Wisdom</span></p>
+            </div>
+          </div>
+
+
+          <div class="bento-card bento-md-w lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge" data-en="Starting out" data-pt="Iniciando">Iniciando</span>
+            </div>
+            <div>
+              <div class="card-value" data-en="German" data-pt="Alemão">Alemão</div>
+              <p class="lang-quote">"Durch Schaden wird man klug." <span
+                style="font-style: normal;">~ Lutero</span></p>
+            </div>
+          </div>
+
+          <!--<div class="bento-card bento-sm lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge">A1</span>
+            </div>
+            <div class="lang-card-top">
+              <div class="card-value" data-en="Mandarin" data-pt="Mandarim">Mandarim</div>
+              <span class="lang-script">中文</span>
+            </div>
+            <div>
+              <p class="lang-quote">“路漫漫其修远兮，吾将上下而求索。” <span style="font-style: normal;">~ 屈原</span></p>
+            </div>
+          </div>
+          -->
+          <div class="bento-card bento-md-w lang-card">
+            <div class="lang-card-top">
+              <i class="bi bi-translate"></i>
+              <span class="lang-badge" data-en="Starting out" data-pt="Iniciando">Iniciando</span>
+            </div>
+            <div>
+              <div class="card-value" data-en="Spanish" data-pt="Espanhol">Espanhol</div>
+              <p class="lang-quote">“Caminante, no hay camino, se hace camino al andar.” <span style="font-style: normal;">- Antonio Machado</span></p>
+            </div>
+          </div>
+
+        </div>
+        <p style="font-size: 0.8rem; color: var(--text-dim); margin-top: 1rem;">
+          <span data-pt="Fonte:" data-en="Source:">Fonte:</span> <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/official-translations-of-the-cefr-global-scale" target="_blank" rel="noopener noreferrer">Conselho da Europa, CEFR Global Scale</a>
+        </p>
+      </section>
       <section id="posts">
         <h2 data-en="Posts" data-pt="Postagens">Posts</h2>
         <div class="posts-list">
@@ -367,7 +378,7 @@ og_type: website
         <div class="contact-panel contact-panel--featured">
           <div class="contact-intro">
             <div class="contact-status contact-status--centered">
-              <span data-en="Open to collaborations and research" data-pt="Aberto a colaborações e pesquisa">Aberto a colaborações e pesquisa</span>
+              <span data-en="Open to opportunities" data-pt="Aberto a oportunidades">Aberto a oportunidades</span>
             </div>
             <div class="contact-cta">
               <a class="button-link button-link--secondary" href="/assets/resume/kaylon-souza-cv.pdf" target="_blank" rel="noopener noreferrer">

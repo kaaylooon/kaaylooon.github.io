@@ -1,0 +1,61 @@
+{
+  "schema_version": 2,
+  "active_work_id": "work-favoritos-001",
+  "works": {
+    "work-favoritos-001": {
+      "work_id": "work-favoritos-001",
+      "active_plan": ".omo/plans/favoritos.md",
+      "plan_name": "favoritos",
+      "session_ids": [
+        "opencode:ses_ffd41bdabffeixGwU4k8qUkH5m",
+        "opencode:ses_ffd311b46ffeOm8xhw2p9o2olw",
+        "opencode:ses_ffd3107d9ffecFmnADPUb0RIGU"
+      ],
+      "status": "active",
+      "worktree_path": null,
+      "session_origins": {
+        "opencode:ses_ffd311b46ffeOm8xhw2p9o2olw": "appended",
+        "opencode:ses_ffd3107d9ffecFmnADPUb0RIGU": "appended"
+      },
+      "updated_at": "2026-08-15T00:27:43.762Z",
+      "task_sessions": {
+        "todo:1": {
+          "task_key": "todo:1",
+          "task_label": "1",
+          "task_title": "`_data/favoritos.yml` - grouped \"things I like\" data file",
+          "session_id": "opencode:ses_ffd3107d9ffecFmnADPUb0RIGU",
+          "agent": "oracle",
+          "updated_at": "2026-08-15T00:27:43.763Z",
+          "started_at": "2026-08-15T00:27:43.763Z",
+          "status": "running"
+        }
+      }
+    }
+  },
+  "session_ids": [
+    "opencode:ses_ffd41bdabffeixGwU4k8qUkH5m",
+    "opencode:ses_ffd311b46ffeOm8xhw2p9o2olw",
+    "opencode:ses_ffd3107d9ffecFmnADPUb0RIGU"
+  ],
+  "session_origins": {
+    "opencode:ses_ffd311b46ffeOm8xhw2p9o2olw": "appended",
+    "opencode:ses_ffd3107d9ffecFmnADPUb0RIGU": "appended"
+  },
+  "task_sessions": {
+    "todo:1": {
+      "task_key": "todo:1",
+      "task_label": "1",
+      "task_title": "`_data/favoritos.yml` - grouped \"things I like\" data file",
+      "session_id": "opencode:ses_ffd3107d9ffecFmnADPUb0RIGU",
+      "agent": "oracle",
+      "updated_at": "2026-08-15T00:27:43.763Z",
+      "started_at": "2026-08-15T00:27:43.763Z",
+      "status": "running"
+    }
+  },
+  "active_plan": ".omo/plans/favoritos.md",
+  "plan_name": "favoritos",
+  "status": "active",
+  "updated_at": "2026-08-15T00:27:43.762Z",
+  "worktree_path": null
+}

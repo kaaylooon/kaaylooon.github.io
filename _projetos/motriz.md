@@ -3,6 +3,7 @@ layout: projeto
 title: "Motriz"
 stack: "TypeScript · Expo · React Native"
 status: "Em progresso"
+featured: true
 image: "/assets/motriz1.png"
 images:
   - "/assets/motriz1.png"

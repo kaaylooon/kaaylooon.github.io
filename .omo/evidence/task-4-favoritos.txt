@@ -1,0 +1,11 @@
+Configuration file: /home/kaylon/dev/web-kaaylooon-pages/_config.yml
+            Source: /home/kaylon/dev/web-kaaylooon-pages
+       Destination: /home/kaylon/dev/web-kaaylooon-pages/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 1.304 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+HTTP /favoritos/: 200
+data-pt count via curl: 37
+data-language-block count: 6
+section ids: 3

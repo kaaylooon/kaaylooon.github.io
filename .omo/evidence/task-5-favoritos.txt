@@ -1,0 +1,20 @@
+Configuration file: /home/kaylon/dev/web-kaaylooon-pages/_config.yml
+            Source: /home/kaylon/dev/web-kaaylooon-pages
+       Destination: /home/kaylon/dev/web-kaaylooon-pages/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 1.805 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+TASK 5 EVIDENCE - nav favoritos entry
+=====================================
+
+jekyll build exit: 0
+
+Source _includes/site-nav.html favoritos lines:
+24:        <a href="/favoritos/" data-en="Favorites" data-pt="Favoritos">Favoritos</a>
+35:        <li><a href="/favoritos/" data-en="Favorites" data-pt="Favoritos">Favoritos</a></li>
+
+_site/index.html href="/favoritos/" count: 2 (desktop .nav-links + mobile .nav-more-nav)
+_site/favoritos/index.html: NOT YET GENERATED - T4 (favoritos page) is a separate todo not executed in this task; will contain 1 nav link once T4 lands.
+home href count: 2
+favoritos page href count: 2 (nav include renders both surfaces)
