@@ -2,7 +2,12 @@
 {% assign page_title = page.title | default: site_name %}
 {% assign description_source = page.description | default: page.excerpt | default: site.description | strip_html | truncate: 160 | escape %}
 {% assign canonical_url = page.canonical_url | default: page.url | absolute_url %}
-{% assign og_type = page.og_type | default: "website" %}
+{% assign og_type = page.og_type | default: layout.og_type | default: "website" %}
+{% assign og_image = page.image | default: '/assets/particles.png' %}
+{% assign og_locale = 'pt_BR' %}
+{% if page.lang == 'en' %}
+  {% assign og_locale = 'en_US' %}
+{% endif %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% if page_title == site_name %}
@@ -29,13 +34,22 @@
 <meta property="og:description" content="{{ description_source }}">
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:url" content="{{ canonical_url }}">
+{% if page.image %}
+<meta property="og:image" content="{{ og_image | absolute_url }}">
+{% else %}
 <meta property="og:image" content="{{ '/assets/particles.png' | absolute_url }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="pt_BR">
+{% endif %}
+<meta property="og:image:alt" content="{{ page.image_alt | default: page_title | escape }}">
+<meta property="og:locale" content="{{ og_locale }}">
+{% if og_type == "article" and page.date %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:modified_time" content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}">
+{% endif %}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:description" content="{{ description_source }}">
-<meta name="twitter:image" content="{{ '/assets/particles.png' | absolute_url }}">
+<meta name="twitter:image" content="{{ og_image | absolute_url }}">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -59,8 +73,8 @@
       "url": "{{ site.url }}",
       "email": "{{ site.email }}",
       "sameAs": [
-        "https://github.com/kaaylooon",
-        "https://linkedin.com/in/kaylonsouza"
+        "https://github.com/{{ site.github_username }}",
+        "https://linkedin.com/in/{{ site.linkedin_username }}"
       ]
     },
     {
