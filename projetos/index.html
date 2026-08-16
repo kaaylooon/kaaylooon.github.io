@@ -1,0 +1,17 @@
+---
+layout: archive
+title: "Projetos"
+description: "Projetos desenvolvidos por Kaylon Souza — aplicações web, mobile e desktop."
+permalink: /projetos/
+archive_projects: true
+---
+<p data-en="A complete list of projects developed by Kaylon Souza — web, mobile and desktop applications." data-pt="Lista completa de projetos desenvolvidos por Kaylon Souza — aplicações web, mobile e desktop.">Lista completa de projetos desenvolvidos por Kaylon Souza — aplicações web, mobile e desktop.</p>
+
+<div class="project-list">
+  {% assign featured_projects = site.projetos | where: "featured", true | sort: "path" %}
+  {% assign regular_projects = site.projetos | where_exp: "p", "p.featured != true" | sort: "path" %}
+  {% assign sorted_projects = featured_projects | concat: regular_projects %}
+  {% for projeto in sorted_projects %}
+    {% include project-card.html projeto=projeto %}
+  {% endfor %}
+</div>

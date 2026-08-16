@@ -15,6 +15,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 {% include site-nav.html %}
 
+{% assign archive_projects = page.archive_projects | default: false %}
+{% if archive_projects %}
+  {% assign archive_count = site.projetos | size %}
+  {% assign archive_icon = "bi-folder2" %}
+  {% assign archive_label_pt = "projetos" %}
+  {% assign archive_label_en = "projects" %}
+{% else %}
+  {% assign archive_count = site.posts | size %}
+  {% assign archive_icon = "bi-journal-text" %}
+  {% assign archive_label_pt = "publicações" %}
+  {% assign archive_label_en = "posts" %}
+{% endif %}
+
 <main class="container">
     <a href="/" class="back-link">
         <i class="bi bi-arrow-left"></i> <span data-en="Back" data-pt="Voltar">Voltar</span>
@@ -23,7 +36,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <article class="post-header">
         <h1>{{ page.title | escape }}</h1>
         <div class="post-meta">
-            <span class="date"><i class="bi bi-journal-text"></i> {{ site.posts | size }} <span data-en="posts" data-pt="publicações">publicações</span></span>
+            <span class="date"><i class="bi {{ archive_icon }}"></i> {{ archive_count }} <span data-en="{{ archive_label_en }}" data-pt="{{ archive_label_pt }}">{{ archive_label_pt }}</span></span>
         </div>
     </article>
 

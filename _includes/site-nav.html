@@ -1,6 +1,7 @@
 {% assign posts_href = include.posts_href | default: page.posts_href %}
 {% assign posts_path = include.posts_path | default: page.posts_path | default: posts_href | default: "/posts/" %}
 {% assign posts_anchor = include.posts_anchor | default: page.posts_anchor | default: "" %}
+{% assign projetos_href = include.projetos_href | default: page.projetos_href | default: "/projetos/" %}
 {% assign home_href = include.home_href | default: "/" %}
 <nav class="sticky-nav">
   <div class="nav-shell">
@@ -15,7 +16,7 @@
 
       <nav class="nav-more-nav" aria-label="Sections navigation">
         <a href="{{ home_href | relative_url }}#home">Home</a>
-        <a href="{{ home_href | relative_url }}#projetos" data-en="Projects" data-pt="Projetos">Projetos</a>
+        <a href="{{ projetos_href | relative_url }}" data-en="Projects" data-pt="Projetos">Projetos</a>
         <a href="{{ home_href | relative_url }}#conquistas" data-en="Achievements" data-pt="Distinções">Distinções</a>
         <a href="{{ home_href | relative_url }}#habilidades" data-en="Skills" data-pt="Habilidades">Habilidades</a>
         <a href="{{ home_href | relative_url }}#idiomas" data-en="Languages" data-pt="Idiomas">Idiomas</a>
@@ -26,7 +27,7 @@
 
     <div class="nav-meta">
       <ul class="nav-links">
-        <li><a href="{{ home_href | relative_url }}#projetos" data-en="Projects" data-pt="Projetos">Projetos</a></li>
+        <li><a href="{{ projetos_href | relative_url }}" data-en="Projects" data-pt="Projetos">Projetos</a></li>
         <li><a href="{{ home_href | relative_url }}#conquistas" data-en="Achievements" data-pt="Distinções">Distinções</a></li>
         <li><a href="{{ home_href | relative_url }}#habilidades" data-en="Skills" data-pt="Habilidades">Habilidades</a></li>
         <li><a href="{{ home_href | relative_url }}#idiomas" data-en="Languages" data-pt="Idiomas">Idiomas</a></li>
