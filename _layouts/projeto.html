@@ -88,6 +88,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
+    <section class="contact-section" aria-label="Contato">
+        <div class="section-heading section-heading--left">
+            <h2 data-en="Contact" data-pt="Contato">Contato</h2>
+        </div>
+
+        <div class="contact-panel contact-panel--featured">
+            <div class="contact-intro">
+                <div class="contact-status contact-status--centered">
+                    <span data-en="Open to opportunities" data-pt="Aberto a oportunidades">Aberto a oportunidades</span>
+                </div>
+            </div>
+
+            <div class="contact-links">
+                <a class="contact-card" href="mailto:kaylon.contact@gmail.com">
+                    <i class="bi bi-envelope"></i>
+                    <div>
+                        <div class="contact-card-label" data-en="Email" data-pt="E-mail">E-mail</div>
+                        <div class="contact-card-value">kaylon.contact@gmail.com</div>
+                    </div>
+                </a>
+                <a class="contact-card" href="https://github.com/kaaylooon" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                    <div>
+                        <div class="contact-card-label" data-en="GitHub" data-pt="GitHub">GitHub</div>
+                        <div class="contact-card-value">kaaylooon</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     {% assign ordered_projects = site.projetos | sort: "path" %}
     {% assign previous_project = nil %}
     {% assign next_project = nil %}
