@@ -1,12 +1,18 @@
 title: Kaylon Souza
 email: kaylon.contact@gmail.com
 description: Personal Page
+author: Kaylon Souza
+github_username: kaaylooon
+linkedin_username: kaylonsouza
 baseurl: ""
 url: "https://kaaylooon.github.io"
 remote_theme: []
 
 markdown: kramdown
 highlighter: rouge
+
+plugins:
+  - jekyll-sitemap
 
 collections:
   projetos:
