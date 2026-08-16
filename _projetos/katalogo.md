@@ -4,6 +4,7 @@ title: "Katálogo"
 stack: "Python · Flask"
 status: "Concluído"
 featured: true
+home: true
 image: "/assets/katalogo-1.png"
 images:
   - "/assets/katalogo-1.png"

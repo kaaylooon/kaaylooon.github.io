@@ -40,12 +40,18 @@ og_type: website
       <section id="projetos">
         <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
         <div class="project-list">
-          {% assign featured_projects = site.projetos | where: "featured", true | sort: "path" %}
-          {% assign regular_projects = site.projetos | where_exp: "p", "p.featured != true" | sort: "path" %}
+          {% assign featured_projects = site.projetos | where: "home", true | where: "featured", true | sort: "path" %}
+          {% assign regular_projects = site.projetos | where: "home", true | where_exp: "p", "p.featured != true" | sort: "path" %}
           {% assign sorted_projects = featured_projects | concat: regular_projects %}
           {% for projeto in sorted_projects %}
             {% include project-card.html projeto=projeto %}
           {% endfor %}
+        </div>
+        <div class="hero-actions">
+          <a class="button-link button-link--secondary" href="/projetos/">
+            <i class="bi bi-folder2"></i>
+            <span data-en="Show more" data-pt="Mostrar mais">Mostrar mais</span>
+          </a>
         </div>
       </section>
 

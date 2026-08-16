@@ -3,6 +3,7 @@ layout: projeto
 title: "Kapraxis"
 stack: "C++ · QT"
 status: "Concluído"
+home: true
 image: "/assets/kapraxis.png"
 repo: "https://github.com/kaaylooon/kapraxis"
 description: "Uma aplicação de estudos com flashcards, revisões, etc. Todos os recursos para fomentar os estudos centralizados."
