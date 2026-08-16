@@ -6,37 +6,44 @@
 
 
 
+
+
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ITA - 2022: z = 5 - 5i, f(n) = |z^(2n+1) + conjugado(z)^(2n+1)| | Kaylon Souza</title>
 
-<meta name="description" content="
-  (ITA - 2022) $z = 5 - 5i \in \mathbb{C}$, $f(n) = \left| z^{(2n+1)} + \overline{z}^{\,(2n+1)} \right|$ para cada $n \in \mathbb{N}$. A soma de $f(n)$ para...">
+<meta name="description" content="Resolução comentada de uma questão do ITA 2022 sobre números complexos: somatório de f(n) e potências de |z|.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="color-scheme" content="dark">
 <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=()">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<link rel="canonical" href="http://localhost:4000/2026/06/26/journal.html">
+<link rel="canonical" href="https://kaaylooon.github.io/2026/06/26/journal.html">
 <meta name="theme-color" content="#0d0c0b">
 <meta property="og:site_name" content="Kaylon Souza">
 
 <meta property="og:title" content="ITA - 2022: z = 5 - 5i, f(n) = |z^(2n+1) + conjugado(z)^(2n+1)| | Kaylon Souza">
 <meta name="twitter:title" content="ITA - 2022: z = 5 - 5i, f(n) = |z^(2n+1) + conjugado(z)^(2n+1)| | Kaylon Souza">
 
-<meta property="og:description" content="
-  (ITA - 2022) $z = 5 - 5i \in \mathbb{C}$, $f(n) = \left| z^{(2n+1)} + \overline{z}^{\,(2n+1)} \right|$ para cada $n \in \mathbb{N}$. A soma de $f(n)$ para...">
-<meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:4000/2026/06/26/journal.html">
-<meta property="og:image" content="http://localhost:4000/assets/particles.png">
+<meta property="og:description" content="Resolução comentada de uma questão do ITA 2022 sobre números complexos: somatório de f(n) e potências de |z|.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kaaylooon.github.io/2026/06/26/journal.html">
+
+<meta property="og:image" content="https://kaaylooon.github.io/assets/particles.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+
+<meta property="og:image:alt" content="ITA - 2022: z = 5 - 5i, f(n) = |z^(2n+1) + conjugado(z)^(2n+1)|">
 <meta property="og:locale" content="pt_BR">
+
+<meta property="article:published_time" content="2026-06-26T00:00:00-03:00">
+<meta property="article:modified_time" content="2026-06-26T00:00:00-03:00">
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:description" content="
-  (ITA - 2022) $z = 5 - 5i \in \mathbb{C}$, $f(n) = \left| z^{(2n+1)} + \overline{z}^{\,(2n+1)} \right|$ para cada $n \in \mathbb{N}$. A soma de $f(n)$ para...">
-<meta name="twitter:image" content="http://localhost:4000/assets/particles.png">
+<meta name="twitter:description" content="Resolução comentada de uma questão do ITA 2022 sobre números complexos: somatório de f(n) e potências de |z|.">
+<meta name="twitter:image" content="https://kaaylooon.github.io/assets/particles.png">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -55,9 +62,9 @@
   "@graph": [
     {
       "@type": "Person",
-      "@id": "http://localhost:4000#person",
+      "@id": "https://kaaylooon.github.io#person",
       "name": "Kaylon Souza",
-      "url": "http://localhost:4000",
+      "url": "https://kaaylooon.github.io",
       "email": "kaylon.contact@gmail.com",
       "sameAs": [
         "https://github.com/kaaylooon",
@@ -66,11 +73,11 @@
     },
     {
       "@type": "WebSite",
-      "@id": "http://localhost:4000#website",
+      "@id": "https://kaaylooon.github.io#website",
       "name": "Kaylon Souza",
-      "url": "http://localhost:4000",
+      "url": "https://kaaylooon.github.io",
       "publisher": {
-        "@id": "http://localhost:4000#person"
+        "@id": "https://kaaylooon.github.io#person"
       }
     }
   ]
@@ -99,6 +106,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
+
 <nav class="sticky-nav">
   <div class="nav-shell">
     <a class="nav-brand" href="/">
@@ -112,7 +120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <nav class="nav-more-nav" aria-label="Sections navigation">
         <a href="/#home">Home</a>
-        <a href="/#projetos" data-en="Projects" data-pt="Projetos">Projetos</a>
+        <a href="/projetos/" data-en="Projects" data-pt="Projetos">Projetos</a>
         <a href="/#conquistas" data-en="Achievements" data-pt="Distinções">Distinções</a>
         <a href="/#habilidades" data-en="Skills" data-pt="Habilidades">Habilidades</a>
         <a href="/#idiomas" data-en="Languages" data-pt="Idiomas">Idiomas</a>
@@ -123,7 +131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="nav-meta">
       <ul class="nav-links">
-        <li><a href="/#projetos" data-en="Projects" data-pt="Projetos">Projetos</a></li>
+        <li><a href="/projetos/" data-en="Projects" data-pt="Projetos">Projetos</a></li>
         <li><a href="/#conquistas" data-en="Achievements" data-pt="Distinções">Distinções</a></li>
         <li><a href="/#habilidades" data-en="Skills" data-pt="Habilidades">Habilidades</a></li>
         <li><a href="/#idiomas" data-en="Languages" data-pt="Idiomas">Idiomas</a></li>
@@ -257,6 +265,37 @@ f(n) = sqrt(2) (5sqrt(2))^{2n+1} = sqrt(2) 5^(2n+1) 2^(2n+1)/2} = 5^(2n+1)
 </div>
 
     </div>
+
+    <section class="contact-section" aria-label="Contato">
+        <div class="section-heading section-heading--left">
+            <h2 data-en="Contact" data-pt="Contato">Contato</h2>
+        </div>
+
+        <div class="contact-panel contact-panel--featured">
+            <div class="contact-intro">
+                <div class="contact-status contact-status--centered">
+                    <span data-en="Open to opportunities" data-pt="Aberto a oportunidades">Aberto a oportunidades</span>
+                </div>
+            </div>
+
+            <div class="contact-links">
+                <a class="contact-card" href="mailto:kaylon.contact@gmail.com">
+                    <i class="bi bi-envelope"></i>
+                    <div>
+                        <div class="contact-card-label" data-en="Email" data-pt="E-mail">E-mail</div>
+                        <div class="contact-card-value">kaylon.contact@gmail.com</div>
+                    </div>
+                </a>
+                <a class="contact-card" href="https://github.com/kaaylooon" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                    <div>
+                        <div class="contact-card-label" data-en="GitHub" data-pt="GitHub">GitHub</div>
+                        <div class="contact-card-value">kaaylooon</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <nav class="page-pager" aria-label="Navegação da publicação">
         

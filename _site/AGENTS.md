@@ -7,12 +7,13 @@ This is a Jekyll-based personal site, not an application with a compiled backend
 - Images and CSS: `assets/`
 
 ## Build, Test, and Development Commands
-There is no package manager or test runner committed in the repo, and no `Gemfile`/`.bundle` directory. Use Jekyll directly if it is installed on your machine:
-- `jekyll serve` - start a local preview server with live rebuilds.
-- `jekyll build` - generate the static site output for a final check.
+The repo uses Bundler (Gemfile committed). Install dependencies and build with:
+- `bundle install` - install Jekyll and the jekyll-sitemap plugin.
+- `bundle exec jekyll serve` - start a local preview server with live rebuilds.
+- `bundle exec jekyll build` - generate the static site output for a final check.
 - `git status` - verify only the intended HTML, Markdown, CSS, and asset files changed.
 
-If you later add Bundler support, then `bundle exec jekyll serve` becomes the preferred wrapper. Until then, open the HTML directly only for a quick sanity check, and prefer a Jekyll preview for content that uses layouts or collections.
+`sitemap.xml` is generated automatically by the jekyll-sitemap plugin at build time — do not edit or commit a manual sitemap. Open the HTML directly only for a quick sanity check, and prefer a Jekyll preview for content that uses layouts or collections.
 
 ## Coding Style & Naming Conventions
 Use two-space indentation for HTML/Liquid and keep CSS declarations consistently indented. Prefer lowercase, descriptive filenames with hyphens for new pages and assets. Keep inline scripts and styles minimal; place reusable styling in `assets/site.css`. Preserve the existing bilingual pattern with `data-pt` and `data-en` attributes when editing copy that needs translation.
