@@ -3,6 +3,7 @@ layout: projeto
 title: "Telegram PDF Uploader Bot"
 stack: "Python · python-telegram-bot"
 status: "Concluído"
+home: true
 image: "/assets/telegram-bot-pdf-2.png"
 images:
   - "/assets/telegram-bot-pdf-2.png"
