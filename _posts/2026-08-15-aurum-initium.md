@@ -5,6 +5,7 @@ date: 2026-08-15
 description: "Um livro de matemática elementar em construção: base sólida, tópicos conectados por intuição e interpretação geométrica."
 image: "/assets/capa-aurum-initium.webp"
 image_alt: "Captura do livro Aurum Initium"
+tags: [matemática, algebra, latex]
 ---
 
 ![Captura do livro](/assets/capa-aurum-initium.webp)

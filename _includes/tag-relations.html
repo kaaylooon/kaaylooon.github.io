@@ -1,0 +1,92 @@
+{% comment %}
+Uso:
+  {% include tag-relations.html tags="latex" %}
+  {% include tag-relations.html tags="React Native,Expo" %}
+  {% include tag-relations.html tags="SQL,PostgreSQL,SQLite,AsyncStorage" sources="projetos,posts" %}
+  {% include tag-relations.html tags="latex" sources="posts" %}
+
+Parâmetros:
+  tags     — lista separada por vírgula (aceita também string única)
+  sources  — "projetos", "posts" ou "projetos,posts" (default: "projetos,posts")
+  field    — campo do front matter onde as tags vivem (default: "tags")
+             use "stack" para projetos que usam stack em vez de tags
+{% endcomment %}
+
+{% assign _tags_raw = include.tags | default: "" | split: "," %}
+{% assign _sources = include.sources | default: "projetos,posts" | split: "," %}
+{% assign _field = include.field | default: "tags" %}
+
+{% comment %} Normaliza tags (trim + downcase) {% endcomment %}
+{% assign _wanted = "" | split: "" %}
+{% for t in _tags_raw %}
+  {% assign _t = t | strip %}
+  {% if _t != "" %}
+    {% assign _wanted = _wanted | push: _t %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Coleta resultados de cada fonte {% endcomment %}
+{% assign _results = "" | split: "" %}
+
+{% for src in _sources %}
+  {% assign _src = src | strip %}
+  {% if _src == "projetos" %}
+    {% assign _coll = site.projetos %}
+  {% elsif _src == "posts" %}
+    {% assign _coll = site.posts %}
+  {% else %}
+    {% assign _coll = nil %}
+  {% endif %}
+
+  {% if _coll %}
+    {% for item in _coll %}
+      {% assign _item_tags = item[_field] %}
+      {% if _item_tags %}
+        {% assign _match = false %}
+        {% for t in _wanted %}
+          {% if _item_tags contains t %}
+            {% assign _match = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% if _match %}
+          {% comment %} Empacota com tipo e collection para renderização {% endcomment %}
+          {% capture _entry %}{{ _src }}::{{ item.url }}{% endcapture %}
+          {% unless _results contains _entry %}
+            {% assign _results = _results | push: _entry %}
+          {% endunless %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% if _results.size > 0 %}
+<div class="card-relations" style="margin-top: 0.5rem;">
+  <ul style="margin: 0; padding-left: 1rem; font-size: 0.8rem; color: var(--text-dim);">
+    {% for entry in _results %}
+      {% assign parts = entry | split: "::" %}
+      {% assign _type = parts[0] %}
+      {% assign _url = parts[1] %}
+
+      {% if _type == "projetos" %}
+        {% assign _obj = site.projetos | where: "url", _url | first %}
+      {% else %}
+        {% assign _obj = site.posts | where: "url", _url | first %}
+      {% endif %}
+
+      {% if _obj %}
+        <li>
+          <a href="{{ _obj.url | relative_url }}"
+             style="color: inherit; text-decoration: underline;">
+            {{ _obj.title | escape }}
+          </a>
+          <span style="font-size: 0.7rem; opacity: 0.7;">
+            {% if _type == "posts" %}(post){% else %}(projeto){% endif %}
+          </span>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

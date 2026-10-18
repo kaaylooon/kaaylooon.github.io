@@ -2,9 +2,10 @@
 layout: null
 permalink: /
 title: "Kaylon Souza"
-description: "Kaylon Souza: Desenvolvedor de Software full-stack & mobile — React Native, TypeScript, Node.js e Python."
+description: "Kaylon Souza: Desenvolvedor de Software full-stack & mobile — React Native, Node.js e Python."
 posts_path: "/"
 posts_anchor: "#posts"
+posts_limit: 3
 og_type: website
 ---
 <!DOCTYPE html>
@@ -15,21 +16,21 @@ og_type: website
   <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8XJL7JC"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     {% include site-nav.html posts_path="/" posts_anchor="#posts" projetos_href="/#projetos" %}
     <main class="container">
       <section id="home">
         <h1>Kaylon Souza</h1>
         <p style="color: var(--text-dim); font-size: 1rem; max-width: 700px;">
-          <span data-pt="Desenvolvedor de Software (Full-stack & Mobile) — React Native, TypeScript, Node.js e Python."
-            data-en="Software Developer (Full-stack & Mobile) — React Native, TypeScript, Node.js and Python.">
-            Desenvolvedor de Software (Full-stack & Mobile) — React Native, TypeScript, Node.js e Python.
+          <span data-pt="Desenvolvedor de Software (Full-stack & Mobile) — React Native, Node.js e Python."
+            data-en="Software Developer (Full-stack & Mobile) — React Native, Node.js and Python.">
+            Desenvolvedor de Software (Full-stack & Mobile) — React Native, Node.js e Python.
           </span>
           <br>
           <span class="hero-actions">
             <a class="button-link" href="/about.html">
-              <i class="bi bi-person"></i>
+              <i class="bi bi-person" aria-hidden="true"></i>
               <span data-pt="Sobre mim" data-en="About me">Sobre mim</span>
             </a>
           </span>
@@ -40,8 +41,8 @@ og_type: website
       <section id="projetos">
         <h2 data-en="Projects" data-pt="Projetos">Projetos</h2>
         <div class="project-list">
-          {% assign featured_projects = site.projetos | where: "home", true | where: "featured", true | sort: "path" %}
-          {% assign regular_projects = site.projetos | where: "home", true | where_exp: "p", "p.featured != true" | sort: "path" %}
+          {% assign featured_projects = site.projetos | where: "home", true | where: "featured", true | sort: "date" | reverse %}
+          {% assign regular_projects = site.projetos | where: "home", true | where_exp: "p", "p.featured != true" | sort: "date" | reverse %}
           {% assign sorted_projects = featured_projects | concat: regular_projects %}
           {% for projeto in sorted_projects %}
             {% include project-card.html projeto=projeto %}
@@ -49,7 +50,7 @@ og_type: website
         </div>
         <div class="hero-actions">
           <a class="button-link button-link--secondary" href="/projetos/">
-            <i class="bi bi-folder2"></i>
+            <i class="bi bi-folder2" aria-hidden="true"></i>
             <span data-en="Show more" data-pt="Mostrar mais">Mostrar mais</span>
           </a>
         </div>
@@ -63,49 +64,49 @@ og_type: website
           <!-- OLITEF Ouro -->
           
           <div class="bento-card bento-sm">
-            <i class="bi bi-trophy"></i>
+            <i class="bi bi-award" aria-hidden="true"></i>
             <div>
               <div class="card-label">OLITEF (2024)</div>
               <div class="card-value" data-en="Gold" data-pt="Ouro">Ouro</div>
-              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Financial Education" data-pt="Educação Financeira">Educação Financeira</p>
+              <p style="font-size: 0.90rem; color: var(--text-dim);" data-en="Financial Education" data-pt="Educação Financeira">Educação Financeira</p>
             </div>
           </div>
 
 
           <!-- O2 Ouro -->
           <div class="bento-card bento-sm">
-            <i class="bi bi-trophy"></i>
+            <i class="bi bi-award" aria-hidden="true"></i>
             <div>
               <div class="card-label">O2 (2024)</div>
               <div class="card-value" data-en="Gold" data-pt="Ouro">Ouro</div>
-              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Ocean Olympiad" data-pt="Olimpíada do Oceano">Olimpíada do Oceano</p>
+              <p style="font-size: 0.90rem; color: var(--text-dim);" data-en="Ocean Olympiad" data-pt="Olimpíada do Oceano">Olimpíada do Oceano</p>
             </div>
           </div>
 
           <!-- OBLI Ouro -->
           <div class="bento-card bento-md-w">
-            <i class="bi bi-trophy"></i>
+            <i class="bi bi-award" aria-hidden="true"></i>
             <div>
               <div class="card-label">OBLI (2024)</div>
               <div class="card-value" data-en="Gold" data-pt="Ouro">Ouro</div>
-              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="English Language" data-pt="Língua Inglesa">Língua Inglesa</p>
+              <p style="font-size: 0.90rem; color: var(--text-dim);" data-en="English Language" data-pt="Língua Inglesa">Língua Inglesa</p>
             </div>
           </div>
 
           <!-- OBA Prata (Card largo posicionado para quebra estética do grid) -->
           
           <div class="bento-card bento-md-w">
-              <i class="bi bi-award"></i>
+              <i class="bi bi-award" aria-hidden="true"></i>
               <div>
                 <div class="card-label">OBA (2025)</div>
                 <div class="card-value" data-en="Silver" data-pt="Prata">Medalha de Prata</div>
-                <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;" data-en="Astronomy and Astronautics" data-pt="Astronomia e Astronáutica">Astronomia e Astronáutica</p>
+                <p style="font-size: 0.90rem; color: var(--text-dim); margin-top: 0.25rem;" data-en="Astronomy and Astronautics" data-pt="Astronomia e Astronáutica">Astronomia e Astronáutica</p>
               </div>
           </div>
 
           <!-- OBMEP Bronze -->
           <div class="bento-card bento-sm">
-            <i class="bi bi-award"></i>
+            <i class="bi bi-award" aria-hidden="true"></i>
             <div>
               <div class="card-label">OBMEP (2025)</div>
               <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
@@ -115,41 +116,41 @@ og_type: website
 
           <!-- OBLI Bronze -->
             <div class="bento-card bento-sm">
-              <i class="bi bi-award"></i>
+              <i class="bi bi-award" aria-hidden="true"></i>
               <div>
                 <div class="card-label">OBLI (2025)</div>
                 <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
-                <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="English Language" data-pt="Língua Inglesa">Língua Inglesa</p>
+                <p style="font-size: 0.90rem; color: var(--text-dim);" data-en="English Language" data-pt="Língua Inglesa">Língua Inglesa</p>
               </div>
             </div>
 
             <!-- OBG Bronze -->
             <div class="bento-card bento-sm">
-            <i class="bi bi-award"></i>
+            <i class="bi bi-award" aria-hidden="true"></i>
             <div>
               <div class="card-label">OBG (2024)</div>
               <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
-              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Geography" data-pt="Geografia">Geografia</p>
+              <p style="font-size: 0.90rem; color: var(--text-dim);" data-en="Geography" data-pt="Geografia">Geografia</p>
             </div>
           </div>
 
           <div class="bento-card bento-sm">
-            <i class="bi bi-trophy"></i>
+            <i class="bi bi-award" aria-hidden="true"></i>
             <div>
               <div class="card-label">OLITEF (2025)</div>
               <div class="card-value" data-en="Bronze" data-pt="Bronze">Bronze</div>
-              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Financial Education" data-pt="Educação Financeira">Educação Financeira</p>
+              <p style="font-size: 0.90rem; color: var(--text-dim);" data-en="Financial Education" data-pt="Educação Financeira">Educação Financeira</p>
             </div>
           </div>
 
           <!-- OBF Menção -->
           <div class="bento-card bento-md-w">
-            <i class="bi bi-activity"></i>
+            <i class="bi bi-activity" aria-hidden="true"></i>
             <div>
               <div class="card-label">OBF (2025)</div>
             <div class="card-value" style="font-size: 0.95rem;" data-en="Good
               Perf." data-pt="Menção">Menção</div>
-              <p style="font-size: 0.75rem; color: var(--text-dim);" data-en="Physics" data-pt="Física">Física</p>
+              <p style="font-size: 0.90rem; color: var(--text-dim);" data-en="Physics" data-pt="Física">Física</p>
             </div>
           </div>
 
@@ -166,117 +167,115 @@ og_type: website
         <article class="skills-group">
           <h3 data-en="Programming & Scripting" data-pt="Programação e Scripts">Programação e Scripts</h3>
           <div class="bento-grid">
-            <div class="bento-card bento-sm">
-              <i class="bi bi-code-slash"></i>
-              <div>
-                <div class="card-label" data-en="Language"
-                  data-pt="Linguagem">Language</div>
-                <div class="card-value">Python</div>
-              </div>
+<div class="bento-card bento-sm">
+  <i class="bi bi-code-slash" aria-hidden="true"></i>
+  <div>
+    <div class="card-label" data-en="Language" data-pt="Linguagem">Language</div>
+    <div class="card-value">Python</div>
+      </div>
+  {% include tag-relations.html tags="Python" sources="projetos" field="stack" %}
             </div>
+
             <div class="bento-card bento-sm">
-              <i class="bi bi-hdd-network"></i>
+              <i class="bi bi-hdd-network" aria-hidden="true"></i>
               <div>
                 <div class="card-label" data-en="Runtime" data-pt="Runtime">Runtime</div>
                 <div class="card-value">Node.js</div>
               </div>
             </div>
-            <div class="bento-card bento-sm">
-              <i class="bi bi-code-slash"></i>
-              <div>
-                <div class="card-label" data-en="Language"
-                  data-pt="Linguagem">Language</div>
-                <div class="card-value">TypeScript</div>
-              </div>
-            </div>
 
             <div class="bento-card bento-sm">
-              <i class="bi bi-code-slash"></i>
+              <i class="bi bi-code-slash" aria-hidden="true"></i>
               <div>
                 <div class="card-label" data-en="Language"
                   data-pt="Linguagem">Language</div>
                 <div class="card-value">JavaScript</div>
               </div>
+              {% include tag-relations.html tags="JavaScript" sources="projetos" field="stack" %}
             </div>
 
             <div class="bento-card bento-sm">
-              <i class="bi bi-database"></i>
+              <i class="bi bi-database" aria-hidden="true"></i>
               <div>
                 <div class="card-label" data-en="Language"
                   data-pt="Linguagem">Language</div>
                 <div class="card-value">SQL</div>
               </div>
             </div>
-
-            <div class="bento-card bento-sm">
-              <div>
-            <i class="bi bi-input-cursor-text"></i>
-              <div>
-                <div class="card-label" data-en="DOC"
-                  data-pt="Documentação">DOC</div>
-                <div class="card-value" data-en="LaTeX" data-pt="LaTeX">LaTeX</div>
-              </div>
-              </div>
-            </div>
-          </div>
+<div class="bento-card bento-md-w">
+  <i class="bi bi-input-cursor-text" aria-hidden="true"></i>
+  <div>
+    <div class="card-label" data-en="DOC" data-pt="Documentação">DOC</div>
+    <div class="card-value">LaTeX</div>
+  </div>
+  {% include tag-relations.html tags="latex" sources="posts" %}
+</div>
         </article>
 
         <article class="skills-group">
           <h3 data-en="Tools & Technologies" data-pt="Ferramentas e Tecnologias">Ferramentas e Tecnologias</h3>
           <div class="bento-grid">
             <div class="bento-card bento-sm">
-              <i class="bi bi-phone"></i>
+              <i class="bi bi-phone" aria-hidden="true"></i>
               <div>
                 <div class="card-label" data-en="Mobile" data-pt="Mobile">Mobile</div>
                 <div class="card-value" data-en="React Native · Expo" data-pt="React Native · Expo">React Native · Expo</div>
               </div>
+              {% include tag-relations.html tags="React Native,Expo" sources="projetos" field="stack" %}
             </div>
 
             <div class="bento-card bento-sm">
-              <i class="bi bi-window"></i>
+              <i class="bi bi-window" aria-hidden="true"></i>
               <div>
                 <div class="card-label" data-en="Web" data-pt="Web">Web</div>
                 <div class="card-value" data-en="Flask · Django · HTML/CSS · Bootstrap" data-pt="Flask · Django · HTML/CSS · Bootstrap">Flask · Django · HTML/CSS · Bootstrap</div>
+{% include tag-relations.html tags="Flask,Django,HTML,CSS,Bootstrap" sources="projetos" field="stack" %}
               </div>
+
             </div>
 
             <div class="bento-card bento-sm">
-              <i class="bi bi-pc-display"></i>
+              <i class="bi bi-pc-display" aria-hidden="true"></i>
               <div>
                 <div class="card-label" data-en="Desktop" data-pt="Desktop">Desktop</div>
                 <div class="card-value" data-en="Qt · Electron · Raylib" data-pt="Qt · Electron · Raylib">Qt · Electron · Raylib</div>
-              </div>
+  {% include tag-relations.html tags="Qt,Electron,Raylib" sources="projetos" field="stack" %}
+</div>
+
             </div>
 
             <div class="bento-card bento-sm">
-              <i class="bi bi-controller"></i>
+              <i class="bi bi-controller" aria-hidden="true"></i>
               <div>
                 <div class="card-label" data-en="Games" data-pt="Jogos">Jogos</div>
                 <div class="card-value">Godot</div>
               </div>
+              {% include tag-relations.html tags="Godot" sources="projetos" field="stack" %}
             </div>
 
             <div class="bento-card bento-sm">
-              <i class="bi bi-terminal"></i>
-              <div>
-                <div class="card-label" data-en="Systems" data-pt="Sistemas">Systems</div>
-                <div class="card-value" data-en="Terminal UI (TUI)" data-pt="Terminal UI (TUI)">Terminal UI (TUI)</div>
-              </div>
-            </div>
-
-            <div class="bento-card bento-sm">
-              <i class="bi bi-database"></i>
+              <i class="bi bi-database" aria-hidden="true"></i>
               <div>
                 <div class="card-label" data-en="Data" data-pt="Dados">Data</div>
                 <div class="card-value" data-en="PostgreSQL · SQLite · AsyncStorage" data-pt="PostgreSQL · SQLite · AsyncStorage">PostgreSQL · SQLite · AsyncStorage</div>
               </div>
+              {% include tag-relations.html tags="PostgreSQL,SQLite,AsyncStorage" sources="projetos" %}
             </div>
 
             <div class="bento-card bento-sm">
-              <i class="bi bi-tools"></i>
+              <i class="bi bi-tools" aria-hidden="true"></i>
               <div>
                 <div class="card-label" data-en="Tools" data-pt="Ferramentas">Tools</div>
-                <div class="card-value" data-en="Git · Linux · LaTeX" data-pt="Git · Linux · LaTeX">Git · Linux · LaTeX</div>
+                <div class="card-value" data-en="Git · Linux" data-pt="Git · Linux">Git · Linux</div>
+              </div>
+            </div>
+            <div class="bento-card bento-sm">
+              <i class="bi bi-tools" aria-hidden="true"></i>
+              <div>
+                <div class="card-label" data-en="AI"
+                    data-pt="IA">IA</div>
+                <div class="card-value" >PI · Claude · Codex · OpenCode
+                    ·  DeepSeek Harness · Sentence-transformers</div>
               </div>
             </div>
           </div>
@@ -290,8 +289,8 @@ og_type: website
 
           <div class="bento-card bento-md-w lang-card">
             <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
-              <span class="lang-badge">Nativo</span>
+              <i class="bi bi-translate" aria-hidden="true"></i>
+              <span class="lang-badge" data-en="Native" data-pt="Nativo">Nativo</span>
             </div>
             <div>
               <div class="card-value" data-en="Portuguese" data-pt="Português">Português</div>
@@ -301,7 +300,7 @@ og_type: website
 
           <div class="bento-card bento-md-w lang-card">
             <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
+              <i class="bi bi-translate" aria-hidden="true"></i>
               <span class="lang-badge">B2/C1</span>
             </div>
             <div>
@@ -313,7 +312,7 @@ og_type: website
 
           <div class="bento-card bento-md-w lang-card">
             <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
+              <i class="bi bi-translate" aria-hidden="true"></i>
               <span class="lang-badge" data-en="Starting out" data-pt="Iniciando">Iniciando</span>
             </div>
             <div>
@@ -325,7 +324,7 @@ og_type: website
 
           <!--<div class="bento-card bento-sm lang-card">
             <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
+              <i class="bi bi-translate" aria-hidden="true"></i>
               <span class="lang-badge">A1</span>
             </div>
             <div class="lang-card-top">
@@ -339,7 +338,7 @@ og_type: website
           -->
           <div class="bento-card bento-md-w lang-card">
             <div class="lang-card-top">
-              <i class="bi bi-translate"></i>
+              <i class="bi bi-translate" aria-hidden="true"></i>
               <span class="lang-badge" data-en="Starting out" data-pt="Iniciando">Iniciando</span>
             </div>
             <div>
@@ -353,10 +352,132 @@ og_type: website
           <span data-pt="Fonte:" data-en="Source:">Fonte:</span> <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/official-translations-of-the-cefr-global-scale" target="_blank" rel="noopener noreferrer">Conselho da Europa, CEFR Global Scale</a>
         </p>
       </section>
+
+<section id="interesses">
+  <h2 data-en="Interests" data-pt="Interesses">Interesses</h2>
+
+  <div class="bento-grid">
+    <!-- Astronomia --> 
+    <div class="bento-card bento-lg bento-img" style="background-image:
+        url('/assets/nicolai2.avif');">
+      <i class="bi bi-rocket" aria-hidden="true"></i>
+      <div>
+        <div class="card-label" data-en="Science" data-pt="Ciência">Ciência</div>
+        <div class="card-value" data-en="Astronomy" data-pt="Astronomia">Astronomia</div>
+        <p style="font-size: 0.90rem; color: var(--text-dim);">Astronomia foi o
+        meu primeiro contato com o estudo formal (a ciência). Interessado pelos fenômenos do
+        espaço, cedi à curiosidade. Mesmo sem ter o curso básico - a base
+        matemática, física clássica, etc. - mergulhei no conteúdo, focando em
+        conceitos que não demandavam, de certa forma, compreender, mas somente
+        aceitar os fatos. Após um tempo, deixei a Astronomia de lado e então
+        foquei em estudar, com outros focos. Dessa forma, desenvolvi maturidade
+        intelectual e formei uma base sólida tanto em Matemática quanto em
+        Física; assim, agora, eu conseguiria compreender e ter um "panorama
+        geral" daqueles eventos espaciais.</p>
+      </div>
+    </div>
+
+    <!-- Neurociência -->
+        <div class="bento-card bento-lg bento-img" style="background-image:
+        url('/assets/neuroscience.avif');">
+      <i class="bi bi-virus" aria-hidden="true"></i>
+      <div>
+        <div class="card-label" data-en="Science" data-pt="Ciência">Ciência</div>
+        <div class="card-value" data-en="Neuroscience" data-pt="Neurociência">Neurociência</div>
+        <p style="font-size: 0.90rem; color: var(--text-dim);">Nada demais — só um pouco de interesse em entender as atividades cerebrais,
+        especialmente a imaginação. Planejo folhear
+        os clássicos da Neurociência. Conforme alguns especialistas, devo
+        iniciar por biologia básica, entendendo interações celulares e então
+        passar por fisiologia, especialmente pelo livro do Berne e Levy. Em
+        seguida, sigo o "Desvendando o Sistema Nervoso", do Mark F. Bear e
+        Barry Connors.</p>
+      </div>
+    </div>
+
+
+    <div class="bento-card bento-md-w" id="">
+        <i class="bi bi-bank" aria-hidden="true"></i>
+        <div class="card-label">Economia</div>
+        <div class="card-value">Macroeconomia</div>
+    </div>
+    <div class="bento-card bento-md-w" id="">
+        <i class="bi bi-cash-stack" aria-hidden="true"></i>
+        <div class="card-label">Economia</div>
+        <div class="card-value">Microeconomia</div>
+    </div>
+    <!-- Produção musical -->
+    <div class="bento-card bento-lg">
+      <i class="bi bi-music-note-beamed" aria-hidden="true"></i>
+      <div>
+        <div class="card-label" data-en="Music Production" data-pt="Produção Musical">Produção Musical</div>
+        <div class="card-value">LMMS</div>
+        <p style="font-size: 0.90rem; color: var(--text-dim);">É muito
+        satisfatório ouvir a sua própria produção, mesmo que ela seja muito
+        ruim. É uma área interessante, pois, assim como outros meios de aplicar
+        a sua criatividade, permite divertir-se. Em algum dia (dificilmente
+        abro o editor...), gostaria de conseguir produzir obras as quais eu me
+        orgulharia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="setup">
+  <h2 data-en="Setup" data-pt="Setup">Setup</h2>
+  
+  <div class="bento-grid">
+    <!-- OS & System -->
+    <div class="bento-card bento-md-w">
+      <i class="bi bi-tux" aria-hidden="true"></i>
+      <div>
+        <div class="card-label" data-en="OS"
+            data-pt="SO">SO</div>
+        <div class="card-value">AntiX 12 (bookworm)</div>
+      </div>
+    </div>
+
+    <!-- Core Editor -->
+    <div class="bento-card bento-sm">
+      <i class="bi bi-keyboard" aria-hidden="true"></i>
+      <div>
+        <div class="card-label" data-en="Text Editor" data-pt="Editor de Texto">Editor de Texto</div>
+        <div class="card-value">Neovim</div>
+      </div>
+    </div>
+
+    <div class="bento-card bento-sm">
+      <i class="bi bi-terminal" aria-hidden="true"></i>
+      <div>
+        <div class="card-label" data-en="Terminal" data-pt="Terminal">Terminal</div>
+        <div class="card-value">Alacritty</div>
+      </div>
+      </div>
+
+    <div class="bento-card bento-sm">
+      <i class="bi bi-filetype-sh" aria-hidden="true"></i>
+      <div>
+        <div class="card-label" data-en="Shell"
+            data-pt="Shell">Shell</div>
+        <div class="card-value">Zsh</div>
+      </div>
+    </div>
+
+        <div class="bento-card bento-sm">
+      <i class="bi bi-pc-display" aria-hidden="true"></i>
+      <div>
+        <div class="card-label" data-en="Browser"
+            data-pt="Navegador">Navegador</div>
+        <div class="card-value">Brave</div>
+      </div>
+      </div>
+
+  </div>
+</section>
+
       <section id="posts">
         <h2 data-en="Posts" data-pt="Postagens">Posts</h2>
         <div class="posts-list">
-          {% for post in site.posts limit: 3 %}
+          {% for post in site.posts limit: page.posts_limit | default: 3 %}
           <div class="post-item">
             <div class="post-date">{{ post.date | date: "%b %Y" | upcase }}</div>
             <div class="post-content">
@@ -370,7 +491,7 @@ og_type: website
         </div>
         <div class="hero-actions">
           <a class="button-link button-link--secondary" href="/posts/">
-            <i class="bi bi-journal-text"></i>
+            <i class="bi bi-journal-text" aria-hidden="true"></i>
             <span data-en="Show more" data-pt="Mostrar mais">Mostrar mais</span>
           </a>
         </div>
@@ -388,30 +509,30 @@ og_type: website
             </div>
             <div class="contact-cta">
               <a class="button-link button-link--secondary" href="/assets/resume/kaylon-souza-cv.pdf" target="_blank" rel="noopener noreferrer">
-                <span data-en="View My Resume" data-pt="Ver Meu Currículo">View My Resume</span>
+                <span data-en="View My Resume" data-pt="Ver Meu Currículo">Ver Meu Currículo</span>
               </a>
             </div>
           </div>
 
           <div class="contact-links">
-            <a class="contact-card" href="mailto:kaylon.contact@gmail.com">
-              <i class="bi bi-envelope"></i>
+            <a class="contact-card" href="mailto:kaylon.contact@gmail.com" aria-label="Enviar e-mail para Kaylon Souza">
+              <i class="bi bi-envelope" aria-hidden="true"></i>
               <div>
                 <div class="contact-card-label" data-en="Email" data-pt="E-mail">E-mail</div>
                 <div class="contact-card-value">kaylon.contact@gmail.com</div>
               </div>
             </a>
-            <a class="contact-card" href="https://github.com/kaaylooon" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-github"></i>
+            <a class="contact-card" href="https://github.com/kaaylooon" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Kaylon Souza (kaaylooon)">
+              <i class="bi bi-github" aria-hidden="true"></i>
               <div>
                 <div class="contact-card-label" data-en="GitHub" data-pt="GitHub">GitHub</div>
                 <div class="contact-card-value">kaaylooon</div>
               </div>
             </a>
-            <a class="contact-card" href="https://linkedin.com/in/kaylonsouza" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-linkedin"></i>
+            <a class="contact-card" href="https://linkedin.com/in/kaylonsouza" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Kaylon Souza">
+              <i class="bi bi-linkedin" aria-hidden="true"></i>
               <div>
-                <div class="contact-card-label">LinkedIn</div>
+                <div class="contact-card-label" data-en="LinkedIn" data-pt="LinkedIn">LinkedIn</div>
                 <div class="contact-card-value">linkedin.com/in/kaylonsouza</div>
               </div>
             </a>

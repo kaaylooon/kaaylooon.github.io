@@ -1,7 +1,7 @@
 ---
 layout: projeto
 title: "Katálogo"
-stack: "Python · Flask"
+stack: "Python · Flask · PostgreSQL · Bootstrap"
 status: "Concluído"
 featured: true
 home: true
