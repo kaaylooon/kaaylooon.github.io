@@ -31,3 +31,7 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - AGENTS.md
+  - docs/ 
+  - scripts/
+  - "**/*.tex"

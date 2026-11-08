@@ -80,6 +80,7 @@ h3 {
     font-size: 1.15rem;
     margin: 1.5rem 0 1rem;
 }
+.card-sub { font-size: 0.90rem; color: var(--text-dim); }
 .container {
     width: 100%;
     max-width: var(--content-max);

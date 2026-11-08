@@ -1,4 +1,7 @@
 .omo
-vendor
+vendor/
 _site/
 .playwright-mcp/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
