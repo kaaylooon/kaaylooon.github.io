@@ -917,6 +917,7 @@ section:first-of-type {
     font-size: 0.9rem;
     letter-spacing: 0.03em;
     color: var(--text-dim);
+    font-weight: 500;
 }
 
 .skills-group .bento-grid {

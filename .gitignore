@@ -1,2 +1,4 @@
 .omo
 vendor
+_site/
+.playwright-mcp/
