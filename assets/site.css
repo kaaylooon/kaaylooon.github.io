@@ -109,7 +109,7 @@ a {
 }
 
 a:hover {
-    color: #2456dc;
+    color: var(on-primary);
     opacity: 1;
 }
 
