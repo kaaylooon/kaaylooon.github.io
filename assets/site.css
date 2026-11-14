@@ -596,7 +596,6 @@ section:first-of-type {
 
 .page-link-text {
     color: var(--text-dim);
-    font-size: 0.92rem;
 }
 
 /* ============================================================
@@ -604,7 +603,7 @@ section:first-of-type {
    ============================================================ */
 
 .project-list {
-    column-count: 1;
+    column-count: 2;
     gap: 1rem;
     width: 100%;
 }
